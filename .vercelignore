@@ -1,0 +1,35 @@
+# Development files
+*.md
+*.txt
+*.log
+
+# PHP files (not needed for demo)
+api/
+database/
+
+# Backup files
+*-backup.*
+*-old.*
+*.bak
+
+# Documentation
+DEPLOYMENT-GUIDE.md
+QUICK-DEPLOY.md
+PLANETSCALE-SETUP.md
+*.REPORT.md
+
+# Node modules
+node_modules/
+package-lock.json
+
+# Environment files
+.env
+.env.local
+.env.example
+
+# VS Code
+.vscode/
+
+# Git
+.git/
+.gitignore

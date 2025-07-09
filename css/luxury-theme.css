@@ -1,0 +1,1486 @@
+/* ==========================================================================
+   Luxury Theme CSS - Maison du Croissant
+   Premium color scheme with gold, black, and cream
+   ========================================================================== */
+
+:root {
+  /* ===== LUXURY COLOR PALETTE ===== */
+  --luxury-gold: #d4af37;          /* Rich Gold */
+  --luxury-gold-light: #f4e4a6;    /* Light Gold */
+  --luxury-gold-dark: #b8941f;     /* Dark Gold */
+  --luxury-black: #1a1a1a;         /* Deep Black */
+  --luxury-black-soft: #2c2c2c;    /* Soft Black */
+  --luxury-cream: #faf8f5;         /* Luxury Cream */
+  --luxury-cream-dark: #f0ede8;    /* Dark Cream */
+  --luxury-bronze: #cd7f32;        /* Bronze accent */
+  --luxury-champagne: #f7e7ce;     /* Champagne */
+  --luxury-pearl: #eae0d5;         /* Pearl white */
+  
+  /* ===== GRADIENT COMBINATIONS ===== */
+  --gradient-gold: linear-gradient(135deg, var(--luxury-gold), var(--luxury-bronze));
+  --gradient-gold-reverse: linear-gradient(135deg, var(--luxury-bronze), var(--luxury-gold));
+  --gradient-black: linear-gradient(135deg, var(--luxury-black), var(--luxury-black-soft));
+  --gradient-cream: linear-gradient(135deg, var(--luxury-cream), var(--luxury-pearl));
+  
+  /* ===== SHADOWS & EFFECTS ===== */
+  --shadow-luxury: 0 8px 32px rgba(212, 175, 55, 0.15);
+  --shadow-gold: 0 4px 20px rgba(212, 175, 55, 0.3);
+  --shadow-black: 0 4px 20px rgba(26, 26, 26, 0.2);
+  --text-shadow-gold: 0 2px 4px rgba(212, 175, 55, 0.3);
+}
+
+/* ===== GLOBAL LUXURY STYLING ===== */
+body {
+  background-color: var(--luxury-cream);
+  color: var(--luxury-black);
+  font-family: 'Playfair Display', 'Georgia', serif;
+  line-height: 1.7;
+}
+
+/* Enhanced typography for luxury feel */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-weight: 700;
+  color: var(--luxury-black);
+  text-shadow: var(--text-shadow-gold);
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  font-size: 3.5rem;
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== LUXURY NAVBAR ===== */
+.navbar {
+  background: var(--gradient-black) !important;
+  backdrop-filter: blur(20px);
+  border-bottom: 2px solid var(--luxury-gold);
+  box-shadow: var(--shadow-luxury);
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--luxury-gold) !important;
+  text-shadow: var(--text-shadow-gold);
+  letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link {
+  color: var(--luxury-cream) !important;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 0.75rem 1.5rem !important;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navbar-nav .nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-gold);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--luxury-gold) !important;
+  transform: translateY(-2px);
+}
+
+.navbar-nav .nav-link:hover::before {
+  width: 80%;
+}
+
+/* ===== LUXURY BUTTONS ===== */
+.btn-luxury-primary {
+  background: var(--gradient-gold);
+  border: 2px solid var(--luxury-gold);
+  color: var(--luxury-black);
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  box-shadow: var(--shadow-gold);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+.btn-luxury-primary:hover {
+  background: var(--gradient-gold-reverse);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+  color: var(--luxury-black);
+}
+
+.btn-luxury-secondary {
+  background: transparent;
+  border: 2px solid var(--luxury-gold);
+  color: var(--luxury-gold);
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+.btn-luxury-secondary:hover {
+  background: var(--gradient-gold);
+  color: var(--luxury-black);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-gold);
+}
+
+.btn-luxury-dark {
+  background: var(--gradient-black);
+  border: 2px solid var(--luxury-black);
+  color: var(--luxury-gold);
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  box-shadow: var(--shadow-black);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+.btn-luxury-dark:hover {
+  background: var(--luxury-black-soft);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(26, 26, 26, 0.3);
+  color: var(--luxury-gold);
+}
+
+/* ==========================================================================
+   FIXES FOR CONSISTENCY ISSUES
+   ========================================================================== */
+
+/* ===== BUTTON CONSISTENCY FIXES ===== */
+.btn-luxury-primary, 
+.btn-luxury-secondary {
+  height: 40px !important;
+  padding: 0.5rem 1rem !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+  border-width: 2px !important;
+  transition: all 0.3s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-decoration: none !important;
+  min-width: 100px !important;
+  max-width: none !important;
+  white-space: nowrap !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* Ensure gap between buttons is consistent */
+.d-flex.gap-2 {
+  gap: 0.75rem !important;
+}
+
+/* Fix button container to prevent overflow */
+.fruite-item .d-flex.gap-2 {
+  margin-top: 1rem;
+  padding: 0 0.25rem;
+}
+
+/* ===== CARD LAYOUT CONSISTENCY ===== */
+.fruite-item {
+  border: 2px solid var(--luxury-gold) !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  transition: all 0.3s ease !important;
+  background: white !important;
+  box-shadow: var(--shadow-luxury) !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.fruite-item:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 12px 40px rgba(212, 175, 55, 0.25) !important;
+  border-color: var(--luxury-gold-dark) !important;
+}
+
+/* Fix card content area */
+.fruite-item > div:last-child {
+  flex-grow: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 1.25rem !important;
+  background: rgba(245, 245, 220, 0.05) !important;
+}
+
+/* Ensure consistent spacing in cards */
+.fruite-item h4 {
+  font-size: 1.25rem !important;
+  margin-bottom: 0.75rem !important;
+  font-weight: 600 !important;
+  color: var(--luxury-black) !important;
+  line-height: 1.3 !important;
+}
+
+.fruite-item p {
+  font-size: 0.9rem !important;
+  line-height: 1.5 !important;
+  margin-bottom: 0.75rem !important;
+  color: var(--luxury-black) !important;
+  opacity: 0.85 !important;
+  flex-grow: 1 !important;
+}
+
+/* Fix price styling */
+.fruite-item .fs-5 {
+  font-size: 1.125rem !important;
+  font-weight: 700 !important;
+  color: var(--luxury-gold-dark) !important;
+  margin-bottom: 1rem !important;
+}
+
+/* ===== TEXT COLOR FIXES ===== */
+/* Remove blue colors and replace with luxury colors */
+.text-muted {
+  color: var(--luxury-bronze) !important;
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+}
+
+a {
+  color: var(--luxury-gold-dark) !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: var(--luxury-gold) !important;
+  text-decoration: underline !important;
+}
+
+/* Fix breadcrumb colors */
+.breadcrumb-item a {
+  color: var(--luxury-gold-dark) !important;
+}
+
+.breadcrumb-item.active {
+  color: var(--luxury-black) !important;
+}
+
+/* ===== BADGE IMPROVEMENTS ===== */
+.luxury-badge {
+  background: var(--gradient-gold) !important;
+  color: var(--luxury-black) !important;
+  font-weight: 600 !important;
+  font-size: 0.75rem !important;
+  padding: 0.4rem 0.8rem !important;
+  border-radius: 20px !important;
+  box-shadow: var(--shadow-gold) !important;
+  border: 1px solid var(--luxury-gold-dark) !important;
+}
+
+/* ===== INTERACTIVE EFFECTS ===== */
+.fruite-img {
+  overflow: hidden !important;
+  position: relative !important;
+}
+
+.fruite-img img {
+  transition: transform 0.4s ease !important;
+  border-radius: 0 !important;
+}
+
+.fruite-item:hover .fruite-img img {
+  transform: scale(1.08) !important;
+}
+
+/* Add overlay effect on hover */
+.fruite-img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(212, 175, 55, 0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.fruite-item:hover .fruite-img::after {
+  opacity: 1;
+}
+
+/* ===== NAVBAR FIXES ===== */
+.navbar {
+  background: var(--luxury-black) !important;
+  padding: 1rem 0 !important;
+  box-shadow: var(--shadow-black) !important;
+}
+
+.navbar-brand h5 {
+  margin-bottom: 0 !important;
+  font-size: 1.5rem !important;
+}
+
+.nav-link {
+  color: var(--luxury-cream) !important;
+  font-weight: 500 !important;
+  padding: 0.5rem 1rem !important;
+  transition: all 0.3s ease !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--luxury-gold) !important;
+  background: rgba(212, 175, 55, 0.1) !important;
+  border-radius: 6px !important;
+}
+
+/* Fix cart badge */
+.cart-count {
+  font-size: 0.7rem !important;
+  padding: 0.25rem 0.5rem !important;
+  border-radius: 12px !important;
+  background: var(--luxury-gold) !important;
+  color: var(--luxury-black) !important;
+  font-weight: 600 !important;
+}
+
+/* ===== FLOATING CART BUTTON FIXES ===== */
+.back-to-top {
+  position: fixed !important;
+  bottom: 2rem !important;
+  right: 2rem !important;
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 50% !important;
+  background: var(--gradient-gold) !important;
+  border: 3px solid var(--luxury-gold-dark) !important;
+  color: var(--luxury-black) !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: var(--shadow-gold) !important;
+  transition: all 0.3s ease !important;
+  z-index: 1000 !important;
+}
+
+.back-to-top:hover {
+  transform: translateY(-3px) scale(1.05) !important;
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4) !important;
+  color: var(--luxury-black) !important;
+  background: var(--gradient-gold-reverse) !important;
+}
+
+/* ===== TYPOGRAPHY CONSISTENCY ===== */
+/* Standardize all text elements */
+.fruite-item small {
+  font-size: 0.75rem !important;
+  line-height: 1.4 !important;
+  margin-bottom: 0.75rem !important;
+  display: block !important;
+}
+
+/* ===== SECTION HEADERS ===== */
+.collection {
+  color: var(--luxury-black) !important;
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 700 !important;
+  text-align: center !important;
+  margin: 3rem 0 2rem 0 !important;
+  position: relative !important;
+}
+
+.collection::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: var(--gradient-gold);
+  border-radius: 2px;
+}
+
+/* ===== RESPONSIVE IMPROVEMENTS ===== */
+@media (max-width: 768px) {
+  .fruite-item .d-flex.gap-2 {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+  }
+  
+  .btn-luxury-primary,
+  .btn-luxury-secondary {
+    width: 100% !important;
+    min-width: auto !important;
+  }
+  
+  .back-to-top {
+    width: 50px !important;
+    height: 50px !important;
+    bottom: 1rem !important;
+    right: 1rem !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .cart-summary-card {
+    margin: 0 10px;
+  }
+}
+
+/* ===== LANGUAGE CONSISTENCY ===== */
+/* Style for mixed language content */
+.product-features {
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* ===== STOCK STATUS INDICATOR ===== */
+.stock-status {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.stock-available {
+  background: #22c55e;
+  color: white;
+}
+
+.stock-low {
+  background: #f59e0b;
+  color: white;
+}
+
+.stock-out {
+  background: #ef4444;
+  color: white;
+}
+
+.product-disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.product-disabled .btn {
+  background: #6b7280 !important;
+  border-color: #6b7280 !important;
+  cursor: not-allowed !important;
+}
+
+/* ===== PRINT STYLES FOR LUXURY THEME ===== */
+@media print {
+  .navbar, .footer, .btn, .modal {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .product-card {
+    border: 1px solid #ddd !important;
+    box-shadow: none !important;
+    background: white !important;
+  }
+}
+
+/* ===== COMPLETE OVERRIDE OF BOOTSTRAP PRIMARY COLORS ===== */
+/* Override Bootstrap CSS variables to use luxury theme */
+:root {
+  --bs-primary: var(--luxury-gold) !important;
+  --bs-primary-rgb: 212, 175, 55 !important;
+  --bs-secondary: var(--luxury-bronze) !important;
+  --bs-dark: var(--luxury-black) !important;
+  --bs-light: var(--luxury-cream) !important;
+}
+
+/* Selective override only for buttons and specific elements */
+.btn-primary:not(.btn-luxury-primary):not(.btn-luxury-secondary) {
+  background: var(--gradient-gold) !important;
+  border: 2px solid var(--luxury-gold) !important;
+  color: var(--luxury-black) !important;
+}
+
+.btn-primary:not(.btn-luxury-primary):not(.btn-luxury-secondary):hover,
+.btn-primary:not(.btn-luxury-primary):not(.btn-luxury-secondary):focus,
+.btn-primary:not(.btn-luxury-primary):not(.btn-luxury-secondary):active {
+  background: var(--gradient-gold-reverse) !important;
+  border-color: var(--luxury-gold-dark) !important;
+  color: var(--luxury-black) !important;
+}
+
+/* Remove any blue color references */
+.text-info,
+.btn-info,
+.bg-info {
+  color: var(--luxury-bronze) !important;
+  background: var(--luxury-champagne) !important;
+  border-color: var(--luxury-bronze) !important;
+}
+
+/* Ensure breadcrumb doesn't use blue */
+.breadcrumb-item + .breadcrumb-item::before {
+  color: var(--luxury-gold) !important;
+}
+
+/* Override any remaining blue elements */
+a,
+a:hover,
+a:focus {
+  color: var(--luxury-gold-dark) !important;
+}
+
+/* Modal header fixes */
+.modal-header.luxury-badge {
+  background: var(--gradient-gold) !important;
+  color: var(--luxury-black) !important;
+}
+
+.modal-header.luxury-badge .modal-title {
+  color: var(--luxury-black) !important;
+  font-weight: 600 !important;
+}
+
+/* Success modal override */
+.modal-header.bg-success {
+  background: var(--gradient-gold) !important;
+  color: var(--luxury-black) !important;
+}
+
+/* Button overrides for all variants */
+.btn-outline-primary {
+  color: var(--luxury-gold) !important;
+  border-color: var(--luxury-gold) !important;
+  background: transparent !important;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+  background: var(--luxury-gold) !important;
+  border-color: var(--luxury-gold) !important;
+  color: var(--luxury-black) !important;
+}
+
+/* Navbar toggler */
+.navbar-toggler {
+  border-color: var(--luxury-gold) !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25) !important;
+}
+
+/* Alert overrides */
+.alert-success {
+  background: var(--luxury-champagne) !important;
+  border-color: var(--luxury-gold) !important;
+  color: var(--luxury-black) !important;
+}
+
+/* Progress bar override */
+.progress-bar {
+  background: var(--gradient-gold) !important;
+}
+
+/* Pagination override */
+.page-link {
+  color: var(--luxury-gold) !important;
+  background: var(--luxury-cream) !important;
+  border-color: var(--luxury-gold) !important;
+}
+
+.page-link:hover {
+  color: var(--luxury-black) !important;
+  background: var(--luxury-gold) !important;
+  border-color: var(--luxury-gold) !important;
+}
+
+/* ===== SCROLL NAVBAR FIXES ===== */
+/* Override any JavaScript-based navbar color changes */
+.navbar.scrolled {
+  background: var(--gradient-black) !important;
+  backdrop-filter: blur(20px) !important;
+  border-bottom: 2px solid var(--luxury-gold) !important;
+  box-shadow: var(--shadow-black) !important;
+}
+
+.navbar.scrolled .navbar-brand,
+.navbar.scrolled .navbar-brand h5 {
+  color: var(--luxury-gold) !important;
+}
+
+.navbar.scrolled .nav-link {
+  color: var(--luxury-cream) !important;
+}
+
+.navbar.scrolled .nav-link:hover,
+.navbar.scrolled .nav-link.active {
+  color: var(--luxury-gold) !important;
+  background: rgba(212, 175, 55, 0.1) !important;
+}
+
+/* Force override any blue colors that might appear */
+.navbar,
+.navbar.scrolled,
+.navbar-dark,
+.navbar-expand-lg {
+  background: var(--gradient-black) !important;
+  border-color: var(--luxury-gold) !important;
+}
+
+/* Override focus states */
+.form-control:focus,
+.btn:focus,
+*:focus {
+  outline: 2px solid var(--luxury-gold) !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25) !important;
+  border-color: var(--luxury-gold) !important;
+}
+
+/* Additional overrides for any missed blue elements */
+.text-info {
+  color: var(--luxury-bronze) !important;
+}
+
+.bg-info {
+  background: var(--luxury-champagne) !important;
+}
+
+.border-info {
+  border-color: var(--luxury-bronze) !important;
+}
+
+.link-primary {
+  color: var(--luxury-gold-dark) !important;
+}
+
+.link-primary:hover {
+  color: var(--luxury-gold) !important;
+}
+
+/* Table striped override */
+.table-striped > tbody > tr:nth-of-type(odd) > td,
+.table-striped > tbody > tr:nth-of-type(odd) > th {
+  background-color: rgba(212, 175, 55, 0.05) !important;
+}
+
+/* Dropdown menu override */
+.dropdown-menu {
+  background: var(--luxury-cream) !important;
+  border: 2px solid var(--luxury-gold) !important;
+  box-shadow: var(--shadow-luxury) !important;
+}
+
+.dropdown-item {
+  color: var(--luxury-black) !important;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background: var(--luxury-gold) !important;
+  color: var(--luxury-black) !important;
+}
+
+/* ==========================================================================
+   GLOBAL BLUE COLOR ELIMINATION
+   ========================================================================== */
+
+/* Override ALL possible blue color variables and classes */
+:root {
+  /* Override Bootstrap blue variables */
+  --bs-blue: var(--luxury-gold) !important;
+  --primary-blue: var(--luxury-gold) !important;
+  --secondary-blue: var(--luxury-bronze) !important;
+  --light-blue: var(--luxury-cream) !important;
+  --dark-blue: var(--luxury-gold-dark) !important;
+  --accent-blue: var(--luxury-bronze) !important;
+}
+
+/* Force override any blue color usage */
+.text-blue,
+.bg-blue,
+.border-blue,
+.btn-blue {
+  color: var(--luxury-gold) !important;
+  background-color: var(--luxury-gold) !important;
+  border-color: var(--luxury-gold) !important;
+}
+
+/* ===== PREMIUM LUXURY BALANCE ===== */
+/* Menyeimbangkan penggunaan warna untuk kesan premium yang elegan */
+
+/* Background body tetap luxury cream yang lembut */
+body {
+  background-color: var(--luxury-cream) !important;
+  color: var(--luxury-black) !important;
+}
+
+/* Card produk dengan background putih bersih */
+.fruite-item {
+  background: white !important;
+  border: 1px solid rgba(212, 175, 55, 0.3) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.fruite-item:hover {
+  border-color: var(--luxury-gold) !important;
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.2) !important;
+  transform: translateY(-4px) !important;
+}
+
+/* Text dengan kontras yang baik */
+.fruite-item h4 {
+  color: var(--luxury-black) !important;
+  font-weight: 600 !important;
+}
+
+.fruite-item p {
+  color: rgba(26, 26, 26, 0.8) !important;
+}
+
+/* Price dengan aksen emas yang subtle */
+.fruite-item .fs-5 {
+  color: var(--luxury-gold-dark) !important;
+  font-weight: 700 !important;
+}
+
+/* Badge dengan styling premium */
+.luxury-badge {
+  background: linear-gradient(135deg, var(--luxury-gold), var(--luxury-bronze)) !important;
+  color: var(--luxury-black) !important;
+  font-weight: 600 !important;
+  border: none !important;
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3) !important;
+}
+
+/* ===== ELEGANT NAVBAR STYLING ===== */
+/* Navbar dengan kesan premium yang elegan, tidak terlalu dominan */
+
+.navbar {
+  background: rgba(26, 26, 26, 0.95) !important;
+  backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3) !important;
+}
+
+.navbar.scrolled {
+  background: rgba(26, 26, 26, 0.98) !important;
+  border-bottom: 2px solid var(--luxury-gold) !important;
+  box-shadow: 0 4px 20px rgba(26, 26, 26, 0.2) !important;
+}
+
+.navbar-brand h5 {
+  color: var(--luxury-gold) !important;
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 700 !important;
+}
+
+.nav-link {
+  color: var(--luxury-cream) !important;
+  font-weight: 500 !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--luxury-gold) !important;
+}
+
+.navbar-brand,
+.navbar-brand h5 {
+  color: var(--luxury-gold) !important;
+}
+
+/* Complete override of any remaining primary colors */
+.primary,
+.text-primary,
+.bg-primary,
+.border-primary,
+.btn-primary,
+[class*="primary"] {
+  color: var(--luxury-gold) !important;
+  background: var(--gradient-gold) !important;
+  border-color: var(--luxury-gold) !important;
+}
+
+/* Ensure forms don't use blue */
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+  border-color: var(--luxury-gold) !important;
+  box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25) !important;
+}
+
+/* Override any CSS custom properties that might be set by JavaScript */
+.navbar[style*="background-color"],
+.navbar[style*="rgba(0, 123, 255"],
+.navbar[style*="#007bff"] {
+  background: var(--gradient-black) !important;
+}
+
+/* Force important on navbar scroll state */
+.navbar.scrolled[style] {
+  background: var(--gradient-black) !important;
+  border-bottom: 2px solid var(--luxury-gold) !important;
+}
+
+/* ===== NAVBAR CONTAINER SCROLL FIX ===== */
+/* Memastikan container navbar tidak berubah jadi biru saat scroll */
+.container-fluid.fixed-top {
+  background: var(--luxury-black) !important;
+  transition: all 0.3s ease !important;
+}
+
+.container-fluid.fixed-top.scrolled,
+.container-fluid.fixed-top.navbar-shrink {
+  background: var(--gradient-black) !important;
+  box-shadow: var(--shadow-black) !important;
+  border-bottom: 2px solid var(--luxury-gold) !important;
+}
+
+/* Force override any Bootstrap primary colors on navbar */
+.navbar,
+.navbar * {
+  background-color: transparent !important;
+}
+
+.navbar.bg-primary,
+.navbar .bg-primary {
+  background: var(--gradient-black) !important;
+}
+
+/* Ensure navbar brand text stays gold */
+.navbar-brand,
+.navbar-brand h5,
+.maison-du-croissant {
+  color: var(--luxury-gold) !important;
+  background: transparent !important;
+}
+
+/* Override Bootstrap navbar-dark background */
+.navbar-dark {
+  background: transparent !important;
+}
+
+/* Global override for any primary color usage */
+*[style*="background-color: #007bff"],
+*[style*="background-color: #0d6efd"],
+*[style*="background: #007bff"],
+*[style*="background: #0d6efd"] {
+  background: var(--gradient-black) !important;
+}
+
+/* ===== SELECTIVE NAVBAR BLUE OVERRIDE ===== */
+/* Hanya menargetkan navbar untuk menghindari override terlalu agresif */
+
+/* Navbar container override - hanya untuk navbar */
+.navbar.bg-primary,
+.navbar .bg-primary,
+.navbar[style*="blue"],
+.navbar[style*="#007bff"],
+.navbar[style*="#0d6efd"] {
+  background: var(--gradient-black) !important;
+  background-color: var(--luxury-black) !important;
+}
+
+/* Container navbar yang spesifik */
+.container-fluid.fixed-top {
+  background: var(--luxury-black) !important;
+}
+
+.container-fluid.fixed-top.scrolled {
+  background: var(--gradient-black) !important;
+  border-bottom: 2px solid var(--luxury-gold) !important;
+  box-shadow: var(--shadow-black) !important;
+}
+
+/* Navbar brand harus tetap emas */
+.navbar-brand,
+.navbar-brand *,
+.maison-du-croissant {
+  color: var(--luxury-gold) !important;
+  background: transparent !important;
+}
+
+/* ===== CLEAN NAVBAR SCROLL STYLING ===== */
+/* Styling yang bersih untuk navbar saat scroll */
+
+.container-fluid.fixed-top {
+  background: var(--luxury-black) !important;
+  transition: all 0.3s ease !important;
+}
+
+.container-fluid.fixed-top.scrolled {
+  background: var(--gradient-black) !important;
+  border-bottom: 2px solid var(--luxury-gold) !important;
+  box-shadow: var(--shadow-black) !important;
+}
+
+/* Navbar tetap transparan */
+.navbar.navbar-expand-lg.navbar-dark {
+  background: transparent !important;
+}
+
+/* Brand text tetap emas */
+.navbar-brand h5.maison-du-croissant,
+.maison-du-croissant {
+  color: var(--luxury-gold) !important;
+  background: transparent !important;
+}
+
+/* ==========================================================================
+   PREMIUM COLOR BALANCE & HIERARCHY
+   Menyeimbangkan penggunaan warna untuk kesan premium yang tidak berlebihan
+   ========================================================================== */
+
+/* ===== BACKGROUND HIERARCHY ===== */
+/* Background utama: Luxury cream yang lembut */
+body {
+  background-color: var(--luxury-cream) !important;
+}
+
+/* Container sections: Tetap cream */
+.container,
+.container-fluid:not(.fixed-top) {
+  background: transparent !important;
+}
+
+/* Cards: White bersih dengan aksen emas minimal */
+.card,
+.fruite-item {
+  background: white !important;
+  border: 1px solid rgba(212, 175, 55, 0.2) !important;
+}
+
+/* ===== TEXT HIERARCHY ===== */
+/* Primary text: Black untuk readability */
+h1, h2, h3, h4, h5, h6,
+.fruite-item h4,
+.fruite-item p {
+  color: var(--luxury-black) !important;
+}
+
+/* Accent text: Gold hanya untuk elemen penting */
+.navbar-brand,
+.navbar-brand h5,
+.price,
+.fruite-item .fs-5 {
+  color: var(--luxury-gold) !important;
+}
+
+/* Secondary text: Muted black */
+.text-secondary,
+.text-muted {
+  color: rgba(26, 26, 26, 0.7) !important;
+}
+
+/* ===== BUTTON HIERARCHY ===== */
+/* Primary buttons: Gold gradient hanya untuk CTA utama */
+.btn-luxury-primary {
+  background: linear-gradient(135deg, var(--luxury-gold), var(--luxury-bronze)) !important;
+  color: var(--luxury-black) !important;
+  border: 2px solid var(--luxury-gold) !important;
+}
+
+/* Secondary buttons: Outline style untuk aksi sekunder */
+.btn-luxury-secondary {
+  background: transparent !important;
+  color: var(--luxury-gold) !important;
+  border: 2px solid var(--luxury-gold) !important;
+}
+
+/* ===== MINIMAL GOLD ACCENTS ===== */
+/* Gold hanya digunakan untuk: */
+/* - Navbar brand */
+/* - Price tags */
+/* - Borders on hover */
+/* - Primary buttons */
+/* - Focus states */
+
+/* Hover states dengan aksen emas subtle */
+.fruite-item:hover {
+  border-color: var(--luxury-gold) !important;
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.15) !important;
+}
+
+/* Focus states */
+*:focus {
+  outline: 2px solid var(--luxury-gold) !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25) !important;
+}
+
+/* ===== FOOTER CONSISTENCY & CONTRAST ===== */
+/* Memastikan footer memiliki background gelap yang konsisten dan kontras text yang baik */
+
+.footer {
+  background: var(--luxury-black) !important;
+  color: var(--luxury-cream) !important;
+}
+
+.footer h1,
+.footer h4 {
+  color: var(--luxury-gold) !important;
+  font-family: 'Playfair Display', serif !important;
+}
+
+.footer p,
+.footer span {
+  color: var(--luxury-cream) !important;
+  opacity: 0.9 !important;
+}
+
+.footer a {
+  color: var(--luxury-gold) !important;
+  text-decoration: none !important;
+}
+
+.footer a:hover {
+  color: var(--luxury-gold-light) !important;
+}
+
+.footer .btn {
+  border: 2px solid var(--luxury-gold) !important;
+  color: var(--luxury-gold) !important;
+  background: transparent !important;
+}
+
+.footer .btn:hover {
+  background: var(--luxury-gold) !important;
+  color: var(--luxury-black) !important;
+}
+
+/* Copyright section styling */
+.copyright,
+.container-fluid[style*="border-top"] {
+  background: var(--luxury-black) !important;
+  border-top: 1px solid var(--luxury-gold) !important;
+}
+
+/* Ensure all footer text is readable against dark background */
+.footer *,
+.copyright * {
+  text-shadow: none !important;
+}
+
+.footer i {
+  color: var(--luxury-gold) !important;
+}
+
+/* Cart Table Improvements */
+.table-luxury {
+  border: 2px solid var(--luxury-gold);
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 8px 25px rgba(218, 165, 32, 0.15);
+}
+
+.table-luxury thead th {
+  background: var(--luxury-gold);
+  color: var(--luxury-black);
+  border: none;
+  padding: 1rem 0.75rem;
+  font-weight: 600;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table-luxury tbody td {
+  border: none;
+  border-bottom: 1px solid rgba(218, 165, 32, 0.2);
+  padding: 1.25rem 0.75rem;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.table-luxury tbody tr:hover {
+  background: rgba(218, 165, 32, 0.05);
+}
+
+.table-luxury tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Input Group Improvements */
+.table-luxury .input-group {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-luxury .input-group .btn {
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.table-luxury .input-group .btn:hover {
+  background: var(--luxury-black) !important;
+  border-color: var(--luxury-black) !important;
+  color: var(--luxury-gold) !important;
+  transform: scale(1.05);
+}
+
+.table-luxury .input-group .form-control {
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--luxury-black);
+}
+
+/* Remove Button Improvements */
+.table-luxury .btn[title="Hapus item"] {
+  transition: all 0.3s ease;
+}
+
+.table-luxury .btn[title="Hapus item"]:hover {
+  background: #b91c2c !important;
+  border-color: #b91c2c !important;
+  transform: scale(1.1);
+}
+
+/* Product Image Improvements */
+.table-luxury img {
+  border: 2px solid var(--luxury-gold);
+  transition: all 0.3s ease;
+}
+
+.table-luxury img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(218, 165, 32, 0.3);
+}
+
+/* Cart Summary Improvements */
+.cart-summary-card {
+  background: linear-gradient(135deg, #faf8f3 0%, #f5f0e8 100%);
+  border: 2px solid var(--luxury-gold);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(218, 165, 32, 0.2);
+  overflow: hidden;
+}
+
+/* Cart Page Layout Improvements */
+.cart-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-content {
+  flex: 1;
+}
+
+/* Table Container */
+.table-responsive {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(218, 165, 32, 0.15);
+  background: white;
+  border: 2px solid var(--luxury-gold);
+}
+
+/* Table Scroll Behavior */
+.table-responsive::-webkit-scrollbar {
+  height: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  background: var(--luxury-cream);
+  border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background: var(--luxury-gold);
+  border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+  background: var(--luxury-black);
+}
+
+/* Smooth Animations */
+.table-luxury tbody tr {
+  transition: all 0.3s ease;
+}
+
+.table-luxury .btn,
+.table-luxury .form-control {
+  transition: all 0.3s ease;
+}
+
+/* Cart Summary Position Fix */
+.cart-summary-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+/* Product Name Typography */
+.table-luxury .product-name {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  color: var(--luxury-black);
+  font-size: 1.1rem;
+}
+
+/* Price Typography */
+.table-luxury .price-text {
+  font-weight: 700;
+  color: var(--luxury-gold);
+  font-size: 1.1rem;
+}
+
+/* Loading State */
+.loading-cart {
+  text-align: center;
+  padding: 3rem;
+  color: var(--luxury-black);
+}
+
+.loading-cart .spinner-luxury {
+  width: 50px;
+  height: 50px;
+  border: 4px solid var(--luxury-cream);
+  border-left: 4px solid var(--luxury-gold);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Alert/Toast Improvements */
+.alert-luxury-success {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 2px solid var(--luxury-gold);
+  color: var(--luxury-black);
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(218, 165, 32, 0.3);
+  animation: slideInDown 0.5s ease-out;
+}
+
+.alert-luxury-info {
+  background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+  border: 2px solid var(--luxury-gold);
+  color: var(--luxury-black);
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(218, 165, 32, 0.3);
+  animation: slideInDown 0.5s ease-out;
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translate(-50%, -100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+/* Back to Top Button Position Fix */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--luxury-gold);
+  border: 2px solid var(--luxury-gold);
+  color: var(--luxury-black);
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(218, 165, 32, 0.4);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.back-to-top:hover {
+  background: var(--luxury-black);
+  border-color: var(--luxury-black);
+  color: var(--luxury-gold);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Cart Summary Button Fixes */
+.cart-summary-card .btn {
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 12px 20px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+}
+
+.cart-summary-card .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cart-summary-card .btn-luxury-primary {
+  background: var(--luxury-gold);
+  border: 2px solid var(--luxury-gold);
+  color: var(--luxury-black);
+}
+
+.cart-summary-card .btn-luxury-primary:hover {
+  background: var(--luxury-black);
+  border-color: var(--luxury-black);
+  color: var(--luxury-gold);
+}
+
+.cart-summary-card .btn-luxury-secondary {
+  background: transparent;
+  border: 2px solid var(--luxury-gold);
+  color: var(--luxury-gold);
+}
+
+.cart-summary-card .btn-luxury-secondary:hover {
+  background: var(--luxury-gold);
+  border-color: var(--luxury-gold);
+  color: var(--luxury-black);
+}
+
+/* Cart Summary Container Padding */
+.cart-summary-card .px-4 {
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+.cart-summary-card .pb-4 {
+  padding-bottom: 1.5rem !important;
+}
+
+/* Responsive Button Fixes */
+@media (max-width: 768px) {
+  .cart-summary-card .btn {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+  
+  .cart-summary-card .px-4 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .cart-summary-card .btn {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+  
+  .cart-summary-card {
+    margin: 0 10px;
+  }
+}
+
+/* Hero Section Compact */
+.hero-section {
+  background: linear-gradient(135deg, var(--luxury-cream) 0%, #f8f6f0 100%);
+  border-bottom: 2px solid var(--luxury-gold);
+  margin-top: 80px; /* Account for fixed navbar */
+}
+
+.hero-content {
+  padding: 1rem 0;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: var(--luxury-black);
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero-subtitle {
+  color: var(--luxury-black);
+  opacity: 0.8;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+/* Cart Page Spacing */
+.cart-content {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+}
+
+.cart-content .container {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+/* Responsive Hero */
+@media (max-width: 768px) {
+  .hero-section {
+    margin-top: 70px;
+  }
+  
+  .hero-title {
+    font-size: 2rem !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    margin-top: 60px;
+  }
+  
+  .hero-title {
+    font-size: 1.75rem !important;
+  }
+}

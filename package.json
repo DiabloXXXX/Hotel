@@ -1,0 +1,25 @@
+{
+  "name": "hotel-senang-hati",
+  "version": "1.0.0",
+  "description": "Hotel management system with booking and reservation features for Hotel Senang Hati",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 3000 -o",
+    "dev": "npx live-server --port=3000 --open=/index.html",
+    "build": "gulp build",
+    "watch": "gulp watch",
+    "deploy": "vercel --prod",
+    "vercel-dev": "vercel dev"
+  },
+  "keywords": ["hotel", "booking", "reservation", "hospitality", "management", "luxury"],
+  "author": "Hotel Senang Hati",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^5.0.0",
+    "vercel-php": "^0.6.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2"
+  }
+}

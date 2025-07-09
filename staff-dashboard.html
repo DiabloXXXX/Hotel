@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8" />
+    <title>Staff Dashboard - Hotel Senang Hati</title>
+    <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
+    
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&family=Playfair+Display:wght@400;600;700;900&display=swap" rel="stylesheet" />
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/luxury-theme.css" rel="stylesheet" />
+    <link href="css/premium-clean.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navbar start -->
+    <div class="container-fluid fixed-top" style="background: var(--luxury-black);">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a href="index.html" class="navbar-brand">
+                    <h5 class="mb-0" style="color: var(--luxury-gold); font-family: 'Playfair Display', serif;">
+                        Hotel Senang Hati
+                    </h5>
+                </a>
+                
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="#" onclick="logout()">
+                        <i class="fas fa-sign-out-alt me-1"></i>Logout
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Dashboard Start -->
+    <div class="container-fluid pt-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="mb-4" style="color: var(--luxury-black); font-family: 'Playfair Display', serif;">
+                        Dashboard Petugas Front-Desk
+                    </h2>
+                </div>
+            </div>
+
+            <!-- Summary Cards -->
+            <div class="row mb-4">
+                <div class="col-md-3">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-calendar-check fa-2x mb-2" style="color: var(--luxury-gold);"></i>
+                            <h5>Check-in Hari Ini</h5>
+                            <h3 id="todayCheckin">12</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-calendar-times fa-2x mb-2" style="color: var(--luxury-gold);"></i>
+                            <h5>Check-out Hari Ini</h5>
+                            <h3 id="todayCheckout">8</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-bed fa-2x mb-2" style="color: var(--luxury-gold);"></i>
+                            <h5>Kamar Tersedia</h5>
+                            <h3 id="availableRooms">23</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-users fa-2x mb-2" style="color: var(--luxury-gold);"></i>
+                            <h5>Total Tamu</h5>
+                            <h3 id="totalGuests">45</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="row mb-4">
+                <div class="col-md-3 mb-3">
+                    <a href="manage-reservations.html" class="btn btn-luxury-primary w-100 p-3">
+                        <i class="fas fa-clipboard-list fa-2x mb-2 d-block"></i>
+                        Manage Reservations
+                    </a>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <a href="manage-rooms.html" class="btn btn-luxury-primary w-100 p-3">
+                        <i class="fas fa-door-open fa-2x mb-2 d-block"></i>
+                        Manage Rooms
+                    </a>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <a href="manage-guests.html" class="btn btn-luxury-primary w-100 p-3">
+                        <i class="fas fa-user-friends fa-2x mb-2 d-block"></i>
+                        Manage Guests
+                    </a>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <a href="reports.html" class="btn btn-luxury-primary w-100 p-3">
+                        <i class="fas fa-chart-bar fa-2x mb-2 d-block"></i>
+                        Reports & Analytics
+                    </a>
+                </div>
+            </div>
+
+            <!-- Recent Activities -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header bg-white">
+                            <h5 class="mb-0">Recent Activities</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Time</th>
+                                            <th>Activity</th>
+                                            <th>Guest</th>
+                                            <th>Room</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="recentActivities">
+                                        <tr>
+                                            <td>10:30</td>
+                                            <td>Check-in</td>
+                                            <td>John Doe</td>
+                                            <td>101 - Deluxe</td>
+                                            <td><span class="badge bg-success">Completed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>09:15</td>
+                                            <td>New Reservation</td>
+                                            <td>Jane Smith</td>
+                                            <td>205 - Suite</td>
+                                            <td><span class="badge bg-info">Confirmed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>08:45</td>
+                                            <td>Check-out</td>
+                                            <td>Robert Johnson</td>
+                                            <td>150 - Standard</td>
+                                            <td><span class="badge bg-success">Selesai</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Dashboard End -->
+
+    <!-- Standardized Heading and Text Styles -->
+    <style>
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+        color: var(--primary-gold);
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+      .section-title, .display-4, .display-6 {
+        font-family: 'Playfair Display', serif;
+        color: var(--primary-gold);
+        font-weight: 700;
+      }
+      .lead, p, .section-fade, .hero-subtitle, .footer-desc, .footer-contact, .footer-social, .room-features, .amenity-features, .event-features {
+        font-family: 'Open Sans', sans-serif;
+        color: var(--primary-dark);
+        font-size: 1.08rem;
+        font-weight: 400;
+      }
+      .premium-navbar, .premium-footer, .footer-logo, .footer-desc h2 {
+        font-family: 'Playfair Display', serif;
+        color: var(--primary-gold);
+      }
+      .btn-luxury-primary, .btn-luxury-secondary {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+      }
+      .luxury-badge {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.05rem;
+        font-weight: 600;
+      }
+    </style>
+    <!-- End Standardized Heading and Text Styles -->
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Global variables
+        let staffData = null;
+        
+        // Check authentication on page load
+        async function checkAuth() {
+            if (!sessionStorage.getItem('staffLoggedIn')) {
+                window.location.href = 'staff-login.html';
+                return;
+            }
+            
+            try {
+                const response = await fetch('api/auth/check.php');
+                const data = await response.json();
+                
+                if (!data.success) {
+                    sessionStorage.removeItem('staffLoggedIn');
+                    sessionStorage.removeItem('staffData');
+                    window.location.href = 'staff-login.html';
+                    return;
+                }
+                
+                staffData = data.data;
+                updateUserInfo();
+                loadDashboardData();
+                
+            } catch (error) {
+                console.error('Auth check error:', error);
+                showNotification('Terjadi kesalahan koneksi', 'error');
+            }
+        }
+        
+        // Update user info in navbar
+        function updateUserInfo() {
+            if (staffData) {
+                // Update navbar with user info
+                const navbar = document.querySelector('.navbar-nav');
+                navbar.innerHTML = `
+                    <span class="navbar-text me-3">
+                        <i class="fas fa-user me-1"></i>
+                        ${staffData.full_name} (${staffData.role})
+                    </span>
+                    <a class="nav-link" href="#" onclick="logout()">
+                        <i class="fas fa-sign-out-alt me-1"></i>Logout
+                    </a>
+                `;
+            }
+        }
+        
+        // Load dashboard statistics (demo data)
+        async function loadDashboardData() {
+            try {
+                showLoading(true);
+                
+                // Gunakan data demo untuk sementara
+                const demoData = {
+                    total_rooms: 45,
+                    available_rooms: 28,
+                    occupied_rooms: 15,
+                    maintenance_rooms: 2,
+                    total_reservations: 156,
+                    pending_reservations: 8,
+                    confirmed_reservations: 12,
+                    checkin_today: 5,
+                    checkout_today: 7,
+                    total_guests: 289,
+                    monthly_revenue: 450000000,
+                    recent_reservations: [
+                        {
+                            id: 1,
+                            guest_name: 'John Doe',
+                            room_number: '101',
+                            check_in: '2024-01-15',
+                            check_out: '2024-01-18',
+                            status: 'confirmed',
+                            total_amount: 2500000
+                        },
+                        {
+                            id: 2,
+                            guest_name: 'Jane Smith',
+                            room_number: '205',
+                            check_in: '2024-01-16',
+                            check_out: '2024-01-20',
+                            status: 'pending',
+                            total_amount: 3200000
+                        },
+                        {
+                            id: 3,
+                            guest_name: 'Ahmad Rahman',
+                            room_number: '301',
+                            check_in: '2024-01-17',
+                            check_out: '2024-01-19',
+                            status: 'confirmed',
+                            total_amount: 1800000
+                        }
+                    ]
+                };
+                
+                updateDashboardStats(demoData);
+                updateRecentReservations(demoData.recent_reservations);
+                
+            } catch (error) {
+                console.error('Dashboard data error:', error);
+                showNotification('Terjadi kesalahan saat memuat data', 'error');
+            } finally {
+                showLoading(false);
+            }
+        }
+        
+        // Update dashboard statistics
+        function updateDashboardStats(stats) {
+            const overview = stats.overview;
+            
+            // Update summary cards
+            document.getElementById('todayCheckin').textContent = overview.todays_checkins;
+            document.getElementById('todayCheckout').textContent = overview.todays_checkouts;
+            document.getElementById('availableRooms').textContent = overview.available_rooms;
+            document.getElementById('totalGuests').textContent = overview.occupied_rooms;
+            
+            // Update occupancy rate if element exists
+            const occupancyElement = document.getElementById('occupancyRate');
+            if (occupancyElement) {
+                occupancyElement.textContent = overview.occupancy_rate + '%';
+            }
+            
+            // Update monthly revenue if element exists
+            const revenueElement = document.getElementById('monthlyRevenue');
+            if (revenueElement) {
+                revenueElement.textContent = 'Rp ' + formatNumber(overview.monthly_revenue);
+            }
+        }
+        
+        // Update recent reservations table
+        function updateRecentReservations(reservations) {
+            const tableBody = document.getElementById('recentReservationsTable');
+            if (!tableBody) return;
+            
+            if (reservations.length === 0) {
+                tableBody.innerHTML = `
+                    <tr>
+                        <td colspan="6" class="text-center text-muted">
+                            Tidak ada reservasi terbaru
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+            
+            tableBody.innerHTML = reservations.map(reservation => `
+                <tr>
+                    <td><strong>${reservation.reservation_code}</strong></td>
+                    <td>${reservation.guest_name}</td>
+                    <td>${reservation.room_number} (${reservation.room_type})</td>
+                    <td>${formatDate(reservation.check_in_date)}</td>
+                    <td>${formatDate(reservation.check_out_date)}</td>
+                    <td>
+                        <span class="badge bg-${getStatusBadgeClass(reservation.status)}">
+                            ${getStatusText(reservation.status)}
+                        </span>
+                    </td>
+                </tr>
+            `).join('');
+        }
+        
+        // Logout function
+        async function logout() {
+            if (!confirm('Yakin ingin logout?')) return;
+            
+            try {
+                await fetch('api/auth/logout.php', { method: 'POST' });
+            } catch (error) {
+                console.error('Logout error:', error);
+            } finally {
+                sessionStorage.removeItem('staffLoggedIn');
+                sessionStorage.removeItem('staffData');
+                window.location.href = 'staff-login.html';
+            }
+        }
+        
+        // Utility functions
+        function formatNumber(number) {
+            return new Intl.NumberFormat('id-ID').format(number);
+        }
+        
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('id-ID', {
+                day: '2-digit',
+                month: 'short',
+                year: 'numeric'
+            });
+        }
+        
+        function getStatusBadgeClass(status) {
+            const statusMap = {
+                'pending': 'warning',
+                'confirmed': 'success',
+                'checked_in': 'primary',
+                'checked_out': 'info',
+                'cancelled': 'danger',
+                'no_show': 'secondary'
+            };
+            return statusMap[status] || 'secondary';
+        }
+        
+        function getStatusText(status) {
+            const statusMap = {
+                'pending': 'Menunggu',
+                'confirmed': 'Terkonfirmasi',
+                'checked_in': 'Check-in',
+                'checked_out': 'Check-out',
+                'cancelled': 'Dibatalkan',
+                'no_show': 'Tidak Hadir'
+            };
+            return statusMap[status] || status;
+        }
+        
+        function showLoading(show) {
+            const loadingElements = document.querySelectorAll('.loading-spinner');
+            loadingElements.forEach(el => {
+                if (show) {
+                    el.classList.remove('d-none');
+                } else {
+                    el.classList.add('d-none');
+                }
+            });
+        }
+        
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `alert alert-${type === 'error' ? 'danger' : 'success'} position-fixed`;
+            notification.style.cssText = 'top: 20px; right: 20px; z-index: 9999; min-width: 300px;';
+            notification.innerHTML = `
+                <i class="fas fa-${type === 'error' ? 'exclamation-circle' : 'check-circle'} me-2"></i>
+                ${message}
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 5000);
+        }
+        
+        // Auto-refresh dashboard every 5 minutes
+        setInterval(loadDashboardData, 300000);
+        
+        // Initialize dashboard
+        document.addEventListener('DOMContentLoaded', checkAuth);
+    </script>
+</body>
+</html>

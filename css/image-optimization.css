@@ -1,0 +1,345 @@
+/* =============================================================
+   AUTOMATIC IMAGE RESIZE & OPTIMIZATION
+   Hotel Senang Hati - Image Management System
+   ============================================================= */
+
+/* Base Image Optimization */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Lazy Loading Support */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+}
+
+/* =============================================================
+   ROOM IMAGES - Automatic Resize
+   ============================================================= */
+
+/* Room Cards on Homepage */
+.hotel-room-item .room-img img,
+.fruite-item .fruite-img img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px 8px 0 0;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.hotel-room-item:hover .room-img img,
+.fruite-item:hover .fruite-img img {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Room Detail Pages */
+.room-detail-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Room Gallery Images */
+.room-gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.room-gallery img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* =============================================================
+   AMENITY IMAGES - Automatic Resize
+   ============================================================= */
+
+/* Amenity Cards */
+.amenity-item .amenity-img img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Feature Images */
+.feature-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+}
+
+/* =============================================================
+   HERO & BANNER IMAGES - Automatic Resize
+   ============================================================= */
+
+/* Hero Background Images */
+.hero-section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 60vh;
+}
+
+/* Banner Images */
+.banner-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 15px;
+}
+
+/* =============================================================
+   AVATAR & PROFILE IMAGES - Automatic Resize
+   ============================================================= */
+
+/* User Avatars */
+.avatar-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 3px solid var(--luxury-gold);
+}
+
+.avatar-large {
+  width: 120px;
+  height: 120px;
+}
+
+.avatar-small {
+  width: 40px;
+  height: 40px;
+  border-width: 2px;
+}
+
+/* Staff Profile Images */
+.staff-profile-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 4px solid var(--luxury-gold);
+}
+
+/* =============================================================
+   TESTIMONIAL IMAGES - Automatic Resize
+   ============================================================= */
+
+.testimonial-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 3px solid var(--luxury-cream);
+  margin: 0 auto;
+}
+
+/* =============================================================
+   RESPONSIVE IMAGE BREAKPOINTS
+   ============================================================= */
+
+/* Mobile Devices */
+@media (max-width: 767px) {
+  .hotel-room-item .room-img img,
+  .fruite-item .fruite-img img {
+    height: 200px;
+  }
+  
+  .room-detail-image {
+    height: 300px;
+  }
+  
+  .amenity-item .amenity-img img {
+    height: 180px;
+  }
+  
+  .banner-image {
+    height: 250px;
+  }
+  
+  .feature-image {
+    height: 200px;
+  }
+}
+
+/* Tablet Devices */
+@media (min-width: 768px) and (max-width: 991px) {
+  .hotel-room-item .room-img img,
+  .fruite-item .fruite-img img {
+    height: 230px;
+  }
+  
+  .room-detail-image {
+    height: 350px;
+  }
+  
+  .amenity-item .amenity-img img {
+    height: 200px;
+  }
+}
+
+/* Large Screens */
+@media (min-width: 1200px) {
+  .hotel-room-item .room-img img,
+  .fruite-item .fruite-img img {
+    height: 280px;
+  }
+  
+  .room-detail-image {
+    height: 450px;
+  }
+  
+  .amenity-item .amenity-img img {
+    height: 250px;
+  }
+}
+
+/* =============================================================
+   IMAGE LOADING STATES
+   ============================================================= */
+
+/* Loading Placeholder */
+.image-placeholder {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Error State */
+.image-error {
+  background: var(--luxury-cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--luxury-gold);
+  font-size: 2rem;
+}
+
+.image-error::before {
+  content: "🏨";
+  font-size: 3rem;
+}
+
+/* =============================================================
+   PRINT OPTIMIZATION
+   ============================================================= */
+
+@media print {
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    page-break-inside: avoid;
+  }
+  
+  .hero-section {
+    background: none !important;
+    min-height: auto !important;
+  }
+}
+
+/* =============================================================
+   ACCESSIBILITY IMPROVEMENTS
+   ============================================================= */
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  img {
+    filter: contrast(1.2);
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  img {
+    transition: none !important;
+  }
+  
+  .hotel-room-item:hover .room-img img,
+  .fruite-item:hover .fruite-img img {
+    transform: none !important;
+  }
+}
+
+/* =============================================================
+   IMAGE OPTIMIZATION UTILITIES
+   ============================================================= */
+
+/* Aspect Ratio Utilities */
+.aspect-ratio-16-9 {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.aspect-ratio-4-3 {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.aspect-ratio-1-1 {
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+
+.aspect-ratio-16-9 img,
+.aspect-ratio-4-3 img,
+.aspect-ratio-1-1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Image Quality Utilities */
+.image-crisp {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+.image-smooth {
+  image-rendering: auto;
+}
+
+/* Performance Optimization */
+.will-change-transform {
+  will-change: transform;
+}
+
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}

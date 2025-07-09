@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Kelola Reservasi - Hotel Senang Hati Staff</title>
+  <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
+  <meta content="Hotel Senang Hati, staff, manage reservations, admin" name="keywords" />
+  <meta content="Kelola reservasi Hotel Senang Hati - Panel staff untuk mengelola booking" name="description" />
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&family=Playfair+Display:wght@400;600;700;900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Icon Font Stylesheet -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+  
+  <!-- Enhanced Responsive Design -->
+  <link href="css/responsive-design.css" rel="stylesheet" />
+  
+  <!-- Cross-Device Compatibility -->
+
+  
+  <!-- Luxury Theme -->
+  <link href="css/luxury-theme.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Spinner Start -->
+  <div id="spinner"
+    class="show w-100 vh-100 position-fixed translate-middle top-50 start-50 d-flex align-items-center justify-content-center"
+    style="background: var(--luxury-cream);">
+    <div class="spinner-luxury" role="status"></div>
+  </div>
+  <!-- Spinner End -->
+
+  <!-- Navbar start -->
+  <div class="container-fluid fixed-top" style="background: var(--luxury-black);">
+    <div class="container topbar d-none d-lg-block" style="background: var(--luxury-black);">
+      <div class="d-flex justify-content-between">
+        <div class="top-info ps-2">
+          <small class="me-3" style="color: var(--luxury-cream);"><i class="fas fa-user-tie me-2" style="color: var(--luxury-gold);"></i>
+            Panel Staff</small>
+          <small class="me-3" style="color: var(--luxury-cream);"><i class="fas fa-clock me-2" style="color: var(--luxury-gold);"></i>
+            <span id="currentDateTime"></span></small>
+        </div>
+        <div class="top-link pe-2">
+          <a href="#" onclick="logout()" style="color: var(--luxury-cream); text-decoration: none;">
+            <small class="text-light ms-2"><i class="fas fa-sign-out-alt me-2" style="color: var(--luxury-gold);"></i>Logout</small>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container px-0">
+      <nav class="navbar navbar-light navbar-expand-xl" style="background: var(--luxury-black);">
+        <a href="staff-dashboard.html" class="navbar-brand">
+          <h1 style="color: var(--luxury-gold); font-family: 'Playfair Display', serif; margin: 0;">Hotel Senang Hati</h1>
+          <small style="color: var(--luxury-cream);">Staff Dashboard</small>
+        </a>
+        <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="fa fa-bars" style="color: var(--luxury-gold);"></span>
+        </button>
+        <div class="collapse navbar-collapse bg-dark" id="navbarCollapse" style="background: var(--luxury-black) !important;">
+          <div class="navbar-nav mx-auto">
+            <a href="staff-dashboard.html" class="nav-item nav-link" style="color: var(--luxury-cream);">Dashboard</a>
+            <a href="manage-reservations.html" class="nav-item nav-link active" style="color: var(--luxury-gold);">Reservasi</a>
+            <a href="manage-rooms.html" class="nav-item nav-link" style="color: var(--luxury-cream);">Kamar</a>
+            <a href="manage-guests.html" class="nav-item nav-link" style="color: var(--luxury-cream);">Tamu</a>
+            <a href="reports.html" class="nav-item nav-link" style="color: var(--luxury-cream);">Laporan</a>
+          </div>
+          <div class="d-flex m-3 me-0">
+            <span class="text-light me-3" style="color: var(--luxury-cream);">
+              <i class="fas fa-user-circle me-2" style="color: var(--luxury-gold);"></i>
+              <span id="staffName">Staff</span>
+            </span>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <!-- Navbar End -->
+
+  <!-- Page Header -->
+  <div class="container-fluid page-header py-5" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/hero-img-1.png'); background-size: cover; background-position: center;">
+    <h1 class="text-center text-white display-6">Kelola Reservasi</h1>
+    <ol class="breadcrumb justify-content-center mb-0">
+      <li class="breadcrumb-item"><a href="staff-dashboard.html" style="color: var(--luxury-cream);">Dashboard</a></li>
+      <li class="breadcrumb-item active text-white">Kelola Reservasi</li>
+    </ol>
+  </div>
+
+  <!-- Manage Reservations Start -->
+  <div class="container-fluid py-5" style="background: var(--luxury-cream);">
+    <div class="container py-5">
+      <!-- Statistics Cards -->
+      <div class="row mb-5">
+        <div class="col-md-3 mb-3">
+          <div class="card border-0 shadow-sm" style="border-radius: 15px; background: #28a745;">
+            <div class="card-body text-center text-white p-4">
+              <i class="fas fa-check-circle fa-2x mb-3"></i>
+              <h4 id="confirmedCount">0</h4>
+              <p class="mb-0">Dikonfirmasi</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <div class="card border-0 shadow-sm" style="border-radius: 15px; background: #ffc107;">
+            <div class="card-body text-center text-white p-4">
+              <i class="fas fa-clock fa-2x mb-3"></i>
+              <h4 id="pendingCount">0</h4>
+              <p class="mb-0">Menunggu</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <div class="card border-0 shadow-sm" style="border-radius: 15px; background: #17a2b8;">
+            <div class="card-body text-center text-white p-4">
+              <i class="fas fa-sign-in-alt fa-2x mb-3"></i>
+              <h4 id="checkedInCount">0</h4>
+              <p class="mb-0">Check-in</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <div class="card border-0 shadow-sm" style="border-radius: 15px; background: #6c757d;">
+            <div class="card-body text-center text-white p-4">
+              <i class="fas fa-sign-out-alt fa-2x mb-3"></i>
+              <h4 id="checkedOutCount">0</h4>
+              <p class="mb-0">Check-out</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter and Search -->
+      <div class="card border-0 shadow-lg mb-4" style="border-radius: 20px;">
+        <div class="card-body p-4">
+          <h5 class="mb-4" style="color: var(--luxury-black); font-family: 'Playfair Display', serif;">
+            <i class="fas fa-filter me-2" style="color: var(--luxury-gold);"></i>
+            Filter & Pencarian
+          </h5>
+          <div class="row g-3">
+            <div class="col-md-3">
+              <input type="text" class="form-control" id="searchReservation" placeholder="Cari ID atau Nama..."
+                     style="border: 2px solid var(--luxury-gold); border-radius: 10px;">
+            </div>
+            <div class="col-md-2">
+              <select class="form-select" id="statusFilter"
+                      style="border: 2px solid var(--luxury-gold); border-radius: 10px;">
+                <option value="">Semua Status</option>
+                <option value="pending">Menunggu</option>
+                <option value="confirmed">Dikonfirmasi</option>
+                <option value="checked-in">Check-in</option>
+                <option value="checked-out">Check-out</option>
+                <option value="cancelled">Dibatalkan</option>
+              </select>
+            </div>
+            <div class="col-md-2">
+              <input type="date" class="form-control" id="dateFilter"
+                     style="border: 2px solid var(--luxury-gold); border-radius: 10px;">
+            </div>
+            <div class="col-md-2">
+              <select class="form-select" id="roomTypeFilter"
+                      style="border: 2px solid var(--luxury-gold); border-radius: 10px;">
+                <option value="">Semua Tipe</option>
+                <option value="standard">Standard</option>
+                <option value="deluxe">Deluxe</option>
+                <option value="suite">Suite</option>
+                <option value="presidential">Presidential</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <button class="btn btn-primary me-2" onclick="applyFilters()"
+                      style="background: var(--luxury-gold); color: var(--luxury-black); border: none; border-radius: 10px;">
+                <i class="fas fa-search me-2"></i>Filter
+              </button>
+              <button class="btn btn-outline-secondary" onclick="clearFilters()"
+                      style="border-radius: 10px;">
+                <i class="fas fa-times me-2"></i>Reset
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reservations Table -->
+      <div class="card border-0 shadow-lg" style="border-radius: 20px;">
+        <div class="card-body p-4">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h5 style="color: var(--luxury-black); font-family: 'Playfair Display', serif; margin: 0;">
+              <i class="fas fa-list me-2" style="color: var(--luxury-gold);"></i>
+              Daftar Reservasi
+            </h5>
+            <button class="btn btn-primary" onclick="refreshReservations()"
+                    style="background: var(--luxury-gold); color: var(--luxury-black); border: none; border-radius: 10px;">
+              <i class="fas fa-sync-alt me-2"></i>Refresh
+            </button>
+          </div>
+
+          <div class="table-responsive">
+            <table class="table table-hover" id="reservationsTable">
+              <thead style="background: var(--luxury-black); color: var(--luxury-cream);">
+                <tr>
+                  <th>ID Reservasi</th>
+                  <th>Tamu</th>
+                  <th>Kamar</th>
+                  <th>Check-in</th>
+                  <th>Check-out</th>
+                  <th>Status</th>
+                  <th>Total</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="reservationsTableBody">
+                <!-- Will be populated by JavaScript -->
+              </tbody>
+            </table>
+          </div>
+
+          <!-- No Data Message -->
+          <div id="noDataMessage" class="text-center p-5" style="display: none;">
+            <i class="fas fa-inbox fa-3x mb-3" style="color: var(--luxury-gold); opacity: 0.5;"></i>
+            <h5 style="color: var(--luxury-black);">Tidak Ada Data Reservasi</h5>
+            <p style="color: var(--luxury-black); opacity: 0.7;">Belum ada reservasi yang sesuai dengan filter yang dipilih</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Manage Reservations End -->
+
+  <!-- Reservation Detail Modal -->
+  <div class="modal fade" id="reservationDetailModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header" style="background: var(--luxury-black); color: var(--luxury-cream);">
+          <h5 class="modal-title">Detail Reservasi</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" id="reservationDetailContent">
+          <!-- Will be populated by JavaScript -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Start -->
+  <div class="container-fluid" style="background: var(--luxury-black); color: var(--luxury-cream);">
+    <div class="container py-3">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <span style="color: var(--luxury-cream);">
+            <a href="#" style="color: var(--luxury-gold); text-decoration: none;">
+              <i class="fas fa-copyright me-2" style="color: var(--luxury-gold);"></i>Hotel Senang Hati Staff Panel
+            </a>, All right reserved.
+          </span>
+        </div>
+        <div class="col-md-6 my-auto text-center text-md-end">
+          <span style="color: var(--luxury-cream);">© 2025 Hotel Senang Hati. All rights reserved.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer End -->
+
+  <!-- JavaScript Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Hotel System Javascript -->
+  <script src="js/hotel-system.js"></script>
+  <script src="js/main.js"></script>
+  
+  <!-- Cross-Device Compatibility Enhancement -->
+
+  
+  <!-- Manage Reservations Script -->
+  <script>
+    let allReservations = [];
+    let filteredReservations = [];
+
+    document.addEventListener('DOMContentLoaded', function() {
+      // Check staff authentication
+      checkStaffAuth();
+      
+      // Initialize page
+      updateDateTime();
+      loadReservations();
+      
+      // Setup event listeners
+      setupEventListeners();
+      
+      // Update time every minute
+      setInterval(updateDateTime, 60000);
+    });
+
+    function checkStaffAuth() {
+      const staffSession = sessionStorage.getItem('staffSession');
+      if (!staffSession) {
+        window.location.href = 'staff-login.html';
+        return;
+      }
+      
+      try {
+        const staffData = JSON.parse(staffSession);
+        document.getElementById('staffName').textContent = staffData.name || 'Staff';
+      } catch (error) {
+        console.error('Error parsing staff session:', error);
+        logout();
+      }
+    }
+
+    function updateDateTime() {
+      const now = new Date();
+      const options = { 
+        weekday: 'short', 
+        year: 'numeric', 
+        month: 'short', 
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+      };
+      document.getElementById('currentDateTime').textContent = now.toLocaleDateString('id-ID', options);
+    }
+
+    function loadReservations() {
+      // Load from localStorage (in real app, this would be from API)
+      allReservations = JSON.parse(localStorage.getItem('hotelReservations')) || [];
+      
+      // Add some sample data if none exists
+      if (allReservations.length === 0) {
+        allReservations = generateSampleReservations();
+        localStorage.setItem('hotelReservations', JSON.stringify(allReservations));
+      }
+      
+      filteredReservations = [...allReservations];
+      displayReservations();
+      updateStatistics();
+    }
+
+    function generateSampleReservations() {
+      const sampleData = [
+        {
+          reservationId: 'HSH-2025-001',
+          firstName: 'John',
+          lastName: 'Doe',
+          email: 'john.doe@email.com',
+          phone: '081234567890',
+          roomData: {
+            roomData: {
+              roomNumber: '101',
+              name: 'Standard Room',
+              type: 'standard',
+              price: 500000
+            },
+            searchParams: {
+              checkinDate: '2025-01-15',
+              checkoutDate: '2025-01-17',
+              guests: '2'
+            }
+          },
+          status: 'confirmed',
+          createdAt: '2025-01-08T10:00:00.000Z'
+        },
+        {
+          reservationId: 'HSH-2025-002',
+          firstName: 'Jane',
+          lastName: 'Smith',
+          email: 'jane.smith@email.com',
+          phone: '081234567891',
+          roomData: {
+            roomData: {
+              roomNumber: '201',
+              name: 'Deluxe Room',
+              type: 'deluxe',
+              price: 750000
+            },
+            searchParams: {
+              checkinDate: '2025-01-20',
+              checkoutDate: '2025-01-23',
+              guests: '3'
+            }
+          },
+          status: 'pending',
+          createdAt: '2025-01-08T11:30:00.000Z'
+        }
+      ];
+      
+      return sampleData;
+    }
+
+    function displayReservations() {
+      const tableBody = document.getElementById('reservationsTableBody');
+      const noDataMessage = document.getElementById('noDataMessage');
+      
+      if (filteredReservations.length === 0) {
+        tableBody.innerHTML = '';
+        noDataMessage.style.display = 'block';
+        return;
+      }
+      
+      noDataMessage.style.display = 'none';
+      
+      tableBody.innerHTML = filteredReservations.map(reservation => {
+        const { roomData, searchParams } = reservation.roomData;
+        const nights = calculateNights(searchParams.checkinDate, searchParams.checkoutDate);
+        const total = roomData.price * nights;
+        
+        return `
+          <tr>
+            <td><span class="badge bg-primary">${reservation.reservationId}</span></td>
+            <td>
+              <div>
+                <strong>${reservation.firstName} ${reservation.lastName}</strong><br>
+                <small class="text-muted">${reservation.email}</small>
+              </div>
+            </td>
+            <td>
+              <div>
+                <strong>${roomData.name}</strong><br>
+                <small class="text-muted">Kamar ${roomData.roomNumber}</small>
+              </div>
+            </td>
+            <td>${formatDate(searchParams.checkinDate)}</td>
+            <td>${formatDate(searchParams.checkoutDate)}</td>
+            <td>${getStatusBadge(reservation.status)}</td>
+            <td><strong>${formatCurrency(total)}</strong></td>
+            <td>
+              <div class="btn-group" role="group">
+                <button class="btn btn-sm btn-outline-primary" onclick="viewReservationDetail('${reservation.reservationId}')"
+                        title="Detail">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <button class="btn btn-sm btn-outline-success" onclick="updateReservationStatus('${reservation.reservationId}', 'confirmed')"
+                        title="Konfirmasi" ${reservation.status === 'confirmed' ? 'disabled' : ''}>
+                  <i class="fas fa-check"></i>
+                </button>
+                <button class="btn btn-sm btn-outline-info" onclick="updateReservationStatus('${reservation.reservationId}', 'checked-in')"
+                        title="Check-in" ${!['confirmed'].includes(reservation.status) ? 'disabled' : ''}>
+                  <i class="fas fa-sign-in-alt"></i>
+                </button>
+                <button class="btn btn-sm btn-outline-secondary" onclick="updateReservationStatus('${reservation.reservationId}', 'checked-out')"
+                        title="Check-out" ${reservation.status !== 'checked-in' ? 'disabled' : ''}>
+                  <i class="fas fa-sign-out-alt"></i>
+                </button>
+                <button class="btn btn-sm btn-outline-danger" onclick="updateReservationStatus('${reservation.reservationId}', 'cancelled')"
+                        title="Batalkan" ${['checked-in', 'checked-out'].includes(reservation.status) ? 'disabled' : ''}>
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function getStatusBadge(status) {
+      const statusConfig = {
+        'pending': { class: 'warning', text: 'Menunggu' },
+        'confirmed': { class: 'success', text: 'Dikonfirmasi' },
+        'checked-in': { class: 'info', text: 'Check-in' },
+        'checked-out': { class: 'secondary', text: 'Check-out' },
+        'cancelled': { class: 'danger', text: 'Dibatalkan' }
+      };
+      
+      const config = statusConfig[status] || { class: 'secondary', text: status };
+      return `<span class="badge bg-${config.class}">${config.text}</span>`;
+    }
+
+    function updateStatistics() {
+      const stats = {
+        confirmed: 0,
+        pending: 0,
+        'checked-in': 0,
+        'checked-out': 0
+      };
+      
+      filteredReservations.forEach(reservation => {
+        if (stats.hasOwnProperty(reservation.status)) {
+          stats[reservation.status]++;
+        }
+      });
+      
+      document.getElementById('confirmedCount').textContent = stats.confirmed;
+      document.getElementById('pendingCount').textContent = stats.pending;
+      document.getElementById('checkedInCount').textContent = stats['checked-in'];
+      document.getElementById('checkedOutCount').textContent = stats['checked-out'];
+    }
+
+    function setupEventListeners() {
+      document.getElementById('searchReservation').addEventListener('input', applyFilters);
+      document.getElementById('statusFilter').addEventListener('change', applyFilters);
+      document.getElementById('dateFilter').addEventListener('change', applyFilters);
+      document.getElementById('roomTypeFilter').addEventListener('change', applyFilters);
+    }
+
+    function applyFilters() {
+      const searchTerm = document.getElementById('searchReservation').value.toLowerCase();
+      const statusFilter = document.getElementById('statusFilter').value;
+      const dateFilter = document.getElementById('dateFilter').value;
+      const roomTypeFilter = document.getElementById('roomTypeFilter').value;
+      
+      filteredReservations = allReservations.filter(reservation => {
+        const matchesSearch = !searchTerm || 
+          reservation.reservationId.toLowerCase().includes(searchTerm) ||
+          `${reservation.firstName} ${reservation.lastName}`.toLowerCase().includes(searchTerm);
+          
+        const matchesStatus = !statusFilter || reservation.status === statusFilter;
+        
+        const matchesDate = !dateFilter || 
+          reservation.roomData.searchParams.checkinDate === dateFilter ||
+          reservation.roomData.searchParams.checkoutDate === dateFilter;
+          
+        const matchesRoomType = !roomTypeFilter || 
+          reservation.roomData.roomData.type === roomTypeFilter;
+          
+        return matchesSearch && matchesStatus && matchesDate && matchesRoomType;
+      });
+      
+      displayReservations();
+      updateStatistics();
+    }
+
+    function clearFilters() {
+      document.getElementById('searchReservation').value = '';
+      document.getElementById('statusFilter').value = '';
+      document.getElementById('dateFilter').value = '';
+      document.getElementById('roomTypeFilter').value = '';
+      
+      filteredReservations = [...allReservations];
+      displayReservations();
+      updateStatistics();
+    }
+
+    function refreshReservations() {
+      loadReservations();
+      alert('Data reservasi telah diperbarui');
+    }
+
+    function viewReservationDetail(reservationId) {
+      const reservation = allReservations.find(r => r.reservationId === reservationId);
+      if (!reservation) return;
+      
+      const { roomData, searchParams } = reservation.roomData;
+      const nights = calculateNights(searchParams.checkinDate, searchParams.checkoutDate);
+      const total = roomData.price * nights;
+      
+      const detailHTML = `
+        <div class="reservation-detail">
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <h6>Informasi Tamu</h6>
+              <p><strong>Nama:</strong> ${reservation.firstName} ${reservation.lastName}</p>
+              <p><strong>Email:</strong> ${reservation.email}</p>
+              <p><strong>Telepon:</strong> ${reservation.phone}</p>
+            </div>
+            <div class="col-md-6">
+              <h6>Informasi Kamar</h6>
+              <p><strong>Tipe:</strong> ${roomData.name}</p>
+              <p><strong>Nomor:</strong> ${roomData.roomNumber}</p>
+              <p><strong>Kapasitas:</strong> ${searchParams.guests} tamu</p>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <h6>Tanggal</h6>
+              <p><strong>Check-in:</strong> ${formatDate(searchParams.checkinDate)}</p>
+              <p><strong>Check-out:</strong> ${formatDate(searchParams.checkoutDate)}</p>
+              <p><strong>Durasi:</strong> ${nights} malam</p>
+            </div>
+            <div class="col-md-6">
+              <h6>Pembayaran</h6>
+              <p><strong>Harga per malam:</strong> ${formatCurrency(roomData.price)}</p>
+              <p><strong>Total:</strong> ${formatCurrency(total)}</p>
+              <p><strong>Status:</strong> ${getStatusBadge(reservation.status)}</p>
+            </div>
+          </div>
+          ${reservation.specialRequests ? `
+          <div class="row">
+            <div class="col-12">
+              <h6>Permintaan Khusus</h6>
+              <p>${reservation.specialRequests}</p>
+            </div>
+          </div>
+          ` : ''}
+        </div>
+      `;
+      
+      document.getElementById('reservationDetailContent').innerHTML = detailHTML;
+      new bootstrap.Modal(document.getElementById('reservationDetailModal')).show();
+    }
+
+    function updateReservationStatus(reservationId, newStatus) {
+      const reservationIndex = allReservations.findIndex(r => r.reservationId === reservationId);
+      if (reservationIndex === -1) return;
+      
+      allReservations[reservationIndex].status = newStatus;
+      localStorage.setItem('hotelReservations', JSON.stringify(allReservations));
+      
+      // Update filtered reservations
+      const filteredIndex = filteredReservations.findIndex(r => r.reservationId === reservationId);
+      if (filteredIndex !== -1) {
+        filteredReservations[filteredIndex].status = newStatus;
+      }
+      
+      displayReservations();
+      updateStatistics();
+      
+      alert(`Status reservasi ${reservationId} berhasil diubah menjadi ${newStatus}`);
+    }
+
+    function calculateNights(checkin, checkout) {
+      const checkinDate = new Date(checkin);
+      const checkoutDate = new Date(checkout);
+      const timeDiff = checkoutDate.getTime() - checkinDate.getTime();
+      return Math.ceil(timeDiff / (1000 * 3600 * 24));
+    }
+
+    function formatDate(dateString) {
+      const options = { year: 'numeric', month: 'short', day: 'numeric' };
+      return new Date(dateString).toLocaleDateString('id-ID', options);
+    }
+
+    function formatCurrency(amount) {
+      return new Intl.NumberFormat('id-ID', {
+        style: 'currency',
+        currency: 'IDR',
+        minimumFractionDigits: 0
+      }).format(amount);
+    }
+
+    function logout() {
+      sessionStorage.removeItem('staffSession');
+      window.location.href = 'staff-login.html';
+    }
+  </script>
+</body>
+
+</html>

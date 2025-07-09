@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <title>Hotel Senang Hati - Luxury Hotel Experience</title>
+    <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
+    <meta content="Hotel Senang Hati, luxury hotel, booking, reservation, hospitality" name="keywords" />
+    <meta content="Hotel Senang Hati - Experience luxury hospitality with our premium rooms and exceptional service" name="description" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&family=Playfair+Display:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+    
+    <!-- Premium Clean CSS - Consolidated styling -->
+    <link href="css/premium-clean.css" rel="stylesheet" />
+
+    <!-- AOS Animate On Scroll CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <!-- Example: Standardized Heading and Text Styles -->
+    <style>
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+        color: var(--primary-gold);
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+      .section-title, .display-4, .display-6 {
+        font-family: 'Playfair Display', serif;
+        color: var(--primary-gold);
+        font-weight: 700;
+      }
+      .lead, p, .section-fade, .hero-subtitle, .footer-desc, .footer-contact, .footer-social, .room-features, .amenity-features, .event-features {
+        font-family: 'Open Sans', sans-serif;
+        color: var(--primary-dark);
+        font-size: 1.08rem;
+        font-weight: 400;
+      }
+      .premium-navbar, .premium-footer, .footer-logo, .footer-desc h2 {
+        font-family: 'Playfair Display', serif;
+        color: var(--primary-gold);
+      }
+      .btn-luxury-primary, .btn-luxury-secondary {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+      }
+      .luxury-badge {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.05rem;
+        font-weight: 600;
+      }
+      .premium-navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1100;
+        background: var(--gradient-dark) !important;
+        backdrop-filter: blur(20px);
+        border-bottom: 2px solid var(--primary-gold);
+        box-shadow: var(--shadow-luxury);
+        padding: 1rem 0;
+        transition: background 0.3s, box-shadow 0.3s;
+      }
+    </style>
+    <!-- End Standardized Heading and Text Styles -->
+  </head>
+
+  <body>
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show w-100 vh-100 position-fixed translate-middle top-50 start-50 d-flex align-items-center justify-content-center"
+      style="background: var(--primary-cream); z-index: 9999;"
+    >
+      <div class="spinner-luxury" role="status">
+        <div style="width: 40px; height: 40px; border: 4px solid var(--primary-cream); border-top: 4px solid var(--primary-gold); border-radius: 50%; animation: spin 1s linear infinite;"></div>
+      </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Premium Navigation Bar Start -->
+    <header class="premium-header">
+      <!-- Top Navigation Bar -->
+      <nav class="navbar navbar-expand-lg fixed-top premium-navbar">
+        <div class="container-fluid px-4">
+          <!-- Logo Brand -->
+          <a class="navbar-brand premium-brand" href="#hero">
+            <div class="brand-container">
+              <img src="img/logo-brand.png" alt="Hotel Senang Hati Logo" class="brand-logo" style="height:48px;width:auto;object-fit:contain;max-width:130px;display:block;" onerror="this.onerror=null;this.src='img/logo-brand.PNG'" />
+              <div class="brand-details">
+                <span class="brand-title">Hotel Senang Hati</span>
+                <small class="brand-subtitle">Luxury Experience</small>
+              </div>
+            </div>
+          </a>
+
+          <!-- Desktop Navigation Menu -->
+          <div class="navbar-nav mx-auto d-none d-lg-flex premium-nav-menu">
+            <a class="nav-link premium-nav-link" href="#rooms" data-scroll>OUR ROOMS</a>
+            <a class="nav-link premium-nav-link" href="#restaurant" data-scroll>RESTAURANT & CAFE</a>
+            <a class="nav-link premium-nav-link" href="#events" data-scroll>MEETING & EVENTS</a>
+            <a class="nav-link premium-nav-link" href="#facilities" data-scroll>FACILITIES</a>
+          </div>
+
+          <!-- Right Side Navigation -->
+          <div class="d-flex align-items-center gap-3">
+            <a href="reservation-form.html" class="btn btn-outline-gold d-none d-md-inline-flex" style="border: 2px solid var(--primary-gold); color: var(--primary-gold); padding: 8px 16px; border-radius: 8px; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease;">
+              <i class="fas fa-calendar-check me-2"></i>Book Now
+            </a>
+            <a href="reservation.html" class="btn btn-gold" style="background: var(--gradient-gold); color: white; padding: 8px 16px; border-radius: 8px; font-weight: 600; font-size: 0.9rem; border: none; transition: all 0.3s ease;">
+              <i class="fas fa-history me-2"></i>Riwayat
+            </a>
+          </div>
+
+          <!-- Mobile Menu Toggle -->
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="collapse navbar-collapse" id="mobileNav">
+          <div class="navbar-nav w-100 text-center d-lg-none">
+            <a class="nav-link" href="#rooms" data-scroll>OUR ROOMS</a>
+            <a class="nav-link" href="#restaurant" data-scroll>RESTAURANT & CAFE</a>
+            <a class="nav-link" href="#events" data-scroll>MEETING & EVENTS</a>
+            <a class="nav-link" href="#facilities" data-scroll>FACILITIES</a>
+            <hr style="border-color: var(--primary-gold); margin: 1rem 0;">
+            <a class="nav-link" href="reservation-form.html">
+              <i class="fas fa-calendar-check me-2"></i>Book Now
+            </a>
+            <a class="nav-link" href="reservation.html">
+              <i class="fas fa-history me-2"></i>Riwayat Pesanan
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="premium-hero section-fade" id="hero" data-aos="fade-up" data-aos-duration="1200" style="position:relative;min-height:80vh;width:100%;overflow:hidden;">
+      <div class="hero-background" style="position:absolute;inset:0;width:100%;height:100%;overflow:hidden;z-index:0;">
+        <video id="heroVideo1" class="hero-video" src="img/HERO-VIDEO-1.mp4" type="video/mp4" playsinline muted loop preload="auto" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;z-index:0;opacity:1;transition:opacity 1s;"></video>
+        <video id="heroVideo2" class="hero-video" src="img/HERO-VIDEO-2.mp4" type="video/mp4" playsinline muted loop preload="auto" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;z-index:0;opacity:0;transition:opacity 1s;"></video>
+        <img src="img/hero-img-1.png" alt="Hotel Senang Hati" class="hero-image" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:0;transition:opacity 1s;" id="heroFallbackImg">
+        <div class="hero-overlay" style="position: absolute; inset: 0; background: rgba(20,20,20,0.65); z-index: 1;"></div>
+      </div>
+      <div class="container h-100 position-relative d-flex align-items-center justify-content-center" style="z-index:2;min-height:80vh;">
+        <div class="hero-content text-center w-100" style="color: #fff; text-shadow: 1px 1px 8px rgba(0,0,0,0.5); max-width: 900px; margin: 0 auto;">
+          <h1 class="hero-title mb-3" style="font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 700;">
+            Welcome to<br>
+            <span class="hero-brand" style="color: var(--primary-gold); font-size: 3.2rem;">Hotel Senang Hati</span><br>
+            <span class="hero-location" style="font-size: 1.5rem; color: var(--primary-cream);">Luxury Paradise</span>
+          </h1>
+          <p class="hero-subtitle mb-4" style="font-family: 'Open Sans', sans-serif; font-size: 1.2rem; color: var(--primary-cream); opacity: 0.95;">
+            Experience the finest luxury hospitality with breathtaking views, exceptional service, and unforgettable moments.
+          </p>
+          
+          <!-- Hero Booking Form -->
+          <div class="hero-booking-form mt-4" style="background: rgba(255,255,255,0.94); border-radius: 10px; padding: 16px 20px; box-shadow: 0 6px 25px rgba(0,0,0,0.12); backdrop-filter: blur(25px); border: 1px solid rgba(255,255,255,0.25);">
+            <form class="hotel-search-form" id="heroBookingForm">
+              <div class="row g-2 align-items-end">
+                <div class="col-md-3">
+                  <label class="form-label-mini" style="font-size: 0.7rem; color: #666; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 3px; display: block;">Check In</label>
+                  <input type="date" class="search-input compact-input" id="heroCheckIn" required title="Tanggal Check In" style="border: 1px solid #ddd; border-radius: 5px; padding: 7px 10px; font-size: 0.9rem; background: white; color: #444; height: 40px; width: 100%; transition: all 0.2s ease;">
+                </div>
+                <div class="col-md-3">
+                  <label class="form-label-mini" style="font-size: 0.7rem; color: #666; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 3px; display: block;">Check Out</label>
+                  <input type="date" class="search-input compact-input" id="heroCheckOut" required title="Tanggal Check Out" style="border: 1px solid #ddd; border-radius: 5px; padding: 7px 10px; font-size: 0.9rem; background: white; color: #444; height: 40px; width: 100%; transition: all 0.2s ease;">
+                </div>
+                <div class="col-md-2">
+                  <label class="form-label-mini" style="font-size: 0.7rem; color: #666; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 3px; display: block;">Tamu</label>
+                  <select class="search-input compact-input" id="heroGuestCount" required style="border: 1px solid #ddd; border-radius: 5px; padding: 7px 10px; font-size: 0.9rem; background: white; color: #555; height: 40px; width: 100%; transition: all 0.2s ease;">
+                    <option value="" disabled selected>Pilih</option>
+                    <option value="1">1 Tamu</option>
+                    <option value="2">2 Tamu</option>
+                    <option value="3">3 Tamu</option>
+                    <option value="4">4 Tamu</option>
+                    <option value="5">5+ Tamu</option>
+                  </select>
+                </div>
+                <div class="col-md-2">
+                  <label class="form-label-mini" style="font-size: 0.7rem; color: #666; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 3px; display: block;">Kamar</label>
+                  <select class="search-input compact-input" id="heroRoomType" required style="border: 1px solid #ddd; border-radius: 5px; padding: 7px 10px; font-size: 0.9rem; background: white; color: #555; height: 40px; width: 100%; transition: all 0.2s ease;">
+                    <option value="" disabled selected>Pilih</option>
+                    <option value="deluxe">Deluxe Room</option>
+                    <option value="standard">Standard Room</option>
+                    <option value="suite">Executive Suite</option>
+                  </select>
+                </div>
+                <div class="col-md-2">
+                  <button type="submit" class="search-btn compact-btn" style="background: linear-gradient(135deg, var(--primary-gold), #c9a643); border: none; border-radius: 5px; padding: 7px 14px; font-size: 0.85rem; font-weight: 600; color: white; text-transform: uppercase; letter-spacing: 0.3px; transition: all 0.3s ease; width: 100%; height: 40px; box-shadow: 0 2px 10px rgba(212, 175, 55, 0.25);">
+                    <i class="fas fa-search me-1" style="font-size: 0.75rem;"></i>CARI
+                  </button>
+                </div>
+              </div>
+              <div id="heroBookingFormError" class="mt-2 text-danger" style="display:none; font-size: 0.8rem;"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rooms Section Start -->
+    <div class="container-fluid py-5 section-fade" style="background: var(--primary-cream);" id="rooms" data-aos="fade-up" data-aos-delay="200">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h1 class="display-4 mb-4 luxury-fade-in" style="color: var(--primary-dark); font-family: 'Playfair Display', serif;">
+            Luxury Rooms & Suites
+          </h1>
+          <div class="luxury-divider mx-auto" style="width: 150px; height: 2px; background: var(--primary-gold);"></div>
+          <p class="lead mt-4" style="color: var(--primary-dark); opacity: 0.8;">
+            Experience luxury and comfort in our premium accommodations
+          </p>
+        </div>
+        <div class="room-grid">
+          <div class="hotel-room-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="room-img">
+              <img src="img/Standar-room.png" class="img-fluid" alt="Standard Room" loading="lazy" />
+              <div class="luxury-badge">Standard</div>
+            </div>
+            <div class="p-4 rounded-bottom">
+              <h4>Standard Room</h4>
+              <p style="height: 48px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">Kamar nyaman dengan fasilitas modern, tempat tidur queen size, dan pemandangan kota yang indah.</p>
+              <div class="room-features" style="min-height: 72px; display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-start;">
+                <span><i class="fas fa-bed me-1"></i> Queen Bed</span>
+                <span><i class="fas fa-wifi me-1"></i> Free WiFi</span>
+                <span><i class="fas fa-bath me-1"></i> Private Bathroom</span>
+                <span><i class="fas fa-tv me-1"></i> Smart TV</span>
+                <span><i class="fas fa-snowflake me-1"></i> AC</span>
+              </div>
+              <div class="d-flex justify-content-between flex-lg-wrap mb-2">
+                <p class="fs-5 fw-bold mb-0">Rp 750.000/malam</p>
+              </div>
+              <div class="d-flex gap-2">
+                <button class="btn btn-luxury-secondary btn-sm flex-fill room-detail-btn" data-room="standard" data-bs-toggle="modal" data-bs-target="#productDetailModal">
+                  <i class="fas fa-info-circle me-1"></i>Detail
+                </button>
+                <button class="btn btn-luxury-primary btn-sm flex-fill" onclick="window.location.href='room-detail.html?room=standard'">
+                  <i class="fa fa-calendar-check me-1"></i>Pesan
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="hotel-room-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="room-img">
+              <img src="img/deluxe-room.png" class="img-fluid" alt="Deluxe Room" loading="lazy" />
+              <div class="luxury-badge">Deluxe</div>
+            </div>
+            <div class="p-4 rounded-bottom">
+              <h4>Deluxe Room</h4>
+              <p style="height: 48px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">Kamar luas dengan dekorasi elegan, tempat tidur king size, dan balkon pribadi yang menawan.</p>
+              <div class="room-features" style="min-height: 72px; display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-start;">
+                <span><i class="fas fa-star me-1"></i> Terpopuler</span>
+                <span><i class="fas fa-umbrella-beach me-1"></i> Balkon</span>
+                <span><i class="fas fa-bed me-1"></i> King Bed</span>
+                <span><i class="fas fa-glass-martini-alt me-1"></i> Minibar</span>
+                <span><i class="fas fa-city me-1"></i> City View</span>
+              </div>
+              <div class="d-flex justify-content-between flex-lg-wrap mb-2">
+                <p class="fs-5 fw-bold mb-0">Rp 1.200.000/malam</p>
+              </div>
+              <div class="d-flex gap-2">
+                <button class="btn btn-luxury-secondary btn-sm flex-fill room-detail-btn" data-room="deluxe" data-bs-toggle="modal" data-bs-target="#productDetailModal">
+                  <i class="fas fa-info-circle me-1"></i>Detail
+                </button>
+                <button class="btn btn-luxury-primary btn-sm flex-fill" onclick="window.location.href='room-detail.html?room=deluxe'">
+                  <i class="fa fa-calendar-check me-1"></i>Pesan
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="hotel-room-item" data-aos="fade-up" data-aos-delay="500">
+            <div class="room-img">
+              <img src="img/Executive-room.png" class="img-fluid" alt="Executive Suite" loading="lazy" />
+              <div class="luxury-badge">Suite</div>
+            </div>
+            <div class="p-4 rounded-bottom">
+              <h4>Executive Suite</h4>
+              <p style="height: 48px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">Suite mewah dengan ruang tamu terpisah, jacuzzi, dan layanan butler 24 jam terbaik.</p>
+              <div class="room-features" style="min-height: 72px; display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-start;">
+                <span><i class="fas fa-hot-tub me-1"></i> Jacuzzi</span>
+                <span><i class="fas fa-couch me-1"></i> Living Room</span>
+                <span><i class="fas fa-user-tie me-1"></i> Butler Service</span>
+                <span><i class="fas fa-spa me-1"></i> Spa Access</span>
+                <span><i class="fas fa-wine-glass me-1"></i> Premium Bar</span>
+              </div>
+              <div class="d-flex justify-content-between flex-lg-wrap mb-2">
+                <p class="fs-5 fw-bold mb-0">Rp 2.500.000/malam</p>
+              </div>
+              <div class="d-flex gap-2">
+                <button class="btn btn-luxury-secondary btn-sm flex-fill room-detail-btn" data-room="suite" data-bs-toggle="modal" data-bs-target="#productDetailModal">
+                  <i class="fas fa-info-circle me-1"></i>Detail
+                </button>
+                <button class="btn btn-luxury-primary btn-sm flex-fill" onclick="window.location.href='room-detail.html?room=suite'">
+                  <i class="fa fa-calendar-check me-1"></i>Pesan
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="hotel-room-item" data-aos="fade-up" data-aos-delay="600">
+            <div class="room-img">
+              <img src="img/Pressidential-room.png" class="img-fluid" alt="Presidential Suite" loading="lazy" />
+              <div class="luxury-badge">Presidential</div>
+            </div>
+            <div class="p-4 rounded-bottom">
+              <h4>Presidential Suite</h4>
+              <p style="height: 48px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">Suite presidential terluas dengan pemandangan panoramic, dapur lengkap, dan layanan eksklusif.</p>
+              <div class="room-features" style="min-height: 72px; display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-start;">
+                <span><i class="fas fa-crown me-1"></i> Exclusive</span>
+                <span><i class="fas fa-utensils me-1"></i> Full Kitchen</span>
+                <span><i class="fas fa-mountain me-1"></i> Panoramic View</span>
+                <span><i class="fas fa-car me-1"></i> Valet Parking</span>
+                <span><i class="fas fa-plane me-1"></i> Airport Transfer</span>
+              </div>
+              <div class="d-flex justify-content-between flex-lg-wrap mb-2">
+                <p class="fs-5 fw-bold mb-0">Rp 5.000.000/malam</p>
+              </div>
+              <div class="d-flex gap-2">
+                <button class="btn btn-luxury-secondary btn-sm flex-fill room-detail-btn" data-room="presidential" data-bs-toggle="modal" data-bs-target="#productDetailModal">
+                  <i class="fas fa-info-circle me-1"></i>Detail
+                </button>
+                <button class="btn btn-luxury-primary btn-sm flex-fill" onclick="window.location.href='room-detail.html?room=presidential'">
+                  <i class="fa fa-calendar-check me-1"></i>Pesan
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Hotel Rooms Section End-->
+
+    <!-- Restaurant & Menu Section Start -->
+    <div class="container-fluid py-5 section-fade" style="background: linear-gradient(135deg, #faf7f0 0%, #f5f1e8 100%);" id="restaurant" data-aos="fade-up" data-aos-delay="200">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h1 class="display-6 mb-3" style="color: var(--primary-gold); font-family: 'Playfair Display', serif;">Restaurant & Cafe</h1>
+          <p class="lead mb-4" style="color: #666; max-width: 600px; margin: 0 auto;">Nikmati cita rasa khas dengan menu pilihan terbaik dari chef berpengalaman di restoran mewah kami</p>
+        </div>
+        
+        <div class="row g-4">
+          <!-- Main Course -->
+          <div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-delay="300">
+            <div class="menu-category" style="background: white; border-radius: 15px; padding: 30px; box-shadow: 0 8px 30px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;">
+              <div class="d-flex align-items-center mb-4">
+                <div style="background: var(--primary-gold); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                  <i class="fas fa-utensils" style="color: white; font-size: 20px;"></i>
+                </div>
+                <h3 style="color: var(--primary-gold); margin: 0; font-family: 'Playfair Display', serif;">Main Course</h3>
+              </div>
+              <div class="menu-items">
+                <div class="menu-item d-flex justify-content-between align-items-center mb-3 pb-3" style="border-bottom: 1px dashed #ddd;">
+                  <div>
+                    <h5 style="color: #333; margin-bottom: 5px;">Beef Tenderloin Steak</h5>
+                    <p style="color: #666; margin: 0; font-size: 14px;">Premium beef dengan saus black pepper</p>
+                  </div>
+                  <span style="color: var(--primary-gold); font-weight: bold; font-size: 18px;">Rp 385.000</span>
+                </div>
+                <div class="menu-item d-flex justify-content-between align-items-center mb-3 pb-3" style="border-bottom: 1px dashed #ddd;">
+                  <div>
+                    <h5 style="color: #333; margin-bottom: 5px;">Grilled Salmon</h5>
+                    <p style="color: #666; margin: 0; font-size: 14px;">Ikan salmon segar dengan lemon herb</p>
+                  </div>
+                  <span style="color: var(--primary-gold); font-weight: bold; font-size: 18px;">Rp 295.000</span>
+                </div>
+                <div class="menu-item d-flex justify-content-between align-items-center mb-3 pb-3" style="border-bottom: 1px dashed #ddd;">
+                  <div>
+                    <h5 style="color: #333; margin-bottom: 5px;">Lobster Thermidor</h5>
+                    <p style="color: #666; margin: 0; font-size: 14px;">Lobster mewah dengan saus keju special</p>
+                  </div>
+                  <span style="color: var(--primary-gold); font-weight: bold; font-size: 18px;">Rp 485.000</span>
+                </div>
+                <div class="menu-item d-flex justify-content-between align-items-center">
+                  <div>
+                    <h5 style="color: #333; margin-bottom: 5px;">Lamb Rack</h5>
+                    <p style="color: #666; margin: 0; font-size: 14px;">Daging domba panggang dengan rosemary</p>
+                  </div>
+                  <span style="color: var(--primary-gold); font-weight: bold; font-size: 18px;">Rp 425.000</span>
+                </div>
+                <div class="menu-item d-flex justify-content-between align-items-center mt-3 pt-3" style="border-top: 1px dashed #ddd;">
+                  <div>
+                    <h5 style="color: #333; margin-bottom: 5px;">Wagyu Beef Burger</h5>
+                    <p style="color: #666; margin: 0; font-size: 14px;">Premium wagyu patty dengan truffle sauce</p>
+                  </div>
+                  <span style="color: var(--primary-gold); font-weight: bold; font-size: 18px;">Rp 185.000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Beverages & Desserts -->
+          <div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-delay="400">
+            <div class="menu-category" style="background: white; border-radius: 15px; padding: 30px; box-shadow: 0 8px 30px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;">
+              <div class="d-flex align-items-center mb-4">
+                <div style="background: var(--primary-gold); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                  <i class="fas fa-coffee" style="color: white; font-size: 20px;"></i>
+                </div>
+                <h3 style="color: var(--primary-gold); margin: 0; font-family: 'Playfair Display', serif;">Beverages & Desserts</h3>
+              </div>
+              <div class="menu-items">
+                <div class="menu-item d-flex justify-content-between align-items-center mb-3 pb-3" style="border-bottom: 1px dashed #ddd;">
+                  <div>
+                    <h5 style="color: #333; margin-bottom: 5px;">Premium Coffee Selection</h5>
+                    <p style="color: #666; margin: 0; font-size: 14px;">Arabica/Robusta, Cappuccino, Latte</p>
+                  </div>
+                  <span style="color: var(--primary-gold); font-weight: bold; font-size: 18px;">Rp 45.000</span>
+                </div>
+                <div class="menu-item d-flex justify-content-between align-items-center mb-3 pb-3" style="border-bottom: 1px dashed #ddd;">
+                  <div>
+                    <h5 style="color: #333; margin-bottom: 5px;">Fresh Juice</h5>
+                    <p style="color: #666; margin: 0; font-size: 14px;">Orange, Apple, Mixed Fruit</p>
+                  </div>
+                  <span style="color: var(--primary-gold); font-weight: bold; font-size: 18px;">Rp 35.000</span>
+                </div>
+                <div class="menu-item d-flex justify-content-between align-items-center mb-3 pb-3" style="border-bottom: 1px dashed #ddd;">
+                  <div>
+                    <h5 style="color: #333; margin-bottom: 5px;">Chocolate Lava Cake</h5>
+                    <p style="color: #666; margin: 0; font-size: 14px;">Warm chocolate cake dengan vanilla ice cream</p>
+                  </div>
+                  <span style="color: var(--primary-gold); font-weight: bold; font-size: 18px;">Rp 85.000</span>
+                </div>
+                <div class="menu-item d-flex justify-content-between align-items-center">
+                  <div>
+                    <h5 style="color: #333; margin-bottom: 5px;">Wine Collection</h5>
+                    <p style="color: #666; margin: 0; font-size: 14px;">Red/White Wine selection by glass</p>
+                  </div>
+                  <span style="color: var(--primary-gold); font-weight: bold; font-size: 18px;">Rp 125.000</span>
+                </div>
+                <div class="menu-item d-flex justify-content-between align-items-center mt-3 pt-3" style="border-top: 1px dashed #ddd;">
+                  <div>
+                    <h5 style="color: #333; margin-bottom: 5px;">Cheese Platter</h5>
+                    <p style="color: #666; margin: 0; font-size: 14px;">Selection of imported cheese dengan crackers</p>
+                  </div>
+                  <span style="color: var(--primary-gold); font-weight: bold; font-size: 18px;">Rp 165.000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Special Package -->
+        <div class="row mt-5">
+          <div class="col-12" data-aos="fade-up" data-aos-delay="500">
+            <div class="restaurant-package" style="background: linear-gradient(135deg, var(--primary-gold) 0%, #b8941f 100%); border-radius: 15px; padding: 40px; text-align: center; color: white;">
+              <h3 style="color: white; margin-bottom: 15px; font-family: 'Playfair Display', serif;"><span style="color: white; filter: grayscale(100%) brightness(0) invert(1);">🍽️</span> Restaurant Package</h3>
+              <p style="color: white; margin-bottom: 20px; font-size: 16px;">Nikmati paket lengkap 3-course meal untuk 2 orang dengan wine selection</p>
+              <div style="display: flex; align-items: center; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                <span style="font-size: 24px; font-weight: bold;">Rp 750.000</span>
+                <span style="background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px; font-size: 14px;">Per Couple</span>
+              </div>
+              <button class="btn btn-light btn-lg mt-3" style="color: var(--primary-gold); font-weight: bold; border-radius: 25px; padding: 12px 30px; border: 2px solid white;" onclick="window.open('https://wa.me/6289629749277?text=Hello%20Hotel%20Senang%20Hati!%20Saya%20ingin%20memesan%20Restaurant%20Package%20untuk%202%20orang%20(Rp%20750.000).%20Mohon%20informasi%20ketersediaan%20dan%20cara%20pemesanan.', '_blank')" onmouseover="this.style.background='white'; this.style.transform='scale(1.05)'" onmouseout="this.style.background=''; this.style.transform='scale(1)'">
+                <i class="fab fa-whatsapp me-2"></i>Pesan Sekarang
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Restaurant & Menu Section End -->
+
+    <!-- Hotel Amenities Section Start-->
+    <div class="container-fluid py-5 section-fade" style="background: var(--luxury-cream);" id="facilities" data-aos="fade-up" data-aos-delay="200">
+      <div class="container">
+        <h1 class="text-center collection display-6 mb-4" id="amenities">Hotel Facilities</h1>
+        <div class="amenity-grid">
+          <div class="amenity-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="amenity-img">
+              <img src="img/pool.png" class="img-fluid" alt="Swimming Pool" loading="lazy" />
+              <div class="luxury-badge">Recreation</div>
+            </div>
+            <div class="p-4 rounded-bottom">
+              <h4>Swimming Pool</h4>
+              <p>Kolam renang outdoor dengan pemandangan indah, dilengkapi area santai dan bar.</p>
+              <div class="amenity-features">
+                <span data-bs-toggle="tooltip" title="Kolam renang outdoor"><i class="fas fa-swimmer me-1"></i> Outdoor Pool</span>
+                <span data-bs-toggle="tooltip" title="Bar di area kolam"><i class="fas fa-cocktail me-1"></i> Pool Bar</span>
+                <span data-bs-toggle="tooltip" title="Area berjemur"><i class="fas fa-sun me-1"></i> Sun Deck</span>
+              </div>
+              <div class="fs-6 fw-bold">Gratis untuk tamu hotel</div>
+            </div>
+          </div>
+          <div class="amenity-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="amenity-img">
+              <img src="img/spa-facility.png" class="img-fluid" alt="Spa & Wellness" loading="lazy" />
+              <div class="luxury-badge">Wellness</div>
+            </div>
+            <div class="p-4 rounded-bottom">
+              <h4>Spa & Wellness</h4>
+              <p>Fasilitas spa lengkap dengan berbagai treatment relaksasi dan kecantikan.</p>
+              <div class="amenity-features">
+                <span data-bs-toggle="tooltip" title="Layanan pijat relaksasi"><i class="fas fa-spa me-1"></i> Massage</span>
+                <span data-bs-toggle="tooltip" title="Yoga dan meditasi"><i class="fas fa-child me-1"></i> Yoga</span>
+                <span data-bs-toggle="tooltip" title="Perawatan alami"><i class="fas fa-leaf me-1"></i> Natural Treatment</span>
+              </div>
+              <div class="fs-6 fw-bold">Buka 06:00 - 22:00</div>
+            </div>
+          </div>
+          <div class="amenity-item" data-aos="fade-up" data-aos-delay="500">
+            <div class="amenity-img">
+              <img src="img/dining-area.png" class="img-fluid" alt="Restaurant" loading="lazy" />
+              <div class="luxury-badge">Dining</div>
+            </div>
+            <div class="p-4 rounded-bottom">
+              <h4>Fine Dining Restaurant</h4>
+              <p>Restoran mewah dengan menu internasional dan pemandangan spektakuler.</p>
+              <div class="amenity-features">
+                <span data-bs-toggle="tooltip" title="Menu internasional"><i class="fas fa-utensils me-1"></i> International Cuisine</span>
+                <span data-bs-toggle="tooltip" title="Pilihan wine premium"><i class="fas fa-wine-glass-alt me-1"></i> Wine Selection</span>
+                <span data-bs-toggle="tooltip" title="Pemandangan kota"><i class="fas fa-city me-1"></i> City View</span>
+              </div>
+              <div class="fs-6 fw-bold">Buka 18:00 - 24:00</div>
+            </div>
+          </div>
+          <!-- Gym Facility -->
+          <div class="amenity-item" data-aos="fade-up" data-aos-delay="600">
+            <div class="amenity-img">
+              <img src="img/gym-facility.png" class="img-fluid" alt="Fitness Center" loading="lazy" />
+              <div class="luxury-badge">Fitness</div>
+            </div>
+            <div class="p-4 rounded-bottom">
+              <h4>Fitness Center</h4>
+              <p>Gym modern dengan peralatan lengkap dan trainer profesional untuk menjaga kebugaran Anda.</p>
+              <div class="amenity-features">
+                <span data-bs-toggle="tooltip" title="Peralatan cardio terbaru"><i class="fas fa-running me-1"></i> Cardio Equipment</span>
+                <span data-bs-toggle="tooltip" title="Area weight training"><i class="fas fa-dumbbell me-1"></i> Weight Training</span>
+                <span data-bs-toggle="tooltip" title="Personal trainer tersedia"><i class="fas fa-user-tie me-1"></i> Personal Trainer</span>
+              </div>
+              <div class="fs-6 fw-bold">Buka 05:00 - 23:00</div>
+            </div>
+          </div>
+          <!-- Parking Valet -->
+          <div class="amenity-item" data-aos="fade-up" data-aos-delay="700">
+            <div class="amenity-img">
+              <img src="img/parking-valet.png" class="img-fluid" alt="Valet Parking" loading="lazy" />
+              <div class="luxury-badge">Service</div>
+            </div>
+            <div class="p-4 rounded-bottom">
+              <h4>Valet Parking</h4>
+              <p>Layanan parkir valet 24 jam dengan area parkir yang aman dan terjaga keamanannya.</p>
+              <div class="amenity-features">
+                <span data-bs-toggle="tooltip" title="Layanan 24 jam"><i class="fas fa-clock me-1"></i> 24/7 Service</span>
+                <span data-bs-toggle="tooltip" title="Area parkir aman"><i class="fas fa-shield-alt me-1"></i> Secure Area</span>
+                <span data-bs-toggle="tooltip" title="CCTV monitoring"><i class="fas fa-video me-1"></i> CCTV</span>
+              </div>
+              <div class="fs-6 fw-bold">Gratis untuk tamu hotel</div>
+            </div>
+          </div>
+          <!-- Concierge Service -->
+          <div class="amenity-item" data-aos="fade-up" data-aos-delay="800">
+            <div class="amenity-img">
+              <img src="img/concierge-service.png" class="img-fluid" alt="Concierge Service" loading="lazy" />
+              <div class="luxury-badge">Concierge</div>
+            </div>
+            <div class="p-4 rounded-bottom">
+              <h4>Concierge Service</h4>
+              <p>Tim concierge profesional siap membantu segala kebutuhan dan rekomendasi selama menginap.</p>
+              <div class="amenity-features">
+                <span data-bs-toggle="tooltip" title="Bantuan reservasi"><i class="fas fa-calendar-alt me-1"></i> Reservations</span>
+                <span data-bs-toggle="tooltip" title="Rekomendasi wisata"><i class="fas fa-map-marked-alt me-1"></i> Travel Guide</span>
+                <span data-bs-toggle="tooltip" title="Layanan transportasi"><i class="fas fa-car me-1"></i> Transportation</span>
+              </div>
+              <div class="fs-6 fw-bold">Tersedia 24/7</div>
+            </div>
+          </div>
+          <!-- Room Service -->
+          <div class="amenity-item" data-aos="fade-up" data-aos-delay="900">
+            <div class="amenity-img">
+              <img src="img/room-service.png" class="img-fluid" alt="Room Service" loading="lazy" />
+              <div class="luxury-badge">Service</div>
+            </div>
+            <div class="p-4 rounded-bottom">
+              <h4>Room Service</h4>
+              <p>Layanan kamar 24 jam dengan menu lengkap dan pelayanan cepat langsung ke kamar Anda.</p>
+              <div class="amenity-features">
+                <span data-bs-toggle="tooltip" title="Layanan 24 jam"><i class="fas fa-clock me-1"></i> 24/7 Available</span>
+                <span data-bs-toggle="tooltip" title="Menu lengkap"><i class="fas fa-utensils me-1"></i> Full Menu</span>
+                <span data-bs-toggle="tooltip" title="Pengiriman cepat"><i class="fas fa-shipping-fast me-1"></i> Fast Delivery</span>
+              </div>
+              <div class="fs-6 fw-bold">Minimum order Rp 100.000</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Hotel Amenities Section End-->
+
+    <!-- Meeting & Events Section Start -->
+    <div class="container-fluid py-5 section-fade" id="events" style="background: #f8f8f8;" data-aos="fade-up" data-aos-delay="200">
+      <div class="container">
+        <h1 class="text-center display-6 mb-4">Meeting & Events</h1>
+        <div class="event-grid">
+          <div class="event-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="event-img">
+              <img src="img/meeting-room.png" class="img-fluid rounded" alt="Meeting Room" loading="lazy" />
+            </div>
+            <div class="p-4 rounded-bottom">
+              <h4>Executive Meeting Room</h4>
+              <p>Ruang rapat modern dengan fasilitas proyektor, sound system, dan kapasitas hingga 30 orang.</p>
+              <div class="event-features">
+                <span class="badge facility-badge mx-1 mb-2"><i class="fas fa-users me-1"></i> 30 Pax</span>
+                <span class="badge facility-badge mx-1 mb-2"><i class="fas fa-tv me-1"></i> Proyektor</span>
+                <span class="badge facility-badge mx-1 mb-2"><i class="fas fa-volume-up me-1"></i> Sound System</span>
+              </div>
+            </div>
+          </div>
+          <div class="event-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="event-img">
+              <img src="img/weeding-venue.png" class="img-fluid rounded" alt="Wedding Venue" loading="lazy" />
+            </div>
+            <div class="p-4 rounded-bottom">
+              <h4>Wedding & Celebration Hall</h4>
+              <p>Ballroom elegan untuk pernikahan dan acara besar, kapasitas hingga 200 tamu, dekorasi mewah.</p>
+              <div class="event-features">
+                <span class="badge facility-badge mx-1 mb-2"><i class="fas fa-glass-cheers me-1"></i> 200 Pax</span>
+                <span class="badge facility-badge mx-1 mb-2"><i class="fas fa-champagne-glasses me-1"></i> Dekorasi Mewah</span>
+                <span class="badge facility-badge mx-1 mb-2"><i class="fas fa-music me-1"></i> Live Music</span>
+              </div>
+            </div>
+          </div>
+          <div class="event-item" data-aos="fade-up" data-aos-delay="500">
+            <div class="event-img">
+              <img src="img/rooftop-hotel.png" class="img-fluid rounded" alt="Rooftop Venue" loading="lazy" />
+            </div>
+            <div class="p-4 rounded-bottom">
+              <h4>Rooftop Event Space</h4>
+              <p>Area rooftop dengan pemandangan kota, cocok untuk private party, gathering, dan corporate event.</p>
+              <div class="event-features">
+                <span class="badge facility-badge mx-1 mb-2"><i class="fas fa-city me-1"></i> City View</span>
+                <span class="badge facility-badge mx-1 mb-2"><i class="fas fa-cocktail me-1"></i> Bar & Lounge</span>
+                <span class="badge facility-badge mx-1 mb-2"><i class="fas fa-lightbulb me-1"></i> Lighting</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Meeting & Events Section End -->
+
+    <!-- CTA Ajakan -->
+    <section class="section-fade" id="cta" data-aos="fade-up" data-aos-delay="200" style="background: var(--primary-gold); padding: 48px 0; text-align: center;">
+      <h2 style="color: #fff; font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700; margin-bottom: 18px;">Rasakan Pengalaman Mewah Sekarang</h2>
+      <p style="color: #fff; font-size: 1.15rem; margin-bottom: 28px;">Nikmati liburan tak terlupakan bersama Hotel Senang Hati. Booking mudah, fasilitas lengkap, dan layanan premium menanti Anda.</p>
+      <a href="#rooms" class="btn btn-luxury-primary btn-lg" style="font-size: 1.15rem; padding: 14px 38px;">Lihat Pilihan Kamar</a>
+    </section>
+
+    <!-- Footer Start -->
+    <footer class="container-fluid py-5 premium-footer" style="background: #181818; border-top: 1px solid var(--primary-gold);">
+      <div class="container">
+        <div class="row g-4 align-items-start justify-content-between">
+          <div class="col-lg-6 col-md-12 d-flex align-items-start gap-3">
+            <div class="footer-logo" style="background: none; padding: 0;">
+              <img src="img/logo-brand.png" alt="Hotel Senang Hati Logo" style="height:48px;width:auto;object-fit:contain;max-width:130px;display:block;" onerror="this.onerror=null;this.src='img/logo-brand.PNG'" />
+            </div>
+            <div class="footer-desc ms-2">
+              <h2 class="mb-1" style="color: var(--primary-gold); font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700;">Hotel Senang Hati</h2>
+              <div class="mb-2" style="color: #f8f6f0; opacity: 0.9; font-size: 1.1rem; font-weight: 500;">Luxury Hotel Experience</div>
+              <div style="color: #f8f6f0; line-height: 1.6; font-size: 1rem; opacity: 0.85;">
+                Experience unparalleled luxury and comfort at Hotel Senang Hati.<br>
+                We are committed to providing exceptional hospitality with elegant touches in every detail of your stay.
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-12 mt-4 mt-lg-0">
+            <div class="footer-contact mb-3">
+              <div class="mb-2" style="color: #f8f6f0; font-size: 1rem;"><span class="footer-contact-label" style="color: var(--primary-gold); font-weight: 600;"><i class="fas fa-map-marker-alt me-2"></i>Alamat:</span> Pondok Cina, Beji, Depok City, West Java</div>
+              <div class="mb-2" style="color: #f8f6f0; font-size: 1rem;"><span class="footer-contact-label" style="color: var(--primary-gold); font-weight: 600;"><i class="fas fa-envelope me-2"></i>Email:</span> <a href="mailto:yugiindra40@gmail.com" style="color:var(--primary-gold);text-decoration:none;">yugiindra40@gmail.com</a></div>
+              <div class="mb-2" style="color: #f8f6f0; font-size: 1rem;"><span class="footer-contact-label" style="color: var(--primary-gold); font-weight: 600;"><i class="fas fa-phone me-2"></i>Telepon:</span> <a href="tel:+6289629749277" style="color:var(--primary-gold);text-decoration:none;">+62 896 2974 9277</a></div>
+              <div class="mb-2" style="color: #f8f6f0; font-size: 1rem;"><span class="footer-contact-label" style="color: var(--primary-gold); font-weight: 600;"><i class="fab fa-instagram me-2"></i>Instagram:</span> <a href="https://www.instagram.com/yugind/" target="_blank" style="color:var(--primary-gold);text-decoration:none;">@yugind</a></div>
+            </div>
+            <div class="footer-social d-flex gap-3 mt-2">
+              <a href="https://instagram.com/hotelsenanghati" title="Hotel Instagram" target="_blank" class="footer-social-icon" style="border: 2px solid var(--primary-gold); color: var(--primary-gold); width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.2rem; transition: all 0.3s ease; background: rgba(212, 175, 55, 0.1);"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.instagram.com/yugind/" title="Designer Instagram (@yugind)" target="_blank" class="footer-social-icon" style="border: 2px solid var(--primary-gold); color: var(--primary-gold); width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.2rem; transition: all 0.3s ease; background: rgba(212, 175, 55, 0.1);"><i class="fab fa-user-circle"></i></a>
+              <a href="https://wa.me/6289629749277" title="WhatsApp" target="_blank" class="footer-social-icon" style="border: 2px solid var(--primary-gold); color: var(--primary-gold); width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.2rem; transition: all 0.3s ease; background: rgba(212, 175, 55, 0.1);"><i class="fab fa-whatsapp"></i></a>
+              <a href="mailto:yugiindra40@gmail.com" title="Email" class="footer-social-icon" style="border: 2px solid var(--primary-gold); color: var(--primary-gold); width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.2rem; transition: all 0.3s ease; background: rgba(212, 175, 55, 0.1);"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-divider my-4" style="height:1px; background:rgba(212, 175, 55, 0.3);"></div>
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small" style="color: #f8f6f0; opacity: 0.8; font-size: 0.9rem;">
+          <div>&copy; 2025 Hotel Senang Hati. All rights reserved.</div>
+          <div class="mt-2 mt-md-0">
+            Designed by <a href="https://www.instagram.com/yugind/" target="_blank" style="color:var(--primary-gold);font-weight:600;text-decoration:none;">orang cibinong</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal Konfirmasi Pembelian -->
+    <div
+      class="modal fade"
+      id="confirmPurchaseModal"
+      tabindex="-1"
+      aria-labelledby="confirmPurchaseModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header luxury-badge">
+            <h5 class="modal-title text-white" id="confirmPurchaseModalLabel">
+              <i class="fas fa-shopping-cart me-2"></i>Konfirmasi Pembelian
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="text-center mb-3">
+              <img
+                id="confirmProductImage"
+                src=""
+                class="img-fluid rounded"
+                style="width: 100px; height: 100px; object-fit: cover"
+                alt="Product Image"
+              />
+            </div>
+            <h5 class="text-center mb-3" id="confirmProductName"></h5>
+            <div class="row">
+              <div class="col-6">
+                <p><strong>Harga:</strong></p>
+              </div>
+              <div class="col-6">
+                <p id="confirmProductPrice"></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <p><strong>Jumlah:</strong></p>
+              </div>
+              <div class="col-6">
+                <div class="input-group" style="width: 120px">
+                  <button
+                    class="btn btn-outline-secondary"
+                    type="button"
+                    id="decreaseQuantity"
+                  >
+                    -
+                  </button>
+                  <input
+                    type="text"
+                    class="form-control text-center"
+                    id="quantityInput"
+                    value="1"
+                    readonly
+                  />
+                  <button
+                    class="btn btn-outline-secondary"
+                    type="button"
+                    id="increaseQuantity"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-6">
+                <p><strong>Total:</strong></p>
+              </div>
+              <div class="col-6">
+                <p class="fw-bold" style="color: var(--luxury-gold); font-weight: 700;" id="confirmTotalPrice"></p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+              Batal
+            </button>
+            <button
+              type="button"
+              class="btn btn-confirm"
+              id="addToCartConfirm"
+            >
+              <i class="fas fa-plus me-2"></i>Tambah ke Keranjang
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Detail Produk -->
+    <div
+      class="modal fade"
+      id="productDetailModal"
+      tabindex="-1"
+      aria-labelledby="productDetailModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content" style="border-radius: 20px; overflow: hidden; max-width: 900px; margin: 0 auto;">
+          <div class="modal-header luxury-badge align-items-center" style="border-bottom: 1px solid #eee; position: relative; padding: 25px 30px;">
+            <h4 class="modal-title text-white fw-bold mb-0" id="productDetailModalLabel" style="font-size: 1.7rem; letter-spacing: 0.5px; font-weight: 700;">
+              <i class="fas fa-bed me-2"></i>Deluxe Room
+            </h4>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              style="font-size: 1.4rem; opacity: 0.9;"
+            ></button>
+          </div>
+          <div class="modal-body" style="padding: 30px;">
+            <div class="row g-4">
+              <div class="col-lg-8">
+                <div id="roomCarousel" class="carousel slide" data-bs-ride="carousel" style="border-radius: 15px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.1);">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="img/Deluxe-room.png" class="d-block w-100" alt="Deluxe Room 1" style="height: 350px; object-fit: cover;" />
+                    </div>
+                    <div class="carousel-item">
+                      <img src="img/deluxe-room.png" class="d-block w-100" alt="Deluxe Room 2" style="height: 350px; object-fit: cover;" />
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#roomCarousel" data-bs-slide="prev" style="width: 40px; height: 40px; top: 50%; left: 15px; transform: translateY(-50%); background: rgba(0,0,0,0.5); border: none; border-radius: 50%; transition: all 0.3s ease;">
+                    <span class="carousel-control-prev-icon" style="width: 18px; height: 18px;"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#roomCarousel" data-bs-slide="next" style="width: 40px; height: 40px; top: 50%; right: 15px; transform: translateY(-50%); background: rgba(0,0,0,0.5); border: none; border-radius: 50%; transition: all 0.3s ease;">
+                    <span class="carousel-control-next-icon" style="width: 18px; height: 18px;"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                <!-- Carousel indicators -->
+                <div class="d-flex justify-content-center mt-3 gap-2">
+                  <button type="button" data-bs-target="#roomCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="width:10px;height:10px;border-radius:50%;background:var(--primary-gold);border:none;transition:all 0.3s ease;"></button>
+                  <button type="button" data-bs-target="#roomCarousel" data-bs-slide-to="1" aria-label="Slide 2" style="width:10px;height:10px;border-radius:50%;background:#ccc;border:none;transition:all 0.3s ease;"></button>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="h-100 d-flex flex-column" style="padding: 10px;">
+                  <!-- Room Description -->
+                  <div class="mb-4">
+                    <p class="text-muted" style="font-size: 1rem; line-height: 1.6; margin-bottom: 0;">Kamar luas dengan dekorasi elegan, tempat tidur king size, balkon pribadi, minibar, dan view kota yang menawan.</p>
+                  </div>
+                  
+                  <!-- Room Features -->
+                  <div class="mb-4">
+                    <h6 class="fw-bold mb-3" style="color: var(--primary-gold); font-size: 1.1rem; border-bottom: 2px solid var(--primary-gold); padding-bottom: 5px;">Fasilitas Kamar</h6>
+                    <div class="row g-2">
+                      <div class="col-12">
+                        <div class="d-flex flex-column gap-2">
+                          <span class="d-flex align-items-center p-2" style="font-size: 0.9rem; background: rgba(212, 175, 55, 0.05); border-radius: 8px;">
+                            <i class="fas fa-star me-3" style="color: var(--primary-gold); width: 16px; font-size: 12px;"></i> 
+                            <span>Terpopuler</span>
+                          </span>
+                          <span class="d-flex align-items-center p-2" style="font-size: 0.9rem; background: rgba(212, 175, 55, 0.05); border-radius: 8px;">
+                            <i class="fas fa-umbrella-beach me-3" style="color: var(--primary-gold); width: 16px; font-size: 12px;"></i> 
+                            <span>Balkon Pribadi</span>
+                          </span>
+                          <span class="d-flex align-items-center p-2" style="font-size: 0.9rem; background: rgba(212, 175, 55, 0.05); border-radius: 8px;">
+                            <i class="fas fa-bed me-3" style="color: var(--primary-gold); width: 16px; font-size: 12px;"></i> 
+                            <span>King Size Bed</span>
+                          </span>
+                          <span class="d-flex align-items-center p-2" style="font-size: 0.9rem; background: rgba(212, 175, 55, 0.05); border-radius: 8px;">
+                            <i class="fas fa-glass-martini-alt me-3" style="color: var(--primary-gold); width: 16px; font-size: 12px;"></i> 
+                            <span>Premium Minibar</span>
+                          </span>
+                          <span class="d-flex align-items-center p-2" style="font-size: 0.9rem; background: rgba(212, 175, 55, 0.05); border-radius: 8px;">
+                            <i class="fas fa-city me-3" style="color: var(--primary-gold); width: 16px; font-size: 12px;"></i> 
+                            <span>City View</span>
+                          </span>
+                          <span class="d-flex align-items-center p-2" style="font-size: 0.9rem; background: rgba(212, 175, 55, 0.05); border-radius: 8px;">
+                            <i class="fas fa-wifi me-3" style="color: var(--primary-gold); width: 16px; font-size: 12px;"></i> 
+                            <span>Free High-Speed WiFi</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Pricing -->
+                  <div class="mb-4">
+                    <div class="d-flex align-items-center justify-content-between p-3" style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.05)); border-radius: 12px; border: 2px solid rgba(212, 175, 55, 0.2);">
+                      <span class="fw-bold" style="font-size: 1rem;">Harga per malam:</span>
+                      <span class="fw-bold" style="color: var(--primary-gold); font-size: 1.3rem;">Rp 1.200.000</span>
+                    </div>
+                  </div>
+                  
+                  <!-- Action Button -->
+                  <div class="mt-auto">
+                    <button type="button" class="btn btn-luxury-primary w-100" style="font-size:1rem;padding:15px;border-radius:10px;font-weight:600;box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);transition: all 0.3s ease;" id="modalPesan">
+                      <i class="fas fa-calendar-check me-2"></i>Pesan Sekarang
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Berhasil Ditambahkan -->
+    <div
+      class="modal fade"
+      id="successModal"
+      tabindex="-1"
+      aria-labelledby="successModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-success">
+            <h5 class="modal-title text-white" id="successModalLabel">
+              <i class="fas fa-check-circle me-2"></i>Berhasil!
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center">
+            <i
+              class="fas fa-check-circle text-success"
+              style="font-size: 3rem"
+            ></i>
+            <h5 class="mt-3">Produk berhasil ditambahkan ke keranjang!</h5>
+            <p class="text-muted">Anda dapat melanjutkan belanja atau melihat keranjang.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+              Lanjut Belanja
+            </button>
+            <a href="index.html#rooms" class="btn btn-luxury-primary">
+              <i class="fas fa-bed me-2"></i>View Rooms
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WhatsApp Help Button -->
+    <a href="https://wa.me/6289629749277?text=Hello%20Hotel%20Senang%20Hati!%20Saya%20butuh%20bantuan%20informasi%20tentang%20hotel.%20Mohon%20dibantu." target="_blank" class="btn whatsapp-help-btn" title="Need Help? Contact us">
+      <i class="fab fa-whatsapp"></i>
+      <span class="help-text">Need Help?<br>Contact us</span>
+    </a>
+
+    <!-- Modal Pop-up Availability -->
+    <div class="modal fade" id="availabilityModal" tabindex="-1" aria-labelledby="availabilityModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header" style="background: var(--luxury-gold);">
+            <h5 class="modal-title" id="availabilityModalLabel" style="color: var(--luxury-black); font-family: 'Playfair Display', serif;">Kamar Tersedia</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" style="color: var(--luxury-black); font-size: 1.1rem;">
+            Kamar tersedia untuk tanggal dan tipe yang Anda pilih.<br>Silakan lanjutkan ke detail kamar untuk melanjutkan reservasi.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-luxury-primary" id="goToRoomDetailBtn">Lanjutkan</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    
+    <!-- Premium Navigation & Booking System -->
+    <script src="js/premium-clean.js"></script>
+    
+
+    
+    <!-- AOS Animate On Scroll JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        duration: 900,
+        offset: 80
+      });
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+        new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+      // Hide spinner after page load
+      window.addEventListener('load', function() {
+        const spinner = document.getElementById('spinner');
+        if (spinner) {
+          setTimeout(() => {
+            spinner.classList.remove('show');
+          }, 500);
+        }
+      });
+
+      // Show booking form on button click
+      document.getElementById('showBookingFormBtn').addEventListener('click', function() {
+        const formSection = document.getElementById('quickBookingForm');
+        if (formSection) {
+          formSection.style.display = 'block';
+          formSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+
+      // Handle booking form submission
+      document.getElementById('quickBookingFormForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const checkIn = document.getElementById('checkIn').value;
+        const checkOut = document.getElementById('checkOut').value;
+        const guests = document.getElementById('guestCount').value;
+        const roomType = document.getElementById('roomType').value;
+        if (!checkIn || !checkOut || !guests || !roomType) {
+          document.getElementById('bookingFormError').innerText = 'Lengkapi semua data!';
+          document.getElementById('bookingFormError').style.display = 'block';
+          return;
+        }
+        document.getElementById('bookingFormError').style.display = 'none';
+        // Tampilkan modal pop-up
+        const modal = new bootstrap.Modal(document.getElementById('availabilityModal'));
+        modal.show();
+        // Simpan data redirect
+        window._roomDetailRedirect = `room-detail.html?room=${roomType}&checkin=${checkIn}&checkout=${checkOut}&guests=${guests}`;
+      });
+      // Event tombol lanjutkan pada modal
+      const goToRoomDetailBtn = document.getElementById('goToRoomDetailBtn');
+      if (goToRoomDetailBtn) {
+        goToRoomDetailBtn.onclick = function() {
+          const modal = bootstrap.Modal.getInstance(document.getElementById('availabilityModal'));
+          if (modal) modal.hide();
+          if (window._roomDetailRedirect) {
+            window.location.href = window._roomDetailRedirect;
+          }
+        };
+      }
+      // Aktifkan tombol detail pada katalog
+      // const detailBtns = document.querySelectorAll('.room-detail-btn');
+      // detailBtns.forEach(btn => {
+      //   btn.addEventListener('click', function() {
+      //     const tipe = btn.getAttribute('data-room');
+      //     window.location.href = `room-detail.html?room=${tipe}`;
+      //   });
+      // });
+
+      // Navbar scroll effect
+      window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.premium-navbar');
+        if (window.scrollY > 100) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+
+      // Navbar scroll effect
+      function handleNavbarScroll() {
+        const navbar = document.querySelector('.premium-navbar');
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      }
+
+      // Add scroll event listener
+      window.addEventListener('scroll', handleNavbarScroll);
+
+      // Initialize navbar state
+      handleNavbarScroll();
+
+      // Smooth scroll for navigation links
+      document.querySelectorAll('a[data-scroll]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            const offsetTop = target.offsetTop - 80; // Account for fixed navbar
+            window.scrollTo({
+              top: offsetTop,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+      // Room modal data handler
+      const roomModalData = {
+        standard: {
+          title: 'Standard Room',
+          price: 'Rp 750.000/malam',
+          description: 'Kamar nyaman dengan fasilitas modern, tempat tidur queen size, dan pemandangan kota yang indah.',
+          images: ['img/Standar-room.png', 'img/room-luxury-1.jpg'],
+          features: [
+            { icon: 'fas fa-bed', text: 'Queen Size Bed' },
+            { icon: 'fas fa-wifi', text: 'Free WiFi' },
+            { icon: 'fas fa-bath', text: 'Private Bathroom' },
+            { icon: 'fas fa-tv', text: 'Smart TV' },
+            { icon: 'fas fa-snowflake', text: 'AC' },
+            { icon: 'fas fa-coffee', text: 'Coffee Maker' }
+          ]
+        },
+        deluxe: {
+          title: 'Deluxe Room',
+          price: 'Rp 1.200.000/malam',
+          description: 'Kamar luas dengan dekorasi elegan, tempat tidur king size, balkon pribadi, minibar, dan view kota yang menawan.',
+          images: ['img/deluxe-room.png', 'img/room-luxury-1.jpg'],
+          features: [
+            { icon: 'fas fa-star', text: 'Terpopuler' },
+            { icon: 'fas fa-umbrella-beach', text: 'Balkon Pribadi' },
+            { icon: 'fas fa-bed', text: 'King Size Bed' },
+            { icon: 'fas fa-glass-martini-alt', text: 'Premium Minibar' },
+            { icon: 'fas fa-city', text: 'City View' },
+            { icon: 'fas fa-wifi', text: 'Free High-Speed WiFi' }
+          ]
+        },
+        suite: {
+          title: 'Executive Suite',
+          price: 'Rp 2.500.000/malam',
+          description: 'Suite mewah dengan ruang tamu terpisah, jacuzzi, dan layanan butler 24 jam terbaik.',
+          images: ['img/Executive-room.png', 'img/room-luxury-1.jpg'],
+          features: [
+            { icon: 'fas fa-hot-tub', text: 'Private Jacuzzi' },
+            { icon: 'fas fa-couch', text: 'Separate Living Room' },
+            { icon: 'fas fa-user-tie', text: '24/7 Butler Service' },
+            { icon: 'fas fa-spa', text: 'Complimentary Spa Access' },
+            { icon: 'fas fa-wine-glass', text: 'Premium Bar' },
+            { icon: 'fas fa-mountain', text: 'Mountain View' }
+          ]
+        },
+        presidential: {
+          title: 'Presidential Suite',
+          price: 'Rp 5.000.000/malam',
+          description: 'Suite presidential terluas dengan pemandangan panoramic, dapur lengkap, dan layanan eksklusif.',
+          images: ['img/Pressidential-room.png', 'img/room-luxury-1.jpg'],
+          features: [
+            { icon: 'fas fa-crown', text: 'Exclusive Presidential Treatment' },
+            { icon: 'fas fa-utensils', text: 'Full Kitchen & Dining' },
+            { icon: 'fas fa-mountain', text: 'Panoramic View' },
+            { icon: 'fas fa-car', text: 'Complimentary Valet Parking' },
+            { icon: 'fas fa-plane', text: 'Airport Transfer' },
+            { icon: 'fas fa-concierge-bell', text: 'Personal Concierge' }
+          ]
+        }
+      };
+
+      // Handle room detail modal
+      document.querySelectorAll('.room-detail-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const roomType = this.getAttribute('data-room');
+          const roomData = roomModalData[roomType];
+          
+          if (roomData) {
+            // Update modal content
+            document.querySelector('#productDetailModalLabel').textContent = roomData.title;
+            document.querySelector('#productDetailModal .text-muted').textContent = roomData.description;
+            document.querySelector('#productDetailModal .fs-4.fw-bold').textContent = roomData.price;
+            
+            // Update features
+            const featuresContainer = document.querySelector('#productDetailModal .d-flex.flex-column.gap-2');
+            if (featuresContainer) {
+              featuresContainer.innerHTML = roomData.features.map(feature => 
+                `<span class="d-flex align-items-center p-2" style="font-size: 0.9rem; background: rgba(212, 175, 55, 0.05); border-radius: 8px;">
+                  <i class="${feature.icon} me-3" style="color: var(--primary-gold); width: 16px; font-size: 12px;"></i> 
+                  <span>${feature.text}</span>
+                </span>`
+              ).join('');
+            }
+            
+            // Update booking button
+            const bookingBtn = document.querySelector('#productDetailModal .btn-luxury-primary');
+            if (bookingBtn) {
+              bookingBtn.onclick = () => window.location.href = `room-detail.html?room=${roomType}`;
+            }
+          }
+        });
+      });
+
+      // ...existing code...
+    </script>
+
+  </body>
+</html>

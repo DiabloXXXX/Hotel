@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Form Reservasi - Hotel Senang Hati</title>
+  <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
+  <meta content="Hotel Senang Hati, reservasi, booking, form pemesanan" name="keywords" />
+  <meta content="Form reservasi kamar di Hotel Senang Hati - Lengkapi data untuk konfirmasi booking" name="description" />
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&family=Playfair+Display:wght@400;600;700;900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Icon Font Stylesheet -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Premium Clean Stylesheet -->
+  <link href="css/premium-clean.css" rel="stylesheet" />
+
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+  
+  <!-- Enhanced Responsive Design -->
+  <link href="css/responsive-design.css" rel="stylesheet" />
+  
+  <!-- Cross-Device Compatibility -->
+
+  
+  <!-- Luxury Theme -->
+  <link href="css/luxury-theme.css" rel="stylesheet" />
+
+
+</head>
+
+<body class="reservation-body">
+  <!-- Spinner Start -->
+  <div id="spinner"
+    class="show w-100 vh-100 position-fixed translate-middle top-50 start-50 d-flex align-items-center justify-content-center"
+    style="background: var(--luxury-cream);">
+    <div class="spinner-luxury" role="status"></div>
+  </div>
+  <!-- Spinner End -->
+
+  <!-- Header Start -->
+  <header class="position-fixed w-100 premium-header" style="top: 0; z-index: 1050;">
+    <div class="container d-flex justify-content-between align-items-center py-3">
+      <!-- Logo and Hotel Name -->
+      <div class="d-flex align-items-center">
+        <img src="img/logo-brand.png" alt="Hotel Senang Hati Logo" class="logo-header" onerror="this.onerror=null;this.src='img/logo-brand.PNG'" />
+        <h1 class="mb-0 hotel-name-header">Hotel Senang Hati</h1>
+      </div>
+      
+      <!-- Navigation Buttons -->
+      <div class="d-flex align-items-center gap-3">
+        <a href="room-detail.html" class="btn btn-back d-flex align-items-center">
+          <i class="fas fa-arrow-left me-2"></i>Kembali
+        </a>
+        <a href="#" class="btn btn-luxury-primary d-flex align-items-center" onclick="submitReservation()">
+          <i class="fas fa-paper-plane me-2"></i>Submit
+        </a>
+      </div>
+    </div>
+  </header>
+  <!-- Header End -->
+  <!-- Hero Section for Reservation Form -->
+  <section class="hero-section-premium section-fade">
+    <div class="hero-background">
+      <img src="img/hero-img-1.png" alt="Hotel Senang Hati" class="hero-bg-image" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;" onerror="this.style.display='none';">
+    </div>
+    <div class="hero-overlay-strong"></div>
+    <div class="container text-center">
+      <h1 class="display-4 mb-2 hero-title">Form Reservasi</h1>
+      <p class="lead hero-subtitle">Lengkapi data reservasi Anda untuk konfirmasi pemesanan kamar di Hotel Senang Hati.</p>
+    </div>
+  </section>
+  <!-- End Hero Section -->
+
+  <!-- Reservation Form Start -->
+  <div class="container py-5">
+    <div class="row justify-content-center align-items-start g-4">
+      <!-- Reservation Form -->
+      <div class="col-lg-8">
+        <div class="card reservation-form-card border-0">
+          <div class="card-body p-5">
+            <h4 class="mb-4 section-subtitle">
+              <i class="fas fa-user-edit me-3"></i>
+              Informasi Tamu
+            </h4>
+            
+            <form id="reservationForm">
+              <!-- Guest Information -->
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="firstName" class="form-label">Nama Depan *</label>
+                  <input type="text" class="form-control" id="firstName" name="firstName" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="lastName" class="form-label">Nama Belakang *</label>
+                  <input type="text" class="form-control" id="lastName" name="lastName" required>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="email" class="form-label">Email *</label>
+                  <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="phone" class="form-label">Nomor Telepon *</label>
+                  <input type="tel" class="form-control" id="phone" name="phone" required>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="idType" class="form-label">Jenis Identitas *</label>
+                  <select class="form-select" id="idType" name="idType" required>
+                    <option value="">Pilih Jenis Identitas</option>
+                    <option value="ktp">KTP</option>
+                    <option value="passport">Passport</option>
+                    <option value="sim">SIM</option>
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="idNumber" class="form-label">Nomor Identitas *</label>
+                  <input type="text" class="form-control" id="idNumber" name="idNumber" required>
+                </div>
+              </div>
+              
+              <div class="mb-3">
+                <label for="address" class="form-label">Alamat *</label>
+                <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
+              </div>
+              
+              <!-- Booking Details Section -->
+              <div class="mb-4">
+                <h5 class="section-subtitle mb-3">
+                  <i class="fas fa-calendar-alt me-3"></i>
+                  Detail Booking
+                </h5>
+                <div class="booking-details-form">
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="checkinDate" class="form-label">Tanggal Check-in *</label>
+                      <input type="date" class="form-control" id="checkinDate" name="checkinDate" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="checkoutDate" class="form-label">Tanggal Check-out *</label>
+                      <input type="date" class="form-control" id="checkoutDate" name="checkoutDate" required>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="checkinTime" class="form-label">Jam Check-in</label>
+                      <select class="form-select" id="checkinTime" name="checkinTime">
+                        <option value="14:00" selected>14:00 (Standar)</option>
+                        <option value="15:00">15:00</option>
+                        <option value="16:00">16:00</option>
+                        <option value="17:00">17:00</option>
+                        <option value="18:00">18:00</option>
+                        <option value="19:00">19:00</option>
+                        <option value="20:00">20:00</option>
+                        <option value="21:00">21:00</option>
+                        <option value="22:00">22:00</option>
+                      </select>
+                      <small class="form-text text-muted">Check-in standar mulai pukul 14:00</small>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="checkoutTime" class="form-label">Jam Check-out</label>
+                      <select class="form-select" id="checkoutTime" name="checkoutTime">
+                        <option value="08:00">08:00</option>
+                        <option value="09:00">09:00</option>
+                        <option value="10:00">10:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="12:00" selected>12:00 (Standar)</option>
+                        <option value="13:00">13:00</option>
+                        <option value="14:00">14:00</option>
+                        <option value="15:00">15:00</option>
+                      </select>
+                      <small class="form-text text-muted">Check-out standar hingga pukul 12:00</small>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="guestCount" class="form-label">Jumlah Tamu *</label>
+                      <select class="form-select" id="guestCount" name="guestCount" required>
+                        <option value="">Pilih Jumlah Tamu</option>
+                        <option value="1">1 Orang</option>
+                        <option value="2">2 Orang</option>
+                        <option value="3">3 Orang</option>
+                        <option value="4">4 Orang</option>
+                        <option value="5">5 Orang</option>
+                        <option value="6">6 Orang</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="roomType" class="form-label">Jenis Kamar</label>
+                      <input type="text" class="form-control" id="roomType" name="roomType" readonly placeholder="Akan diisi otomatis">
+                      <small class="form-text text-muted">Berdasarkan pilihan dari halaman detail kamar</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Special Requests -->
+              <div class="mb-4">
+                <label for="specialRequests" class="form-label">Permintaan Khusus</label>
+                <textarea class="form-control" id="specialRequests" name="specialRequests" rows="3"
+                          placeholder="Masukkan permintaan khusus Anda (opsional)"></textarea>
+              </div>
+              
+              <!-- Payment Method Section -->
+              <div class="mb-4">
+                <h5 class="section-subtitle mb-3">
+                  <i class="fas fa-credit-card me-3"></i>
+                  Metode Pembayaran
+                </h5>
+                <div class="payment-methods">
+                  <div class="form-check payment-option mb-3">
+                    <input class="form-check-input" type="radio" name="paymentMethod" id="paymentWhatsapp" value="whatsapp" checked>
+                    <label class="form-check-label" for="paymentWhatsapp">
+                      <div class="payment-card">
+                        <div class="payment-icon">
+                          <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="payment-info">
+                          <h6>WhatsApp Booking</h6>
+                          <small>Konfirmasi & pembayaran melalui WhatsApp admin</small>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  
+                  <div class="form-check payment-option mb-3">
+                    <input class="form-check-input" type="radio" name="paymentMethod" id="paymentTransfer" value="transfer">
+                    <label class="form-check-label" for="paymentTransfer">
+                      <div class="payment-card">
+                        <div class="payment-icon">
+                          <i class="fas fa-university"></i>
+                        </div>
+                        <div class="payment-info">
+                          <h6>Transfer Bank</h6>
+                          <small>Transfer ke rekening hotel (konfirmasi via WhatsApp)</small>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  
+                  <div class="form-check payment-option mb-3">
+                    <input class="form-check-input" type="radio" name="paymentMethod" id="paymentCash" value="cash">
+                    <label class="form-check-label" for="paymentCash">
+                      <div class="payment-card">
+                        <div class="payment-icon">
+                          <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <div class="payment-info">
+                          <h6>Bayar di Tempat</h6>
+                          <small>Pembayaran saat check-in di hotel</small>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="d-grid gap-3">
+                <button type="submit" class="btn btn-lg btn-luxury-primary">
+                  <i class="fas fa-paper-plane me-2"></i>Konfirmasi Pemesanan
+                </button>
+                <a href="room-detail.html" class="btn btn-lg btn-back">
+                  <i class="fas fa-arrow-left me-2"></i>Kembali ke Detail Kamar
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Booking Summary -->
+      <div class="col-lg-4">
+        <div class="card summary-card border-0 sticky-top" style="top: 120px;">
+          <div class="card-header text-center">
+            <h5 class="mb-0" style="font-weight: 600;">
+              <i class="fas fa-receipt me-2"></i>
+              Ringkasan Booking
+            </h5>
+          </div>
+          <div class="card-body p-4">
+            <div id="bookingSummary">
+              <!-- Will be populated by JavaScript -->
+              <div class="text-center p-4">
+                <i class="fas fa-bed fa-2x mb-3" style="color: var(--primary-gold); opacity: 0.5;"></i>
+                <p style="color: var(--primary-dark); opacity: 0.7;">Tidak ada kamar yang dipilih</p>
+                <a href="index.html#rooms" class="btn btn-sm btn-luxury-primary">
+                  Pilih Kamar
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Reservation Form End -->
+
+  <!-- Footer Start -->
+  <footer class="container-fluid py-5 premium-footer" style="background: #181818; border-top: 1px solid var(--primary-gold);">
+    <div class="container">
+      <div class="row g-4 align-items-start justify-content-between">
+        <div class="col-lg-6 col-md-12 d-flex align-items-start gap-3">
+          <div class="footer-logo" style="background: none; padding: 0;">
+            <img src="img/logo-brand.png" alt="Hotel Senang Hati Logo" style="height:48px;width:auto;object-fit:contain;max-width:130px;display:block;" onerror="this.onerror=null;this.src='img/logo-brand.PNG'" />
+          </div>
+          <div class="footer-desc ms-2">
+            <h2 class="mb-1" style="color: var(--primary-gold); font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700;">Hotel Senang Hati</h2>
+            <div class="mb-2" style="color: #f8f6f0; opacity: 0.9; font-size: 1.1rem; font-weight: 500;">Luxury Hotel Experience</div>
+            <div style="color: #f8f6f0; line-height: 1.6; font-size: 1rem; opacity: 0.85;">
+              Experience unparalleled luxury and comfort at Hotel Senang Hati.<br>
+              We are committed to providing exceptional hospitality with elegant touches in every detail of your stay.
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-12 mt-4 mt-lg-0">
+          <div class="footer-contact mb-3">
+            <div class="mb-2" style="color: #f8f6f0; font-size: 1rem;"><span class="footer-contact-label" style="color: var(--primary-gold); font-weight: 600;"><i class="fas fa-map-marker-alt me-2"></i>Alamat:</span> Pondok Cina, Beji, Depok City, West Java</div>
+            <div class="mb-2" style="color: #f8f6f0; font-size: 1rem;"><span class="footer-contact-label" style="color: var(--primary-gold); font-weight: 600;"><i class="fas fa-envelope me-2"></i>Email:</span> <a href="mailto:yugiindra40@gmail.com" style="color:var(--primary-gold);text-decoration:none;">yugiindra40@gmail.com</a></div>
+            <div class="mb-2" style="color: #f8f6f0; font-size: 1rem;"><span class="footer-contact-label" style="color: var(--primary-gold); font-weight: 600;"><i class="fas fa-phone me-2"></i>Telepon:</span> <a href="tel:+6289629749277" style="color:var(--primary-gold);text-decoration:none;">+62 896 2974 9277</a></div>
+            <div class="mb-2" style="color: #f8f6f0; font-size: 1rem;"><span class="footer-contact-label" style="color: var(--primary-gold); font-weight: 600;"><i class="fab fa-instagram me-2"></i>Instagram:</span> <a href="https://www.instagram.com/yugind/" target="_blank" style="color:var(--primary-gold);text-decoration:none;">@yugind</a></div>
+          </div>
+          <div class="footer-social d-flex gap-3 mt-2">
+            <a href="https://instagram.com/hotelsenanghati" title="Hotel Instagram" target="_blank" class="footer-social-icon" style="border: 2px solid var(--primary-gold); color: var(--primary-gold); width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.2rem; transition: all 0.3s ease; background: rgba(212, 175, 55, 0.1);"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/yugind/" title="Designer Instagram (@yugind)" target="_blank" class="footer-social-icon" style="border: 2px solid var(--primary-gold); color: var(--primary-gold); width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.2rem; transition: all 0.3s ease; background: rgba(212, 175, 55, 0.1);"><i class="fab fa-user-circle"></i></a>
+            <a href="https://wa.me/6289629749277" title="WhatsApp" target="_blank" class="footer-social-icon" style="border: 2px solid var(--primary-gold); color: var(--primary-gold); width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.2rem; transition: all 0.3s ease; background: rgba(212, 175, 55, 0.1);"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:yugiindra40@gmail.com" title="Email" class="footer-social-icon" style="border: 2px solid var(--primary-gold); color: var(--primary-gold); width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.2rem; transition: all 0.3s ease; background: rgba(212, 175, 55, 0.1);"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-divider my-4" style="height:1px; background:rgba(212, 175, 55, 0.3);"></div>
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small" style="color: #f8f6f0; opacity: 0.8; font-size: 0.9rem;">
+        <div>&copy; 2025 Hotel Senang Hati. All rights reserved.</div>
+        <div class="mt-2 mt-md-0">
+          Designed by <a href="https://www.instagram.com/yugind/" target="_blank" style="color:var(--primary-gold);font-weight:600;text-decoration:none;">orang cibinong</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+  <!-- WhatsApp Help Button -->
+  <div class="whatsapp-help-btn">
+    <a href="https://wa.me/6289629749277" target="_blank" class="whatsapp-help-link" title="Bantuan WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
+  
+  <!-- Premium Navigation & Booking System -->
+  <script src="js/premium-clean.js"></script>
+  
+
+
+  <script>
+    // Hide spinner after page load
+    window.addEventListener('load', function() {
+      const spinner = document.getElementById('spinner');
+      if (spinner) {
+        setTimeout(() => {
+          spinner.classList.remove('show');
+        }, 500);
+      }
+    });
+
+    // Room data for booking summary
+    const roomData = {
+      'standard': { 
+        name: 'Standard Room', 
+        price: 750000,
+        image: 'img/Standar-room.png',
+        type: 'Standard Room',
+        capacity: 2
+      },
+      'deluxe': { 
+        name: 'Deluxe Room', 
+        price: 1200000,
+        image: 'img/Business-room.png',
+        type: 'Business Room',
+        capacity: 2
+      },
+      'suite': { 
+        name: 'Executive Suite', 
+        price: 2500000,
+        image: 'img/Executive-room.png',
+        type: 'Executive Suite',
+        capacity: 4
+      },
+      'presidential': { 
+        name: 'Presidential Suite', 
+        price: 5000000,
+        image: 'img/Pressidential-room.png',
+        type: 'Presidential Suite',
+        capacity: 6
+      }
+    };
+
+    function calculateNights(checkin, checkout) {
+      if (!checkin || !checkout) return 1;
+      const start = new Date(checkin);
+      const end = new Date(checkout);
+      const timeDiff = end.getTime() - start.getTime();
+      return Math.max(1, Math.ceil(timeDiff / (1000 * 3600 * 24)));
+    }
+
+    function formatDate(dateString) {
+      if (!dateString) return '-';
+      const date = new Date(dateString);
+      const options = { 
+        weekday: 'short', 
+        year: 'numeric', 
+        month: 'short', 
+        day: 'numeric' 
+      };
+      return date.toLocaleDateString('id-ID', options);
+    }
+
+    function updateBookingSummary() {
+      const params = new URLSearchParams(window.location.search);
+      const roomId = params.get('room');
+      const checkin = params.get('checkin');
+      const checkout = params.get('checkout');
+      const guests = parseInt(params.get('guests')) || 2;
+      const summaryContainer = document.getElementById('bookingSummary');
+      
+      // Pre-fill form fields if parameters exist
+      if (checkin) {
+        document.getElementById('checkinDate').value = checkin;
+      }
+      if (checkout) {
+        document.getElementById('checkoutDate').value = checkout;
+      }
+      if (guests) {
+        document.getElementById('guestCount').value = guests.toString();
+      }
+      
+      if (!roomId || !roomData[roomId]) {
+        summaryContainer.innerHTML = `
+          <div class="text-center p-4">
+            <i class="fas fa-bed fa-2x mb-3" style="color: var(--primary-gold); opacity: 0.5;"></i>
+            <p style="color: var(--primary-dark); opacity: 0.7;">Tidak ada kamar yang dipilih</p>
+            <a href="index.html#rooms" class="btn btn-sm btn-luxury-primary">Pilih Kamar</a>
+          </div>`;
+        return;
+      }
+
+      const room = roomData[roomId];
+      
+      // Fill room type field
+      document.getElementById('roomType').value = room.name;
+      
+      // Get actual dates from form or URL params
+      const actualCheckin = document.getElementById('checkinDate').value || checkin;
+      const actualCheckout = document.getElementById('checkoutDate').value || checkout;
+      const actualGuests = parseInt(document.getElementById('guestCount').value) || guests;
+      
+      const nights = calculateNights(actualCheckin, actualCheckout);
+      const subtotal = room.price * nights;
+      const tax = Math.round(subtotal * 0.1); // 10% tax
+      const total = subtotal + tax;
+
+      // Get selected times
+      const checkinTime = document.getElementById('checkinTime').value || '14:00';
+      const checkoutTime = document.getElementById('checkoutTime').value || '12:00';
+
+      summaryContainer.innerHTML = `
+        <div class="room-summary mb-4">
+          <div class="d-flex mb-3">
+            <img src="${room.image}" class="rounded" style="width: 80px; height: 60px; object-fit: cover;" alt="${room.name}" onerror="this.src='img/room-luxury-1.jpg'">
+            <div class="ms-3">
+              <h6 style="color: var(--primary-dark); margin-bottom: 2px; font-weight: 600;">${room.name}</h6>
+              <small class="text-muted">${room.type} • ${room.capacity} Tamu</small>
+            </div>
+          </div>
+        </div>
+        
+        <div class="booking-details">
+          <div class="summary-item">
+            <div class="d-flex justify-content-between">
+              <span><i class="fas fa-calendar-check me-2 text-success"></i>Check-in:</span>
+              <span class="fw-bold">${formatDate(actualCheckin)} ${checkinTime ? `${checkinTime}` : ''}</span>
+            </div>
+          </div>
+          <div class="summary-item">
+            <div class="d-flex justify-content-between">
+              <span><i class="fas fa-calendar-times me-2 text-danger"></i>Check-out:</span>
+              <span class="fw-bold">${formatDate(actualCheckout)} ${checkoutTime ? `${checkoutTime}` : ''}</span>
+            </div>
+          </div>
+          <div class="summary-item">
+            <div class="d-flex justify-content-between">
+              <span><i class="fas fa-moon me-2 text-primary"></i>Durasi:</span>
+              <span class="fw-bold">${nights} malam</span>
+            </div>
+          </div>
+          <div class="summary-item">
+            <div class="d-flex justify-content-between">
+              <span><i class="fas fa-users me-2 text-info"></i>Tamu:</span>
+              <span class="fw-bold">${actualGuests} orang</span>
+            </div>
+          </div>
+          
+          <hr style="border-color: var(--primary-gold); margin: 16px 0;">
+          
+          <div class="summary-item">
+            <div class="d-flex justify-content-between">
+              <span>Harga per malam:</span>
+              <span class="fw-bold">Rp ${room.price.toLocaleString('id-ID')}</span>
+            </div>
+          </div>
+          <div class="summary-item">
+            <div class="d-flex justify-content-between">
+              <span>Subtotal (${nights} malam):</span>
+              <span class="fw-bold">Rp ${subtotal.toLocaleString('id-ID')}</span>
+            </div>
+          </div>
+          <div class="summary-item">
+            <div class="d-flex justify-content-between">
+              <span>Pajak & Layanan (10%):</span>
+              <span class="fw-bold">Rp ${tax.toLocaleString('id-ID')}</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="summary-total">
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="fw-bold fs-5">Total Pembayaran:</span>
+            <span class="fw-bold fs-4" style="color: var(--primary-gold);">
+              Rp ${total.toLocaleString('id-ID')}
+            </span>
+          </div>
+        </div>
+      `;
+
+      // Store booking data globally for form submission
+      window.currentBookingData = {
+        room: room,
+        checkinDate: actualCheckin,
+        checkoutDate: actualCheckout,
+        checkinTime: checkinTime,
+        checkoutTime: checkoutTime,
+        guests: actualGuests,
+        nights: nights,
+        subtotal: subtotal,
+        tax: tax,
+        total: total
+      };
+    }
+
+    function setupReservationForm() {
+      const reservationForm = document.getElementById('reservationForm');
+      if (!reservationForm) return;
+      
+      // Add event listeners for real-time summary updates
+      const bookingFields = ['checkinDate', 'checkoutDate', 'checkinTime', 'checkoutTime', 'guestCount'];
+      bookingFields.forEach(fieldId => {
+        const field = document.getElementById(fieldId);
+        if (field) {
+          field.addEventListener('change', updateBookingSummary);
+        }
+      });
+      
+      reservationForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const formData = new FormData(reservationForm);
+        const booking = window.currentBookingData;
+        
+        if (!booking) {
+          alert('Silakan pilih kamar terlebih dahulu');
+          return;
+        }
+        
+        // Ambil data form
+        const nama = formData.get('firstName') + ' ' + formData.get('lastName');
+        const email = formData.get('email');
+        const phone = formData.get('phone');
+        const idType = formData.get('idType');
+        const idNumber = formData.get('idNumber');
+        const address = formData.get('address');
+        const specialRequests = formData.get('specialRequests');
+        const paymentMethod = formData.get('paymentMethod');
+        
+        // Data booking dari form
+        const checkinDate = formData.get('checkinDate') || booking.checkinDate;
+        const checkoutDate = formData.get('checkoutDate') || booking.checkoutDate;
+        const checkinTime = formData.get('checkinTime') || '14:00';
+        const checkoutTime = formData.get('checkoutTime') || '12:00';
+        const guestCount = formData.get('guestCount') || booking.guests;
+        
+        // Data kamar
+        const kamar = booking.room.name;
+        const nights = booking.nights;
+        const subtotal = booking.subtotal;
+        const tax = booking.tax;
+        const total = booking.total;
+        
+        // Generate order ID
+        const now = new Date();
+        const orderId = `HSH${now.getFullYear()}${String(now.getMonth()+1).padStart(2,'0')}${String(now.getDate()).padStart(2,'0')}${String(now.getHours()).padStart(2,'0')}${String(now.getMinutes()).padStart(2,'0')}`;
+        
+        // Format metode pembayaran
+        let paymentInfo = '';
+        switch(paymentMethod) {
+          case 'whatsapp':
+            paymentInfo = 'WhatsApp Booking (Konfirmasi via WhatsApp)';
+            break;
+          case 'transfer':
+            paymentInfo = 'Transfer Bank (Konfirmasi via WhatsApp)';
+            break;
+          case 'cash':
+            paymentInfo = 'Bayar di Tempat (Saat Check-in)';
+            break;
+          default:
+            paymentInfo = 'WhatsApp Booking';
+        }
+        
+        // Format pesan WhatsApp
+        const pesan = encodeURIComponent(`🏨 *HOTEL SENANG HATI* 🏨
+✨ *PEMESANAN KAMAR BARU* ✨
+
+📋 *INFORMASI PEMESANAN*
+🔸 Nama: ${nama}
+🔸 Email: ${email}
+🔸 Telepon: ${phone}
+🔸 ID: ${idType.toUpperCase()} - ${idNumber}
+🔸 Alamat: ${address}
+🔸 Nomor Booking: #${orderId}
+
+🏨 *DETAIL KAMAR*
+🔸 Jenis Kamar: ${kamar}
+🔸 Check-in: ${formatDate(checkinDate)} pukul ${checkinTime}
+🔸 Check-out: ${formatDate(checkoutDate)} pukul ${checkoutTime}
+🔸 Durasi: ${nights} malam
+🔸 Jumlah Tamu: ${guestCount} orang
+
+💰 *RINCIAN PEMBAYARAN*
+🔸 Harga per malam: Rp ${booking.room.price.toLocaleString('id-ID')}
+🔸 Subtotal (${nights} malam): Rp ${subtotal.toLocaleString('id-ID')}
+🔸 Pajak & Layanan (10%): Rp ${tax.toLocaleString('id-ID')}
+🔸 *TOTAL PEMBAYARAN: Rp ${total.toLocaleString('id-ID')}*
+
+💳 *METODE PEMBAYARAN*
+🔸 ${paymentInfo}
+
+${specialRequests ? `📝 *PERMINTAAN KHUSUS*
+🔸 ${specialRequests}
+
+` : ''}Mohon bantuannya untuk proses konfirmasi dan pembayaran selanjutnya.
+
+Terima kasih telah memilih Hotel Senang Hati! 🙏✨`);
+        
+        // Nomor admin WA
+        const nomorAdmin = '6289629749277';
+        
+        // Redirect ke WhatsApp
+        window.location.href = `https://wa.me/${nomorAdmin}?text=${pesan}`;
+      });
+    }
+
+    // Date validation functions
+    function validateDates() {
+      const checkinDate = document.getElementById('checkinDate').value;
+      const checkoutDate = document.getElementById('checkoutDate').value;
+      
+      if (checkinDate && checkoutDate) {
+        const checkin = new Date(checkinDate);
+        const checkout = new Date(checkoutDate);
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        
+        // Check if check-in is not in the past
+        if (checkin < today) {
+          alert('Tanggal check-in tidak boleh di masa lalu');
+          document.getElementById('checkinDate').value = '';
+          return false;
+        }
+        
+        // Check if check-out is after check-in
+        if (checkout <= checkin) {
+          alert('Tanggal check-out harus setelah tanggal check-in');
+          document.getElementById('checkoutDate').value = '';
+          return false;
+        }
+      }
+      return true;
+    }
+
+    function setupDateValidation() {
+      const checkinField = document.getElementById('checkinDate');
+      const checkoutField = document.getElementById('checkoutDate');
+      
+      if (checkinField) {
+        checkinField.addEventListener('change', function() {
+          validateDates();
+          updateBookingSummary();
+        });
+      }
+      
+      if (checkoutField) {
+        checkoutField.addEventListener('change', function() {
+          validateDates();
+          updateBookingSummary();
+        });
+      }
+    }
+
+    function submitReservation() {
+      const form = document.getElementById('reservationForm');
+      if (form) {
+        form.dispatchEvent(new Event('submit'));
+      }
+    }
+
+    // Initialize everything when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      updateBookingSummary();
+      setupReservationForm();
+      setupDateValidation();
+    });
+  </script>
+</body>
+
+</html>

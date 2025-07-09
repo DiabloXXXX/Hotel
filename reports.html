@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Reports - Hotel Senang Hati</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/optimized.css" rel="stylesheet">
+
+    <!-- Chart.js for reports -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Example: Standardized Heading and Text Styles -->
+    <style>
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+        color: var(--primary-gold);
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+      .section-title, .display-4, .display-6 {
+        font-family: 'Playfair Display', serif;
+        color: var(--primary-gold);
+        font-weight: 700;
+      }
+      .lead, p, .section-fade, .hero-subtitle, .footer-desc, .footer-contact, .footer-social, .room-features, .amenity-features, .event-features {
+        font-family: 'Open Sans', sans-serif;
+        color: var(--primary-dark);
+        font-size: 1.08rem;
+        font-weight: 400;
+      }
+      .premium-navbar, .premium-footer, .footer-logo, .footer-desc h2 {
+        font-family: 'Playfair Display', serif;
+        color: var(--primary-gold);
+      }
+      .btn-luxury-primary, .btn-luxury-secondary {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+      }
+      .luxury-badge {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.05rem;
+        font-weight: 600;
+      }
+    </style>
+    <!-- End Standardized Heading and Text Styles -->
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar start -->
+    <div class="container-fluid fixed-top">
+        <div class="container topbar bg-primary d-none d-lg-block">
+            <div class="d-flex justify-content-between">
+                <div class="top-info ps-2">
+                    <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a href="#" class="text-white">Jl. Raya Senang No. 123, Jakarta</a></small>
+                    <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#" class="text-white">info@hotelsenanghati.com</a></small>
+                </div>
+                <div class="top-link pe-2">
+                    <a href="#" class="text-white"><small class="text-white mx-2">Privacy Policy</small>/</a>
+                    <a href="#" class="text-white"><small class="text-white mx-2">Terms of Use</small>/</a>
+                    <a href="#" class="text-white"><small class="text-white ms-2">Sales and Refunds</small></a>
+                </div>
+            </div>
+        </div>
+        <div class="container px-0">
+            <nav class="navbar navbar-light bg-white navbar-expand-xl">
+                <a href="index.html" class="navbar-brand"><h1 class="text-primary display-6">Hotel Senang Hati</h1></a>
+                <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars text-primary"></span>
+                </button>
+                <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="index.html" class="nav-item nav-link">Search Rooms</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Staff</a>
+                            <div class="dropdown-menu m-0 bg-secondary rounded-0">
+                                <a href="staff-dashboard.html" class="dropdown-item">Dashboard</a>
+                                <a href="manage-reservations.html" class="dropdown-item">Reservations</a>
+                                <a href="manage-rooms.html" class="dropdown-item">Rooms</a>
+                                <a href="manage-guests.html" class="dropdown-item">Guests</a>
+                                <a href="reports.html" class="dropdown-item active">Reports</a>
+                            </div>
+                        </div>
+                        <a href="staff-login.html" class="nav-item nav-link">Staff Login</a>
+                    </div>
+                    <div class="d-flex m-3 me-0">
+                        <button class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search text-primary"></i></button>
+                        <a href="reservation-form.html" class="position-relative me-4 my-auto">
+                            <i class="fa fa-calendar fa-2x"></i>
+                        </a>
+                        <a href="staff-login.html" class="my-auto">
+                            <i class="fas fa-user fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Header Start -->
+    <div class="container-fluid page-header py-5">
+        <h1 class="text-center text-white display-6">Hotel Reports & Analytics</h1>
+        <ol class="breadcrumb justify-content-center mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="staff-dashboard.html">Staff Dashboard</a></li>
+            <li class="breadcrumb-item active text-white">Reports</li>
+        </ol>
+    </div>
+    <!-- Header End -->
+
+    <!-- Reports Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto mb-5" style="max-width: 700px;">
+                <h1 class="display-4">Business Intelligence & Reports</h1>
+                <p>Comprehensive analytics and reporting for Hotel Senang Hati operations, revenue, and performance metrics.</p>
+            </div>
+
+            <!-- Report Controls -->
+            <div class="row mb-4">
+                <div class="col-lg-3">
+                    <label for="reportPeriod" class="form-label">Report Period</label>
+                    <select class="form-select" id="reportPeriod" onchange="updateReports()">
+                        <option value="today">Today</option>
+                        <option value="week">This Week</option>
+                        <option value="month" selected>This Month</option>
+                        <option value="quarter">This Quarter</option>
+                        <option value="year">This Year</option>
+                        <option value="custom">Custom Range</option>
+                    </select>
+                </div>
+                <div class="col-lg-3" id="customDateRange" style="display: none;">
+                    <label for="startDate" class="form-label">Start Date</label>
+                    <input type="date" class="form-control" id="startDate">
+                </div>
+                <div class="col-lg-3" id="customDateRangeEnd" style="display: none;">
+                    <label for="endDate" class="form-label">End Date</label>
+                    <input type="date" class="form-control" id="endDate">
+                </div>
+                <div class="col-lg-3">
+                    <label class="form-label">&nbsp;</label>
+                    <div class="d-grid">
+                        <button class="btn btn-primary" onclick="generateReport()">
+                            <i class="fas fa-chart-bar me-2"></i>Generate Report
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Performance Indicators -->
+            <div class="row mb-5">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card border-left-success shadow h-100">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Revenue</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800" id="totalRevenue">IDR 0</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card border-left-info shadow h-100">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Occupancy Rate</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800" id="occupancyRate">0%</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-percentage fa-2x text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card border-left-primary shadow h-100">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">ADR</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800" id="averageDailyRate">IDR 0</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-coins fa-2x text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card border-left-warning shadow h-100">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">RevPAR</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800" id="revPar">IDR 0</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-chart-line fa-2x text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Row 1 -->
+            <div class="row mb-4">
+                <div class="col-lg-8">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Revenue Trend</h6>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="revenueChart" width="400" height="200"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Room Type Distribution</h6>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="roomTypeChart" width="400" height="400"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Row 2 -->
+            <div class="row mb-4">
+                <div class="col-lg-6">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Occupancy Rate</h6>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="occupancyChart" width="400" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Guest Satisfaction</h6>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="satisfactionChart" width="400" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Reports Tables -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3 d-flex justify-content-between">
+                            <h6 class="m-0 font-weight-bold text-primary">Top Performing Rooms</h6>
+                            <button class="btn btn-sm btn-outline-primary" onclick="exportTable('topRoomsTable')">
+                                <i class="fas fa-download"></i> Export
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="topRoomsTable">
+                                    <thead>
+                                        <tr>
+                                            <th>Room Number</th>
+                                            <th>Type</th>
+                                            <th>Revenue</th>
+                                            <th>Occupancy</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="topRoomsTableBody">
+                                        <!-- Data will be loaded dynamically -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3 d-flex justify-content-between">
+                            <h6 class="m-0 font-weight-bold text-primary">Revenue Breakdown</h6>
+                            <button class="btn btn-sm btn-outline-primary" onclick="exportTable('revenueBreakdownTable')">
+                                <i class="fas fa-download"></i> Export
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="revenueBreakdownTable">
+                                    <thead>
+                                        <tr>
+                                            <th>Source</th>
+                                            <th>Amount</th>
+                                            <th>Percentage</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="revenueBreakdownTableBody">
+                                        <!-- Data will be loaded dynamically -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Export Options -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="card shadow">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Export Options</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <button class="btn btn-success w-100 mb-2" onclick="exportToExcel()">
+                                        <i class="fas fa-file-excel me-2"></i>Export to Excel
+                                    </button>
+                                </div>
+                                <div class="col-md-3">
+                                    <button class="btn btn-danger w-100 mb-2" onclick="exportToPDF()">
+                                        <i class="fas fa-file-pdf me-2"></i>Export to PDF
+                                    </button>
+                                </div>
+                                <div class="col-md-3">
+                                    <button class="btn btn-info w-100 mb-2" onclick="emailReport()">
+                                        <i class="fas fa-envelope me-2"></i>Email Report
+                                    </button>
+                                </div>
+                                <div class="col-md-3">
+                                    <button class="btn btn-warning w-100 mb-2" onclick="scheduleReport()">
+                                        <i class="fas fa-clock me-2"></i>Schedule Report
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Reports End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
+        <div class="container py-5">
+            <div class="pb-4 mb-4" style="border-bottom: 1px solid rgba(226, 175, 24, 0.5) ;">
+                <div class="row g-4">
+                    <div class="col-lg-3">
+                        <a href="#">
+                            <h1 class="text-primary mb-0">Hotel Senang Hati</h1>
+                            <p class="text-secondary mb-0">Luxury & Comfort</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="position-relative mx-auto">
+                            <input class="form-control border-0 w-100 py-3 px-4 rounded-pill" type="number" placeholder="Your Email">
+                            <button type="submit" class="btn btn-primary border-0 border-secondary py-3 px-4 position-absolute rounded-pill text-white" style="top: 0; right: 0;">Subscribe Now</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="d-flex justify-content-end pt-3">
+                            <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-secondary btn-md-square rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-item">
+                        <h4 class="text-light mb-3">Why People Like us!</h4>
+                        <p class="mb-4">Experience luxury and comfort at Hotel Senang Hati. Our dedicated staff ensures your stay is memorable.</p>
+                        <a href="" class="btn border-secondary py-2 px-4 rounded-pill text-primary">Read More</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex flex-column text-start footer-item">
+                        <h4 class="text-light mb-3">Hotel Info</h4>
+                        <a class="btn-link" href="">About Us</a>
+                        <a class="btn-link" href="">Contact Us</a>
+                        <a class="btn-link" href="">Privacy Policy</a>
+                        <a class="btn-link" href="">Terms & Condition</a>
+                        <a class="btn-link" href="">Return Policy</a>
+                        <a class="btn-link" href="">FAQs & Help</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex flex-column text-start footer-item">
+                        <h4 class="text-light mb-3">Account</h4>
+                        <a class="btn-link" href="">My Account</a>
+                        <a class="btn-link" href="">Shop details</a>
+                        <a class="btn-link" href="">Shopping Cart</a>
+                        <a class="btn-link" href="">Wishlist</a>
+                        <a class="btn-link" href="">Order History</a>
+                        <a class="btn-link" href="">International Orders</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-item">
+                        <h4 class="text-light mb-3">Contact</h4>
+                        <p>Address: Jl. Raya Senang No. 123, Jakarta</p>
+                        <p>Email: info@hotelsenanghati.com</p>
+                        <p>Phone: +62 21 1234 5678</p>
+                        <p>Payment Accepted</p>
+                        <img src="img/payment.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="js/hotel-system.js"></script>
+
+    <script>
+        // Global chart variables
+        let revenueChart, roomTypeChart, occupancyChart, satisfactionChart;
+
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeReports();
+            setupEventListeners();
+        });
+
+        function initializeReports() {
+            // Generate sample data
+            generateSampleData();
+            updateReports();
+            initializeCharts();
+        }
+
+        function setupEventListeners() {
+            document.getElementById('reportPeriod').addEventListener('change', function() {
+                const customRange = document.getElementById('customDateRange');
+                const customRangeEnd = document.getElementById('customDateRangeEnd');
+                
+                if (this.value === 'custom') {
+                    customRange.style.display = 'block';
+                    customRangeEnd.style.display = 'block';
+                } else {
+                    customRange.style.display = 'none';
+                    customRangeEnd.style.display = 'none';
+                }
+            });
+        }
+
+        function generateSampleData() {
+            // Sample reservation data for reports
+            const currentDate = new Date();
+            const sampleReservations = [
+                {
+                    id: 1,
+                    checkIn: '2025-01-01',
+                    checkOut: '2025-01-05',
+                    roomType: 'deluxe',
+                    totalAmount: 3000000,
+                    status: 'confirmed',
+                    guestType: 'vip'
+                },
+                {
+                    id: 2,
+                    checkIn: '2025-01-02',
+                    checkOut: '2025-01-04',
+                    roomType: 'standard',
+                    totalAmount: 1000000,
+                    status: 'confirmed',
+                    guestType: 'regular'
+                },
+                {
+                    id: 3,
+                    checkIn: '2025-01-03',
+                    checkOut: '2025-01-08',
+                    roomType: 'suite',
+                    totalAmount: 6000000,
+                    status: 'confirmed',
+                    guestType: 'corporate'
+                },
+                {
+                    id: 4,
+                    checkIn: '2025-01-05',
+                    checkOut: '2025-01-07',
+                    roomType: 'presidential',
+                    totalAmount: 5000000,
+                    status: 'confirmed',
+                    guestType: 'vip'
+                }
+            ];
+
+            if (!localStorage.getItem('hotelReportsData')) {
+                localStorage.setItem('hotelReportsData', JSON.stringify(sampleReservations));
+            }
+        }
+
+        function updateReports() {
+            const period = document.getElementById('reportPeriod').value;
+            const reservations = JSON.parse(localStorage.getItem('hotelReportsData') || '[]');
+            const rooms = JSON.parse(localStorage.getItem('hotelRooms') || '[]');
+
+            // Calculate KPIs
+            calculateKPIs(reservations, rooms);
+            updateCharts(reservations);
+            updateTables(reservations, rooms);
+        }
+
+        function calculateKPIs(reservations, rooms) {
+            // Total Revenue
+            const totalRevenue = reservations.reduce((sum, res) => sum + res.totalAmount, 0);
+            document.getElementById('totalRevenue').textContent = `IDR ${totalRevenue.toLocaleString()}`;
+
+            // Occupancy Rate
+            const totalRooms = rooms.length || 50; // Default to 50 if no rooms data
+            const occupiedRooms = reservations.filter(res => res.status === 'confirmed').length;
+            const occupancyRate = totalRooms > 0 ? ((occupiedRooms / totalRooms) * 100).toFixed(1) : 0;
+            document.getElementById('occupancyRate').textContent = `${occupancyRate}%`;
+
+            // Average Daily Rate (ADR)
+            const totalNights = reservations.reduce((sum, res) => {
+                const checkIn = new Date(res.checkIn);
+                const checkOut = new Date(res.checkOut);
+                const nights = Math.ceil((checkOut - checkIn) / (1000 * 60 * 60 * 24));
+                return sum + nights;
+            }, 0);
+            const adr = totalNights > 0 ? (totalRevenue / totalNights) : 0;
+            document.getElementById('averageDailyRate').textContent = `IDR ${adr.toLocaleString()}`;
+
+            // Revenue per Available Room (RevPAR)
+            const revPar = totalRooms > 0 ? (totalRevenue / totalRooms) : 0;
+            document.getElementById('revPar').textContent = `IDR ${revPar.toLocaleString()}`;
+        }
+
+        function initializeCharts() {
+            // Revenue Chart
+            const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+            revenueChart = new Chart(revenueCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                    datasets: [{
+                        label: 'Revenue (IDR)',
+                        data: [12000000, 15000000, 18000000, 16000000, 20000000, 22000000],
+                        borderColor: 'rgb(54, 162, 235)',
+                        backgroundColor: 'rgba(54, 162, 235, 0.1)',
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return 'IDR ' + value.toLocaleString();
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Room Type Chart
+            const roomTypeCtx = document.getElementById('roomTypeChart').getContext('2d');
+            roomTypeChart = new Chart(roomTypeCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Standard', 'Deluxe', 'Suite', 'Presidential'],
+                    datasets: [{
+                        data: [40, 30, 20, 10],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.8)',
+                            'rgba(54, 162, 235, 0.8)',
+                            'rgba(255, 205, 86, 0.8)',
+                            'rgba(75, 192, 192, 0.8)'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+
+            // Occupancy Chart
+            const occupancyCtx = document.getElementById('occupancyChart').getContext('2d');
+            occupancyChart = new Chart(occupancyCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                    datasets: [{
+                        label: 'Occupancy %',
+                        data: [75, 80, 65, 90, 95, 100, 85],
+                        backgroundColor: 'rgba(75, 192, 192, 0.8)'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100
+                        }
+                    }
+                }
+            });
+
+            // Satisfaction Chart
+            const satisfactionCtx = document.getElementById('satisfactionChart').getContext('2d');
+            satisfactionChart = new Chart(satisfactionCtx, {
+                type: 'radar',
+                data: {
+                    labels: ['Service', 'Cleanliness', 'Comfort', 'Location', 'Value', 'Amenities'],
+                    datasets: [{
+                        label: 'Guest Satisfaction',
+                        data: [85, 90, 88, 95, 80, 87],
+                        borderColor: 'rgb(255, 99, 132)',
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        r: {
+                            beginAtZero: true,
+                            max: 100
+                        }
+                    }
+                }
+            });
+        }
+
+        function updateCharts(reservations) {
+            // Update charts with real data
+            // This is a simplified version - in a real implementation, 
+            // you would process the actual reservation data
+        }
+
+        function updateTables(reservations, rooms) {
+            // Top Performing Rooms
+            const topRoomsData = [
+                { number: '301', type: 'Suite', revenue: 'IDR 6,000,000', occupancy: '95%' },
+                { number: '401', type: 'Presidential', revenue: 'IDR 5,000,000', occupancy: '85%' },
+                { number: '201', type: 'Deluxe', revenue: 'IDR 3,000,000', occupancy: '90%' },
+                { number: '101', type: 'Standard', revenue: 'IDR 1,000,000', occupancy: '75%' }
+            ];
+
+            const topRoomsTableBody = document.getElementById('topRoomsTableBody');
+            topRoomsTableBody.innerHTML = topRoomsData.map(room => `
+                <tr>
+                    <td>${room.number}</td>
+                    <td>${room.type}</td>
+                    <td>${room.revenue}</td>
+                    <td>${room.occupancy}</td>
+                </tr>
+            `).join('');
+
+            // Revenue Breakdown
+            const revenueData = [
+                { source: 'Room Revenue', amount: 'IDR 15,000,000', percentage: '75%' },
+                { source: 'Food & Beverage', amount: 'IDR 3,000,000', percentage: '15%' },
+                { source: 'Spa & Wellness', amount: 'IDR 1,500,000', percentage: '7.5%' },
+                { source: 'Other Services', amount: 'IDR 500,000', percentage: '2.5%' }
+            ];
+
+            const revenueBreakdownTableBody = document.getElementById('revenueBreakdownTableBody');
+            revenueBreakdownTableBody.innerHTML = revenueData.map(item => `
+                <tr>
+                    <td>${item.source}</td>
+                    <td>${item.amount}</td>
+                    <td>${item.percentage}</td>
+                </tr>
+            `).join('');
+        }
+
+        function generateReport() {
+            updateReports();
+            alert('Report generated successfully!');
+        }
+
+        function exportToExcel() {
+            alert('Export to Excel functionality would be implemented here. This would generate a comprehensive Excel report with all data and charts.');
+        }
+
+        function exportToPDF() {
+            alert('Export to PDF functionality would be implemented here. This would generate a professional PDF report.');
+        }
+
+        function emailReport() {
+            alert('Email report functionality would be implemented here. This would send the report to specified email addresses.');
+        }
+
+        function scheduleReport() {
+            alert('Schedule report functionality would be implemented here. This would allow setting up automated report generation and delivery.');
+        }
+
+        function exportTable(tableId) {
+            const table = document.getElementById(tableId);
+            const rows = table.rows;
+            let csv = '';
+            
+            for (let i = 0; i < rows.length; i++) {
+                const cells = rows[i].cells;
+                let row = '';
+                for (let j = 0; j < cells.length; j++) {
+                    row += cells[j].textContent + ',';
+                }
+                csv += row.slice(0, -1) + '\n';
+            }
+            
+            const blob = new Blob([csv], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = tableId + '.csv';
+            a.click();
+            window.URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>

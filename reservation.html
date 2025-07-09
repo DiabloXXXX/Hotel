@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Riwayat Pesanan - Hotel Senang Hati</title>
+  <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
+  <meta content="Hotel Senang Hati, riwayat pesanan, booking history" name="keywords" />
+  <meta content="Lihat riwayat pesanan kamar di Hotel Senang Hati - Status booking dan detail pemesanan" name="description" />
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&family=Playfair+Display:wght@400;600;700;900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Icon Font Stylesheet -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Premium Clean Stylesheet -->
+  <link href="css/premium-clean.css" rel="stylesheet" />
+
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+  
+  <!-- Enhanced Responsive Design -->
+  <link href="css/responsive-design.css" rel="stylesheet" />
+  
+  <!-- Luxury Theme -->
+  <link href="css/luxury-theme.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Spinner Start -->
+  <div id="spinner"
+    class="show w-100 vh-100 position-fixed translate-middle top-50 start-50 d-flex align-items-center justify-content-center"
+    style="background: var(--primary-cream); z-index: 9999;">
+    <div class="spinner-luxury" role="status">
+      <div style="width: 40px; height: 40px; border: 4px solid var(--primary-cream); border-top: 4px solid var(--primary-gold); border-radius: 50%; animation: spin 1s linear infinite;"></div>
+    </div>
+  </div>
+  <!-- Spinner End -->
+
+  <!-- Premium Navigation Bar Start -->
+  <header class="premium-header">
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg fixed-top premium-navbar">
+      <div class="container-fluid px-4">
+        <!-- Logo Brand -->
+        <a class="navbar-brand premium-brand" href="index.html">
+          <div class="brand-container">
+            <img src="img/logo-brand.png" alt="Hotel Senang Hati Logo" class="brand-logo" style="height:48px;width:auto;object-fit:contain;max-width:130px;display:block;" onerror="this.onerror=null;this.src='img/logo-brand.PNG'" />
+            <div class="brand-details">
+              <span class="brand-title">Hotel Senang Hati</span>
+              <small class="brand-subtitle">Luxury Experience</small>
+            </div>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <div class="navbar-nav mx-auto d-none d-lg-flex premium-nav-menu">
+          <a class="nav-link premium-nav-link" href="index.html#rooms" data-scroll>OUR ROOMS</a>
+          <a class="nav-link premium-nav-link" href="index.html#restaurant" data-scroll>RESTAURANT & CAFE</a>
+          <a class="nav-link premium-nav-link" href="index.html#events" data-scroll>MEETING & EVENTS</a>
+          <a class="nav-link premium-nav-link" href="index.html#facilities" data-scroll>FACILITIES</a>
+          <a class="nav-link premium-nav-link active" href="reservation.html">RIWAYAT</a>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="d-none d-lg-flex align-items-center gap-3">
+          <a href="index.html" class="btn btn-outline-luxury">
+            <i class="fas fa-home me-2"></i>Beranda
+          </a>
+          <a href="reservation-form.html" class="btn btn-luxury-primary">
+            <i class="fas fa-plus me-2"></i>Booking Baru
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div class="collapse navbar-collapse" id="mobileNav">
+        <div class="navbar-nav w-100 text-center d-lg-none">
+          <a class="nav-link" href="index.html#rooms" data-scroll>OUR ROOMS</a>
+          <a class="nav-link" href="index.html#restaurant" data-scroll>RESTAURANT & CAFE</a>
+          <a class="nav-link" href="index.html#events" data-scroll>MEETING & EVENTS</a>
+          <a class="nav-link" href="index.html#facilities" data-scroll>FACILITIES</a>
+          <a class="nav-link active" href="reservation.html">RIWAYAT</a>
+          <div class="d-flex justify-content-center gap-2 mt-3 pb-3">
+            <a href="index.html" class="btn btn-outline-luxury btn-sm">
+              <i class="fas fa-home me-1"></i>Beranda
+            </a>
+            <a href="reservation-form.html" class="btn btn-luxury-primary btn-sm">
+              <i class="fas fa-plus me-1"></i>Booking Baru
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Premium Navigation Bar End -->
+
+  <!-- Hero Section -->
+  <section class="reservation-hero">
+    <div class="hero-background">
+      <img src="img/hero-img-1.png" alt="Hotel Senang Hati" class="hero-image" onerror="this.src='img/rooftop-hotel.png'" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="container">
+      <div class="hero-content text-center text-white">
+        <h1 class="hero-title mb-3">Riwayat Pesanan</h1>
+        <p class="hero-subtitle">Kelola dan lacak status pemesanan kamar Anda di Hotel Senang Hati</p>
+      </div>
+    </div>
+  </section>
+  <!-- Hero Section End -->
+
+  <!-- Reservation History Section -->
+  <section class="py-5" style="background: var(--primary-cream);">
+    <div class="container">
+      <!-- Search & Filter Section -->
+      <div class="row mb-5">
+        <div class="col-12">
+          <div class="card border-0 shadow-sm">
+            <div class="card-body p-4">
+              <h4 class="card-title mb-4" style="color: var(--primary-gold); font-family: 'Playfair Display', serif;">
+                <i class="fas fa-search me-3"></i>Cari Pesanan Anda
+              </h4>
+              <form id="searchForm" class="row g-3">
+                <div class="col-md-4">
+                  <label for="bookingCode" class="form-label">Kode Booking</label>
+                  <input type="text" class="form-control" id="bookingCode" placeholder="Masukkan kode booking (HSH240701xxxx)">
+                </div>
+                <div class="col-md-4">
+                  <label for="guestEmail" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="guestEmail" placeholder="Masukkan email Anda">
+                </div>
+                <div class="col-md-4">
+                  <label for="guestPhone" class="form-label">Nomor Telepon</label>
+                  <input type="tel" class="form-control" id="guestPhone" placeholder="Masukkan nomor telepon">
+                </div>
+                <div class="col-12">
+                  <div class="d-flex gap-3">
+                    <button type="submit" class="btn btn-luxury-primary">
+                      <i class="fas fa-search me-2"></i>Cari Pesanan
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="clearSearch()">
+                      <i class="fas fa-times me-2"></i>Clear
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Section -->
+      <div class="row">
+        <div class="col-12">
+          <div id="searchResults">
+            <!-- Default State -->
+            <div id="defaultState" class="text-center py-5">
+              <div class="mb-4">
+                <i class="fas fa-calendar-alt fa-3x" style="color: var(--primary-gold); opacity: 0.5;"></i>
+              </div>
+              <h5 style="color: var(--primary-dark);">Cari Riwayat Pesanan Anda</h5>
+              <p class="text-muted">Masukkan kode booking, email, atau nomor telepon untuk melihat detail pesanan</p>
+              <div class="mt-4">
+                <a href="reservation-form.html" class="btn btn-luxury-primary">
+                  <i class="fas fa-plus me-2"></i>Buat Booking Baru
+                </a>
+              </div>
+            </div>
+
+            <!-- Loading State -->
+            <div id="loadingState" class="text-center py-5" style="display: none;">
+              <div class="spinner-border text-warning mb-3" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+              <h5 style="color: var(--primary-dark);">Mencari pesanan...</h5>
+              <p class="text-muted">Mohon tunggu sebentar</p>
+            </div>
+
+            <!-- No Results State -->
+            <div id="noResultsState" class="text-center py-5" style="display: none;">
+              <div class="mb-4">
+                <i class="fas fa-search fa-3x" style="color: #dc3545; opacity: 0.5;"></i>
+              </div>
+              <h5 style="color: var(--primary-dark);">Pesanan Tidak Ditemukan</h5>
+              <p class="text-muted">Periksa kembali kode booking, email, atau nomor telepon Anda</p>
+              <div class="mt-4">
+                <button class="btn btn-outline-secondary me-2" onclick="clearSearch()">
+                  <i class="fas fa-redo me-2"></i>Coba Lagi
+                </button>
+                <a href="https://wa.me/6289629749277" target="_blank" class="btn btn-success">
+                  <i class="fab fa-whatsapp me-2"></i>Hubungi Admin
+                </a>
+              </div>
+            </div>
+
+            <!-- Results Container -->
+            <div id="resultsContainer" style="display: none;">
+              <!-- Results will be populated here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Reservation History Section End -->
+
+  <!-- Footer Start -->
+  <footer class="container-fluid py-5 premium-footer" style="background: #181818; border-top: 1px solid var(--primary-gold);">
+    <div class="container">
+      <div class="row g-4 align-items-start justify-content-between">
+        <div class="col-lg-6 col-md-12 d-flex align-items-start gap-3">
+          <div class="footer-logo" style="background: none; padding: 0;">
+            <img src="img/logo-brand.png" alt="Hotel Senang Hati Logo" style="height:48px;width:auto;object-fit:contain;max-width:130px;display:block;" onerror="this.onerror=null;this.src='img/logo-brand.PNG'" />
+          </div>
+          <div class="footer-desc ms-2">
+            <h2 class="mb-1" style="color: var(--primary-gold); font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700;">Hotel Senang Hati</h2>
+            <div class="mb-2" style="color: #f8f6f0; opacity: 0.9; font-size: 1.1rem; font-weight: 500;">Luxury Hotel Experience</div>
+            <div style="color: #f8f6f0; line-height: 1.6; font-size: 1rem; opacity: 0.85;">
+              Experience unparalleled luxury and comfort at Hotel Senang Hati.<br>
+              We are committed to providing exceptional hospitality with elegant touches in every detail of your stay.
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-12 mt-4 mt-lg-0">
+          <div class="footer-contact mb-3">
+            <div class="mb-2" style="color: #f8f6f0; font-size: 1rem;"><span class="footer-contact-label" style="color: var(--primary-gold); font-weight: 600;"><i class="fas fa-map-marker-alt me-2"></i>Alamat:</span> Pondok Cina, Beji, Depok City, West Java</div>
+            <div class="mb-2" style="color: #f8f6f0; font-size: 1rem;"><span class="footer-contact-label" style="color: var(--primary-gold); font-weight: 600;"><i class="fas fa-envelope me-2"></i>Email:</span> <a href="mailto:yugiindra40@gmail.com" style="color:var(--primary-gold);text-decoration:none;">yugiindra40@gmail.com</a></div>
+            <div class="mb-2" style="color: #f8f6f0; font-size: 1rem;"><span class="footer-contact-label" style="color: var(--primary-gold); font-weight: 600;"><i class="fas fa-phone me-2"></i>Telepon:</span> <a href="tel:+6289629749277" style="color:var(--primary-gold);text-decoration:none;">+62 896 2974 9277</a></div>
+            <div class="mb-2" style="color: #f8f6f0; font-size: 1rem;"><span class="footer-contact-label" style="color: var(--primary-gold); font-weight: 600;"><i class="fab fa-instagram me-2"></i>Instagram:</span> <a href="https://www.instagram.com/yugind/" target="_blank" style="color:var(--primary-gold);text-decoration:none;">@yugind</a></div>
+          </div>
+          <div class="footer-social d-flex gap-3 mt-2">
+            <a href="https://instagram.com/hotelsenanghati" title="Hotel Instagram" target="_blank" class="footer-social-icon" style="border: 2px solid var(--primary-gold); color: var(--primary-gold); width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.2rem; transition: all 0.3s ease; background: rgba(212, 175, 55, 0.1);"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/yugind/" title="Designer Instagram (@yugind)" target="_blank" class="footer-social-icon" style="border: 2px solid var(--primary-gold); color: var(--primary-gold); width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.2rem; transition: all 0.3s ease; background: rgba(212, 175, 55, 0.1);"><i class="fab fa-user-circle"></i></a>
+            <a href="https://wa.me/6289629749277" title="WhatsApp" target="_blank" class="footer-social-icon" style="border: 2px solid var(--primary-gold); color: var(--primary-gold); width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.2rem; transition: all 0.3s ease; background: rgba(212, 175, 55, 0.1);"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:yugiindra40@gmail.com" title="Email" class="footer-social-icon" style="border: 2px solid var(--primary-gold); color: var(--primary-gold); width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.2rem; transition: all 0.3s ease; background: rgba(212, 175, 55, 0.1);"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-divider my-4" style="height:1px; background:rgba(212, 175, 55, 0.3);"></div>
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small" style="color: #f8f6f0; opacity: 0.8; font-size: 0.9rem;">
+        <div>&copy; 2025 Hotel Senang Hati. All rights reserved.</div>
+        <div class="mt-2 mt-md-0">
+          Designed by <a href="https://www.instagram.com/yugind/" target="_blank" style="color:var(--primary-gold);font-weight:600;text-decoration:none;">orang cibinong</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+  <!-- WhatsApp Help Button -->
+  <a href="https://wa.me/6289629749277?text=Hello%20Hotel%20Senang%20Hati!%20Saya%20butuh%20bantuan%20informasi%20tentang%20hotel.%20Mohon%20dibantu." target="_blank" class="btn whatsapp-help-btn" title="Need Help? Contact us">
+    <i class="fab fa-whatsapp"></i>
+    <span class="help-text">Need Help?<br>Contact us</span>
+  </a>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
+  
+  <!-- Premium Navigation & Booking System -->
+  <script src="js/premium-clean.js"></script>
+
+  <script>
+    // Hide spinner after page load
+    window.addEventListener('load', function() {
+      const spinner = document.getElementById('spinner');
+      if (spinner) {
+        setTimeout(() => {
+          spinner.classList.remove('show');
+        }, 500);
+      }
+    });
+
+    // Sample reservation data (in real app, this would come from database)
+    const sampleReservations = [
+      {
+        code: 'HSH2507090001',
+        guestName: 'John Doe',
+        email: 'john@example.com',
+        phone: '+6281234567890',
+        roomType: 'Deluxe Room',
+        checkIn: '2025-07-15',
+        checkOut: '2025-07-17',
+        nights: 2,
+        guests: 2,
+        total: 1500000,
+        status: 'confirmed',
+        paymentStatus: 'paid',
+        paymentMethod: 'bank_transfer'
+      },
+      {
+        code: 'HSH2507080002',
+        guestName: 'Jane Smith',
+        email: 'jane@example.com',
+        phone: '+6281234567891',
+        roomType: 'Standard Room',
+        checkIn: '2025-07-12',
+        checkOut: '2025-07-14',
+        nights: 2,
+        guests: 1,
+        total: 1000000,
+        status: 'checked_out',
+        paymentStatus: 'paid',
+        paymentMethod: 'cash'
+      }
+    ];
+
+    // Search form handler
+    document.getElementById('searchForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      searchReservations();
+    });
+
+    function searchReservations() {
+      const bookingCode = document.getElementById('bookingCode').value.trim();
+      const guestEmail = document.getElementById('guestEmail').value.trim();
+      const guestPhone = document.getElementById('guestPhone').value.trim();
+
+      if (!bookingCode && !guestEmail && !guestPhone) {
+        alert('Silakan masukkan minimal satu kriteria pencarian');
+        return;
+      }
+
+      // Show loading state
+      showState('loading');
+
+      // Simulate API call delay
+      setTimeout(() => {
+        const results = sampleReservations.filter(reservation => {
+          return (
+            (bookingCode && reservation.code.toLowerCase().includes(bookingCode.toLowerCase())) ||
+            (guestEmail && reservation.email.toLowerCase().includes(guestEmail.toLowerCase())) ||
+            (guestPhone && reservation.phone.includes(guestPhone))
+          );
+        });
+
+        if (results.length > 0) {
+          displayResults(results);
+        } else {
+          showState('noResults');
+        }
+      }, 1500);
+    }
+
+    function displayResults(reservations) {
+      const container = document.getElementById('resultsContainer');
+      let html = '<div class="row g-4">';
+
+      reservations.forEach(reservation => {
+        const statusColor = getStatusColor(reservation.status);
+        const statusText = getStatusText(reservation.status);
+        
+        html += `
+          <div class="col-12">
+            <div class="card border-0 shadow-sm reservation-card">
+              <div class="card-body p-4">
+                <div class="row align-items-center">
+                  <div class="col-lg-8">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                      <div>
+                        <h5 class="card-title mb-1" style="color: var(--primary-gold);">
+                          <i class="fas fa-bed me-2"></i>${reservation.roomType}
+                        </h5>
+                        <p class="text-muted mb-0">Kode Booking: <strong>${reservation.code}</strong></p>
+                      </div>
+                      <span class="badge badge-${statusColor} px-3 py-2">${statusText}</span>
+                    </div>
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <div class="reservation-detail">
+                          <i class="fas fa-user text-primary me-2"></i>
+                          <span><strong>Tamu:</strong> ${reservation.guestName}</span>
+                        </div>
+                        <div class="reservation-detail">
+                          <i class="fas fa-calendar-check text-success me-2"></i>
+                          <span><strong>Check-in:</strong> ${formatDate(reservation.checkIn)}</span>
+                        </div>
+                        <div class="reservation-detail">
+                          <i class="fas fa-calendar-times text-danger me-2"></i>
+                          <span><strong>Check-out:</strong> ${formatDate(reservation.checkOut)}</span>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="reservation-detail">
+                          <i class="fas fa-moon text-info me-2"></i>
+                          <span><strong>Durasi:</strong> ${reservation.nights} malam</span>
+                        </div>
+                        <div class="reservation-detail">
+                          <i class="fas fa-users text-warning me-2"></i>
+                          <span><strong>Jumlah Tamu:</strong> ${reservation.guests} orang</span>
+                        </div>
+                        <div class="reservation-detail">
+                          <i class="fas fa-credit-card text-success me-2"></i>
+                          <span><strong>Total:</strong> Rp ${reservation.total.toLocaleString('id-ID')}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+                    <div class="d-flex flex-column gap-2">
+                      <button class="btn btn-outline-primary btn-sm" onclick="viewDetails('${reservation.code}')">
+                        <i class="fas fa-eye me-2"></i>Lihat Detail
+                      </button>
+                      <a href="https://wa.me/6289629749277?text=Halo,%20saya%20ingin%20bertanya%20tentang%20booking%20${reservation.code}" 
+                         target="_blank" class="btn btn-success btn-sm">
+                        <i class="fab fa-whatsapp me-2"></i>Hubungi Admin
+                      </a>
+                      ${reservation.status === 'confirmed' ? `
+                        <button class="btn btn-warning btn-sm" onclick="modifyBooking('${reservation.code}')">
+                          <i class="fas fa-edit me-2"></i>Ubah Booking
+                        </button>
+                      ` : ''}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+
+      html += '</div>';
+      container.innerHTML = html;
+      showState('results');
+    }
+
+    function showState(state) {
+      // Hide all states
+      document.getElementById('defaultState').style.display = 'none';
+      document.getElementById('loadingState').style.display = 'none';
+      document.getElementById('noResultsState').style.display = 'none';
+      document.getElementById('resultsContainer').style.display = 'none';
+
+      // Show selected state
+      switch(state) {
+        case 'loading':
+          document.getElementById('loadingState').style.display = 'block';
+          break;
+        case 'noResults':
+          document.getElementById('noResultsState').style.display = 'block';
+          break;
+        case 'results':
+          document.getElementById('resultsContainer').style.display = 'block';
+          break;
+        default:
+          document.getElementById('defaultState').style.display = 'block';
+      }
+    }
+
+    function clearSearch() {
+      document.getElementById('searchForm').reset();
+      showState('default');
+    }
+
+    function getStatusColor(status) {
+      const statusColors = {
+        'pending': 'warning',
+        'confirmed': 'success',
+        'checked_in': 'primary',
+        'checked_out': 'secondary',
+        'cancelled': 'danger'
+      };
+      return statusColors[status] || 'secondary';
+    }
+
+    function getStatusText(status) {
+      const statusTexts = {
+        'pending': 'Menunggu Konfirmasi',
+        'confirmed': 'Dikonfirmasi',
+        'checked_in': 'Check-in',
+        'checked_out': 'Check-out',
+        'cancelled': 'Dibatalkan'
+      };
+      return statusTexts[status] || 'Unknown';
+    }
+
+    function formatDate(dateString) {
+      const date = new Date(dateString);
+      const options = { 
+        weekday: 'short', 
+        year: 'numeric', 
+        month: 'short', 
+        day: 'numeric' 
+      };
+      return date.toLocaleDateString('id-ID', options);
+    }
+
+    function viewDetails(bookingCode) {
+      alert(`Fitur detail booking untuk ${bookingCode} akan segera tersedia!`);
+    }
+
+    function modifyBooking(bookingCode) {
+      if (confirm(`Apakah Anda yakin ingin mengubah booking ${bookingCode}?`)) {
+        alert('Fitur ubah booking akan segera tersedia!');
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Detail Kamar - Hotel Senang Hati</title>
+  <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
+  <meta content="Hotel Senang Hati, detail kamar, room details, hotel booking" name="keywords" />
+  <meta content="Detail kamar Hotel Senang Hati - Informasi lengkap fasilitas dan amenitas kamar" name="description" />
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&family=Playfair+Display:wght@400;600;700;900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Icon Font Stylesheet -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+  
+  <!-- Premium Clean CSS - Consolidated styling for consistency -->
+  <link href="css/premium-clean.css" rel="stylesheet" />
+  
+  <!-- Enhanced Responsive Design -->
+  <link href="css/responsive-design.css" rel="stylesheet" />
+  
+  <!-- Cross-Device Compatibility -->
+
+  
+  <!-- Luxury Theme -->
+  <link href="css/luxury-theme.css" rel="stylesheet" />
+
+  <!-- Example: Standardized Heading and Text Styles -->
+  <style>
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+      color: var(--primary-gold);
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .section-title, .display-4, .display-6 {
+      font-family: 'Playfair Display', serif;
+      color: var(--primary-gold);
+      font-weight: 700;
+    }
+    .lead, p, .section-fade {
+      font-family: 'Open Sans', sans-serif;
+      color: var(--primary-dark);
+      font-size: 1.08rem;
+      font-weight: 400;
+    }
+    /* Header premium styling */
+    .premium-header {
+      background: var(--gradient-dark) !important;
+      backdrop-filter: blur(20px);
+      border-bottom: 2px solid var(--primary-gold);
+      box-shadow: var(--shadow-luxury);
+    }
+    /* Hero section dengan overlay */
+    .hero-section-premium {
+      position: relative;
+      background: linear-gradient(135deg, rgba(212,175,55,0.1), rgba(24,24,24,0.2)), url('img/hero-img-1.png');
+      background-size: cover;
+      background-position: center;
+      padding: 100px 0 60px 0;
+      margin-top: 76px;
+      border-radius: 0 0 32px 32px;
+      overflow: hidden;
+    }
+    .hero-overlay-strong {
+      position: absolute;
+      inset: 0;
+      background: rgba(24,24,24,0.4);
+      z-index: 1;
+      border-radius: 0 0 32px 32px;
+    }
+    .hero-section-premium .container {
+      position: relative;
+      z-index: 2;
+    }
+    .hero-section-premium h1 {
+      color: var(--primary-cream) !important;
+      text-shadow: 2px 2px 12px rgba(0,0,0,0.6);
+    }
+    .hero-section-premium .lead {
+      color: var(--primary-cream) !important;
+      opacity: 0.9;
+      text-shadow: 1px 1px 8px rgba(0,0,0,0.5);
+    }
+    /* Room detail card styling */
+    .room-detail-card {
+      border-radius: 20px;
+      box-shadow: var(--shadow-luxury);
+      border: 1px solid rgba(212,175,55,0.1);
+    }
+    /* Similar rooms card styling */
+    .similar-rooms-card {
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      border: 1px solid rgba(212,175,55,0.15);
+      background: var(--primary-cream);
+    }
+    .similar-rooms-card .card-header {
+      background: var(--primary-gold);
+      color: var(--primary-dark);
+      border-radius: 16px 16px 0 0 !important;
+      border-bottom: none;
+    }
+    /* Button styling consistency */
+    .btn-luxury-primary {
+      background: var(--gradient-gold);
+      color: #fff;
+      border: none;
+      font-weight: 600;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    }
+    .btn-luxury-primary:hover {
+      background: var(--primary-gold);
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+    }
+    .btn-luxury-primary:active {
+      transform: scale(0.97);
+    }
+    .btn-back {
+      background: transparent;
+      color: var(--primary-gold);
+      border: 2px solid var(--primary-gold);
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+    .btn-back:hover {
+      background: var(--primary-gold);
+      color: #fff;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    }
+    /* Button sizes for different contexts */
+    .btn-sm.btn-luxury-primary {
+      padding: 6px 12px;
+      font-size: 0.85rem;
+      border-radius: 8px;
+    }
+    .btn-lg.btn-luxury-primary {
+      padding: 16px 32px;
+      font-size: 1.1rem;
+      border-radius: 12px;
+    }
+    /* Modal styling */
+    .modal-content {
+      border-radius: 16px;
+      border: none;
+      box-shadow: var(--shadow-luxury);
+    }
+    .modal-header {
+      background: var(--gradient-dark);
+      color: var(--primary-cream);
+      border-radius: 16px 16px 0 0;
+      border-bottom: 2px solid var(--primary-gold);
+    }
+    /* Form styling */
+    .form-control, .form-select {
+      border: 2px solid #e0e0e0;
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: 1rem;
+      transition: all 0.2s ease;
+    }
+    .form-control:focus, .form-select:focus {
+      border-color: var(--primary-gold);
+      box-shadow: 0 0 0 3px rgba(212,175,55,0.15);
+      outline: none;
+    }
+    .form-label {
+      color: var(--primary-dark);
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+    /* Similar rooms container */
+    #similarRoomsContainer .card {
+      margin-bottom: 16px;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+    }
+    #similarRoomsContainer .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    }
+    #similarRoomsContainer img {
+      width: 100%;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 12px 0 0 12px;
+    }
+  </style>
+  <!-- End Standardized Heading and Text Styles -->
+</head>
+
+<body>
+  <!-- Spinner Start -->
+  <div id="spinner"
+    class="show w-100 vh-100 position-fixed translate-middle top-50 start-50 d-flex align-items-center justify-content-center"
+    style="background: var(--luxury-cream);">
+    <div class="spinner-luxury" role="status"></div>
+  </div>
+  <!-- Spinner End -->
+
+  <!-- Header Start -->
+  <header class="position-fixed w-100 premium-header" style="top: 0; z-index: 1050;">
+    <div class="container d-flex justify-content-between align-items-center py-3">
+      <!-- Logo and Hotel Name -->
+      <div class="d-flex align-items-center">
+        <img src="img/logo-brand.png" alt="Hotel Senang Hati Logo" style="height: 40px; width: auto; margin-right: 12px;" onerror="this.onerror=null;this.src='img/logo-brand.PNG'" />
+        <h1 class="mb-0" style="color: var(--primary-gold); font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700;">Hotel Senang Hati</h1>
+      </div>
+      
+      <!-- Navigation Buttons -->
+      <div class="d-flex align-items-center gap-3">
+        <a href="index.html" class="btn btn-back d-flex align-items-center">
+          <i class="fas fa-arrow-left me-2"></i>Kembali
+        </a>
+        <a href="reservation-form.html" class="btn btn-luxury-primary d-flex align-items-center">
+          <i class="fas fa-calendar-check me-2"></i>Booking
+        </a>
+      </div>
+    </div>
+  </header>
+  <!-- Header End -->
+
+  <!-- Hero Section for Room Detail -->
+  <section class="hero-section-premium section-fade" style="margin-top: 70px;">
+    <div class="hero-overlay-strong"></div>
+    <div class="container text-center">
+      <h1 class="display-4 mb-2" style="font-family: 'Playfair Display', serif; font-weight: 800;">Detail Kamar</h1>
+      <p class="lead" style="color: var(--primary-dark); max-width: 600px; margin: 0 auto;">Lihat informasi lengkap, fasilitas, dan lakukan pemesanan kamar pilihan Anda di Hotel Senang Hati.</p>
+    </div>
+  </section>
+  <!-- End Hero Section -->
+
+  <!-- Room Detail Start -->
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-12">
+        <div class="card room-detail-card border-0">
+          <div class="card-body p-5">
+            <div id="roomDetailContent">
+              <!-- Konten detail kamar akan diisi oleh JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 d-none d-lg-block">
+        <div class="card similar-rooms-card border-0">
+          <div class="card-header text-center">
+            <h4 class="mb-0" style="font-weight: 600;">Kamar Serupa</h4>
+          </div>
+          <div class="card-body p-4">
+            <div id="similarRoomsContainer">
+              <!-- Kamar serupa akan diisi oleh JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Room Detail End -->
+
+  <!-- Booking Modal -->
+  <div class="modal fade" id="quickBookingModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">
+            <i class="fas fa-calendar-plus me-2" style="color: var(--primary-gold);"></i>
+            Quick Booking
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="quickBookingForm">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="quickRoomType" class="form-label">Tipe Kamar</label>
+                <select class="form-select" id="quickRoomType" required>
+                  <option value="">Pilih Tipe Kamar</option>
+                  <option value="deluxe">Deluxe Room</option>
+                  <option value="standard">Standard Room</option>
+                  <option value="suite">Executive Suite</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="quickCheckin" class="form-label">Check-in</label>
+                <input type="date" class="form-control" id="quickCheckin" required>
+              </div>
+              <div class="col-md-6">
+                <label for="quickCheckout" class="form-label">Check-out</label>
+                <input type="date" class="form-control" id="quickCheckout" required>
+              </div>
+              <div class="col-md-6">
+                <label for="quickGuests" class="form-label">Jumlah Tamu</label>
+                <select class="form-select" id="quickGuests" required>
+                  <option value="">Pilih Jumlah Tamu</option>
+                  <option value="1">1 Tamu</option>
+                  <option value="2">2 Tamu</option>
+                  <option value="3">3 Tamu</option>
+                  <option value="4">4 Tamu</option>
+                  <option value="5">5+ Tamu</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Total Estimasi</label>
+                <div class="form-control" style="background: var(--primary-cream); color: var(--primary-gold); font-weight: bold;">
+                  <span id="totalEstimate">Pilih tanggal</span>
+                </div>
+              </div>
+              <div class="col-md-6 d-flex align-items-end">
+                <button type="button" id="checkAvailabilityBtn" class="btn btn-luxury-primary w-100">
+                  <i class="fas fa-search me-2"></i>Check Availability
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-luxury-primary" onclick="proceedToReservation()">
+            <i class="fas fa-arrow-right me-2"></i>Lanjut ke Reservasi
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Start -->
+  <footer class="container-fluid py-5 premium-footer" style="background: #181818; border-top: 1px solid var(--primary-gold);">
+    <div class="container">
+      <div class="row g-4 align-items-start justify-content-between">
+        <div class="col-lg-6 col-md-12 d-flex align-items-start gap-3">
+          <div class="footer-logo" style="background: none; padding: 0;">
+            <img src="img/logo-brand.png" alt="Hotel Senang Hati Logo" style="height:48px;width:auto;object-fit:contain;max-width:130px;display:block;" onerror="this.onerror=null;this.src='img/logo-brand.PNG'" />
+          </div>
+          <div class="footer-desc ms-2">
+            <h2 class="mb-1" style="color: var(--primary-gold); font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700;">Hotel Senang Hati</h2>
+            <div class="mb-2" style="color: #f8f6f0; opacity: 0.9; font-size: 1.1rem; font-weight: 500;">Luxury Hotel Experience</div>
+            <div style="color: #f8f6f0; line-height: 1.6; font-size: 1rem; opacity: 0.85;">
+              Experience unparalleled luxury and comfort at Hotel Senang Hati.<br>
+              We are committed to providing exceptional hospitality with elegant touches in every detail of your stay.
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-12 mt-4 mt-lg-0">
+          <div class="footer-contact mb-3">
+            <div class="mb-2" style="color: #f8f6f0; font-size: 1rem;"><span class="footer-contact-label" style="color: var(--primary-gold); font-weight: 600;"><i class="fas fa-map-marker-alt me-2"></i>Alamat:</span> Pondok Cina, Beji, Depok City, West Java</div>
+            <div class="mb-2" style="color: #f8f6f0; font-size: 1rem;"><span class="footer-contact-label" style="color: var(--primary-gold); font-weight: 600;"><i class="fas fa-envelope me-2"></i>Email:</span> <a href="mailto:yugiindra40@gmail.com" style="color:var(--primary-gold);text-decoration:none;">yugiindra40@gmail.com</a></div>
+            <div class="mb-2" style="color: #f8f6f0; font-size: 1rem;"><span class="footer-contact-label" style="color: var(--primary-gold); font-weight: 600;"><i class="fas fa-phone me-2"></i>Telepon:</span> <a href="tel:+6289629749277" style="color:var(--primary-gold);text-decoration:none;">+62 896 2974 9277</a></div>
+            <div class="mb-2" style="color: #f8f6f0; font-size: 1rem;"><span class="footer-contact-label" style="color: var(--primary-gold); font-weight: 600;"><i class="fab fa-instagram me-2"></i>Instagram:</span> <a href="https://www.instagram.com/yugind/" target="_blank" style="color:var(--primary-gold);text-decoration:none;">@yugind</a></div>
+          </div>
+          <div class="footer-social d-flex gap-3 mt-2">
+            <a href="https://instagram.com/hotelsenanghati" title="Hotel Instagram" target="_blank" class="footer-social-icon" style="border: 2px solid var(--primary-gold); color: var(--primary-gold); width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.2rem; transition: all 0.3s ease; background: rgba(212, 175, 55, 0.1);"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/yugind/" title="Designer Instagram (@yugind)" target="_blank" class="footer-social-icon" style="border: 2px solid var(--primary-gold); color: var(--primary-gold); width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.2rem; transition: all 0.3s ease; background: rgba(212, 175, 55, 0.1);"><i class="fab fa-user-circle"></i></a>
+            <a href="https://wa.me/6289629749277" title="WhatsApp" target="_blank" class="footer-social-icon" style="border: 2px solid var(--primary-gold); color: var(--primary-gold); width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.2rem; transition: all 0.3s ease; background: rgba(212, 175, 55, 0.1);"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:yugiindra40@gmail.com" title="Email" class="footer-social-icon" style="border: 2px solid var(--primary-gold); color: var(--primary-gold); width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.2rem; transition: all 0.3s ease; background: rgba(212, 175, 55, 0.1);"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-divider my-4" style="height:1px; background:rgba(212, 175, 55, 0.3);"></div>
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small" style="color: #f8f6f0; opacity: 0.8; font-size: 0.9rem;">
+        <div>&copy; 2025 Hotel Senang Hati. All rights reserved.</div>
+        <div class="mt-2 mt-md-0">
+          Designed by <a href="https://www.instagram.com/yugind/" target="_blank" style="color:var(--primary-gold);font-weight:600;text-decoration:none;">orang cibinong</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+  <!-- WhatsApp Help Button -->
+  <div class="whatsapp-help-btn" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4); cursor: pointer; transition: all 0.3s ease;" onclick="openWhatsApp()">
+    <i class="fab fa-whatsapp" style="font-size: 26px; color: white; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"></i>
+    <span class="help-text" style="opacity: 0; font-size: 14px; font-weight: 600; line-height: 1.2; color: white; position: absolute; right: 70px; background: #25D366; padding: 8px 12px; border-radius: 8px; white-space: nowrap; transition: all 0.3s ease;">Butuh bantuan?</span>
+  </div>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Hotel System Javascript -->
+  <script src="js/hotel-system.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/premium-clean.js"></script>
+  
+
+  
+  <!-- Cross-Device Compatibility Enhancement -->
+  <script>
+    // WhatsApp Help Button
+    function openWhatsApp() {
+      const message = "Halo, saya butuh bantuan mengenai detail kamar di Hotel Senang Hati. Bisakah Anda membantu saya?";
+      const whatsappUrl = `https://wa.me/6289629749277?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+    }
+
+    // WhatsApp Help Button Hover Effect
+    $('.whatsapp-help-btn').hover(
+      function() {
+        $(this).find('.help-text').css('opacity', '1');
+      },
+      function() {
+        $(this).find('.help-text').css('opacity', '0');
+      }
+    );
+
+    // Room Detail Script
+    // Data kamar (dummy, bisa dikembangkan ke API/backend)
+    const roomList = [
+      {
+        id: 'standard',
+        name: 'Standard Room',
+        desc: 'Kamar nyaman dengan fasilitas modern, tempat tidur queen size, pemandangan kota, AC, TV, dan kamar mandi pribadi.',
+        images: ['img/Standar-room.png', 'img/room-service.png', 'img/parking-valet.png'],
+        facilities: ['Queen Bed', 'Free WiFi', 'Private Bathroom', 'TV', 'AC'],
+        price: 750000,
+        capacity: 2,
+        available: true
+      },
+      {
+        id: 'deluxe',
+        name: 'Deluxe Room',
+        desc: 'Kamar luas dengan dekorasi elegan, tempat tidur king size, balkon pribadi, minibar, dan view kota.',
+        images: ['img/deluxe-room.png', 'img/rooftop-hotel.png', 'img/dining-area.png'],
+        facilities: ['King Bed', 'Balkon', 'Minibar', 'City View', 'Smart TV'],
+        price: 1200000,
+        capacity: 3,
+        available: true
+      },
+      {
+        id: 'suite',
+        name: 'Executive Suite',
+        desc: 'Suite mewah dengan ruang tamu terpisah, jacuzzi, layanan butler 24 jam, dan fasilitas premium.',
+        images: ['img/Executive-room.png', 'img/concierge-service.png', 'img/spa-facility.png'],
+        facilities: ['King Bed', 'Jacuzzi', 'Living Room', 'Butler Service', 'Spa Access'],
+        price: 2500000,
+        capacity: 4,
+        available: true
+      },
+      {
+        id: 'presidential',
+        name: 'Presidential Suite',
+        desc: 'Suite mewah tertinggi dengan ruang makan pribadi, pemandangan panorama, dan layanan concierge eksklusif.',
+        images: ['img/Pressidential-room.png', 'img/weeding-venue.png', 'img/meeting-room.png'],
+        facilities: ['King Bed', 'Private Dining', 'Panoramic View', 'Concierge Service', 'Premium Amenities'],
+        price: 5000000,
+        capacity: 6,
+        available: true
+      }
+    ];
+
+    function getRoomById(id) {
+      return roomList.find(r => r.id === id);
+    }
+
+    function getRecommendedRooms(excludeId) {
+      return roomList.filter(r => r.id !== excludeId && r.available);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const params = new URLSearchParams(window.location.search);
+      const roomId = params.get('room');
+      const checkin = params.get('checkin') || '';
+      const checkout = params.get('checkout') || '';
+      const guests = params.get('guests') || '';
+      const room = getRoomById(roomId);
+      const container = document.getElementById('roomDetailContent');
+      const recContainer = document.getElementById('similarRoomsContainer');
+
+      if (!room) {
+        container.innerHTML = `<div class='text-center p-5'><h4>Kamar tidak ditemukan</h4><a href='index.html' class='btn btn-luxury-primary mt-3'>Kembali</a></div>`;
+        recContainer.innerHTML = '';
+        return;
+      }
+
+      // Tampilkan detail kamar
+      let imagesHtml = room.images.map((img, i) => `<div class='carousel-item${i===0?' active':''}'><img src='${img}' class='d-block w-100 rounded' style='height:320px;object-fit:cover;'/></div>`).join('');
+      let facilitiesHtml = room.facilities.map(f => `<span class='badge bg-secondary me-1 mb-1'>${f}</span>`).join(' ');
+      let priceHtml = `<div class='fw-bold' style='color:var(--primary-gold);font-size:1.2em;'>Rp ${room.price.toLocaleString('id-ID')}/malam</div>`;
+      let detailHtml = `
+        <div class='row'>
+          <div class='col-md-6'>
+            <div id='roomCarousel' class='carousel slide mb-3' data-bs-ride='carousel'>
+              <div class='carousel-inner'>${imagesHtml}</div>
+              <button class='carousel-control-prev' type='button' data-bs-target='#roomCarousel' data-bs-slide='prev'><span class='carousel-control-prev-icon'></span></button>
+              <button class='carousel-control-next' type='button' data-bs-target='#roomCarousel' data-bs-slide='next'><span class='carousel-control-next-icon'></span></button>
+            </div>
+          </div>
+          <div class='col-md-6'>
+            <h2>${room.name}</h2>
+            <div class='mb-2'>${facilitiesHtml}</div>
+            <div class='mb-2'>${room.desc}</div>
+            <div class='mb-2'>Kapasitas: ${room.capacity} tamu</div>
+            ${priceHtml}
+            <div class='mt-4'>
+              ${room.available ? `<a href="reservation-form.html?room=${room.id}&checkin=${checkin}&checkout=${checkout}&guests=${guests}" class="btn btn-luxury-primary btn-lg w-100"><i class="fas fa-calendar-check me-2"></i>Pesan Sekarang</a>` : `<div class='alert alert-warning'>Kamar ini sedang tidak tersedia.</div>`}
+            </div>
+          </div>
+        </div>
+      `;
+      container.innerHTML = detailHtml;
+
+      // Tampilkan rekomendasi semua kamar lain yang tersedia
+      let recRooms = getRecommendedRooms(room.id); // tampilkan semua kamar selain kamar saat ini
+      if (recRooms.length > 0) {
+        recContainer.innerHTML = recRooms.map(r => `
+          <div class='card mb-3'>
+            <div class='row g-0'>
+              <div class='col-4'>
+                <img src='${r.images[0]}' class='img-fluid' style='height:90px;object-fit:cover;border-radius:12px 0 0 12px;'/>
+              </div>
+              <div class='col-8'>
+                <div class='card-body p-3'>
+                  <h6 class='card-title mb-2' style='color: var(--primary-gold); font-weight: 600; font-size: 1rem;'>${r.name}</h6>
+                  <div class='mb-2'>
+                    <span class='badge' style='background: var(--primary-gold); color: #fff; font-size: 0.75rem; padding: 4px 8px;'>${r.facilities[0]}</span>
+                  </div>
+                  <div class='mb-3' style='color: var(--primary-gold); font-weight: bold; font-size: 0.95rem;'>
+                    Rp ${r.price.toLocaleString('id-ID')}/malam
+                  </div>
+                  <div class='d-flex gap-2'>
+                    <a href='room-detail.html?room=${r.id}&checkin=${checkin}&checkout=${checkout}&guests=${guests}' 
+                       class='btn btn-sm btn-back' style='font-size: 0.8rem; padding: 6px 12px; flex: 1;'>Detail</a>
+                    <a href='reservation-form.html?room=${r.id}&checkin=${checkin}&checkout=${checkout}&guests=${guests}' 
+                       class='btn btn-sm btn-luxury-primary' style='font-size: 0.8rem; padding: 6px 12px; flex: 1;'>Pesan</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      } else {
+        recContainer.innerHTML = `<div class='text-center text-muted p-3'>Tidak ada kamar lain yang tersedia saat ini.</div>`;
+      }
+    });
+  </script>
+</body>
+
+</html>

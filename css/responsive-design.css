@@ -1,0 +1,632 @@
+/* Enhanced Responsive Design - Maison du Croissant */
+
+/* Color Palette - Original Blue Theme */
+:root {
+    --primary-blue: #0d6efd;           /* Bootstrap Primary Blue */
+    --secondary-blue: #6c757d;         /* Bootstrap Secondary */
+    --light-blue: #e3f2fd;            /* Light Blue */
+    --dark-blue: #0b5ed7;             /* Dark Blue */
+    --accent-blue: #17a2b8;           /* Info Blue */
+    --success-green: #28a745;         /* Success Green */
+    --warning-yellow: #ffc107;        /* Warning Yellow */
+    --danger-red: #dc3545;            /* Danger Red */
+    --light-gray: #f8f9fa;            /* Light Gray */
+    --dark-gray: #343a40;             /* Dark Gray */
+}
+
+/* Reset dan Base Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Container Responsive */
+.container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (min-width: 576px) {
+    .container-fluid {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container-fluid {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+/* Product Card Enhancements */
+.fruite-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e9ecef;
+    margin-bottom: 1rem;
+}
+
+.fruite-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(13, 110, 253, 0.2);
+    border-color: var(--primary-blue);
+}
+
+/* Konsistensi Tombol Aksi */
+.btn-action {
+    height: 38px;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 8px;
+    border: 2px solid;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    min-width: 90px;
+    white-space: nowrap;
+}
+
+/* Tombol Detail (Sekunder) */
+.btn-detail {
+    background-color: transparent;
+    color: var(--primary-blue);
+    border-color: var(--primary-blue);
+}
+
+.btn-detail:hover {
+    background-color: var(--primary-blue);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+}
+
+/* Tombol Tambah/Add to Cart (Primer) */
+.btn-add-cart {
+    background-color: var(--primary-blue);
+    color: white;
+    border-color: var(--primary-blue);
+}
+
+.btn-add-cart:hover {
+    background-color: var(--dark-blue);
+    border-color: var(--dark-blue);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(11, 94, 215, 0.4);
+}
+
+/* Override Bootstrap Primary untuk konsistensi */
+.btn-primary {
+    background-color: var(--primary-blue) !important;
+    border-color: var(--primary-blue) !important;
+    color: white !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: var(--dark-blue) !important;
+    border-color: var(--dark-blue) !important;
+    color: white !important;
+    box-shadow: 0 4px 12px rgba(11, 94, 215, 0.3) !important;
+}
+
+/* Tombol Outline dengan tema original */
+.btn-outline-primary {
+    color: var(--primary-blue) !important;
+    border-color: var(--primary-blue) !important;
+    background-color: transparent !important;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+    background-color: var(--primary-blue) !important;
+    border-color: var(--primary-blue) !important;
+    color: white !important;
+}
+
+/* Tombol Konfirmasi (Aksi Utama) */
+.btn-confirm {
+    background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue)) !important;
+    border: 2px solid var(--primary-blue) !important;
+    color: white !important;
+    height: 45px;
+    padding: 0.7rem 1.5rem;
+    font-weight: 600;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-confirm:hover {
+    background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue)) !important;
+    border-color: var(--dark-blue) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(13, 110, 253, 0.4) !important;
+    color: white !important;
+}
+
+/* Tombol Checkout */
+.btn-checkout {
+    background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue)) !important;
+    border: 2px solid var(--primary-blue) !important;
+    color: white !important;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-checkout:hover {
+    background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue)) !important;
+    border-color: var(--dark-blue) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(13, 110, 253, 0.4) !important;
+    color: white !important;
+}
+
+/* Modal Enhancements */
+.modal-content {
+    border-radius: 15px;
+    border: 3px solid var(--light-blue);
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(13, 110, 253, 0.2);
+}
+
+.modal-header {
+    background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue)) !important;
+    border-radius: 15px 15px 0 0 !important;
+    border: none;
+    color: white;
+}
+
+.modal-header.bg-success {
+    background: linear-gradient(135deg, var(--success-green), #218838) !important;
+}
+
+.modal-footer {
+    border: none;
+    border-radius: 0 0 15px 15px;
+    background-color: #fafafa;
+    padding: 1.5rem;
+}
+
+/* Product Detail Badges */
+.fruite-item small.text-muted {
+    font-size: 0.75rem;
+    line-height: 1.2;
+    color: var(--primary-blue) !important;
+    font-weight: 500;
+}
+
+/* Quantity Controls */
+.input-group-btn .btn {
+    border-radius: 50% !important;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background-color: var(--light-blue);
+    border: 2px solid var(--primary-blue);
+    color: var(--primary-blue);
+}
+
+.input-group-btn .btn:hover {
+    background-color: var(--primary-blue);
+    border-color: var(--dark-blue);
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Success Animations */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal.show .modal-content {
+    animation: bounceIn 0.5s ease-out;
+}
+
+/* Notification Styles */
+.alert {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 15px rgba(13, 110, 253, 0.1);
+}
+
+.alert-success {
+    background: linear-gradient(135deg, var(--success-green), #218838) !important;
+    color: white;
+}
+
+.alert-info {
+    background: linear-gradient(135deg, var(--accent-blue), var(--primary-blue)) !important;
+    color: white;
+}
+
+/* Form Enhancements */
+.form-check {
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.form-check:hover {
+    background-color: var(--light-blue) !important;
+    border-color: var(--primary-blue) !important;
+}
+
+.form-check-input:checked + .form-check-label {
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+
+/* Card Shadows */
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card.shadow {
+    box-shadow: 0 10px 30px rgba(13, 110, 253, 0.15) !important;
+    border: 2px solid var(--light-blue);
+}
+
+/* Badge Enhancements */
+.badge {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+.bg-primary {
+    background-color: var(--primary-blue) !important;
+}
+
+/* Enhanced Product Images */
+.fruite-img img {
+    transition: transform 0.3s ease;
+    border-radius: 8px 8px 0 0;
+}
+
+.fruite-item:hover .fruite-img img {
+    transform: scale(1.05);
+}
+
+/* Cart Total Section */
+.bg-light.rounded {
+    border: 2px solid var(--light-blue);
+    background: linear-gradient(135deg, var(--light-blue), #ffffff) !important;
+}
+
+.cart-total-section {
+    background: var(--light-blue);
+    border: 2px solid var(--primary-blue);
+    border-radius: 15px;
+    padding: 1.5rem;
+}
+
+/* Text Colors */
+.text-primary {
+    color: var(--primary-blue) !important;
+}
+
+.maison-du-croissant {
+    color: white !important;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design Improvements */
+
+/* Extra Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .modal-lg,
+    .modal-xl {
+        max-width: 95%;
+        margin: 1rem auto;
+    }
+    
+    .fruite-item .d-flex.gap-2 {
+        flex-direction: column;
+        gap: 0.5rem !important;
+    }
+    
+    .btn-action {
+        width: 100%;
+        margin-bottom: 0.5rem;
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .btn-confirm,
+    .btn-checkout {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+    
+    .container-fluid {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .modal-body {
+        padding: 1rem;
+    }
+    
+    .modal-footer {
+        padding: 1rem;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    /* Stack navigation items vertically on mobile */
+    .navbar-nav {
+        text-align: center;
+    }
+    
+    .navbar-nav .nav-item {
+        margin: 0.25rem 0;
+    }
+    
+    /* Improve form spacing on mobile */
+    .form-group,
+    .mb-3 {
+        margin-bottom: 1rem;
+    }
+    
+    /* Better table display on mobile */
+    .table-responsive {
+        border: none;
+    }
+    
+    .table td,
+    .table th {
+        padding: 0.5rem;
+        vertical-align: middle;
+    }
+    
+    /* Mobile-friendly cart layout */
+    .quantity {
+        width: 80px !important;
+    }
+    
+    .input-group-btn .btn {
+        width: 28px;
+        height: 28px;
+        font-size: 0.75rem;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .modal-lg {
+        max-width: 90%;
+    }
+    
+    .btn-action {
+        font-size: 0.8rem;
+        padding: 0.45rem 0.9rem;
+    }
+    
+    .fruite-item {
+        margin-bottom: 1.5rem;
+    }
+    
+    .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .modal-lg {
+        max-width: 85%;
+    }
+    
+    .fruite-item .d-flex.gap-2 {
+        gap: 0.75rem !important;
+    }
+    
+    .btn-action {
+        min-width: 80px;
+    }
+    
+    .container {
+        max-width: 720px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .modal-lg {
+        max-width: 800px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+    .modal-lg {
+        max-width: 900px;
+    }
+}
+
+/* Ultra-wide screens (1400px and up) */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+    
+    .modal-lg {
+        max-width: 1000px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .modal,
+    .navbar,
+    .btn,
+    .back-to-top {
+        display: none !important;
+    }
+    
+    .container-fluid {
+        padding: 0;
+    }
+    
+    .fruite-item {
+        page-break-inside: avoid;
+        margin-bottom: 1rem;
+    }
+}
+
+/* High DPI / Retina Display Support */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .fruite-img img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Dark Mode Support (Optional) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #1a1a1a;
+        --text-color: #ffffff;
+        --card-bg: #2d2d2d;
+    }
+    
+    /* Apply dark mode styles only if user preference is detected */
+    .dark-mode-support body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+    }
+    
+    .dark-mode-support .card,
+    .dark-mode-support .modal-content {
+        background-color: var(--card-bg);
+        color: var(--text-color);
+    }
+}
+
+/* Focus Indicators for Accessibility */
+.btn:focus,
+.form-control:focus,
+.form-select:focus {
+    outline: 2px solid var(--primary-blue);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* Improve touch targets */
+@media (hover: none) and (pointer: coarse) {
+    .btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .nav-link,
+    .dropdown-item {
+        padding: 0.75rem 1rem;
+    }
+}
+
+/* Loading States */
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Custom Scrollbar */
+.modal-body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-blue) var(--light-blue);
+}
+
+.modal-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background: var(--light-blue);
+    border-radius: 3px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: var(--primary-blue);
+    border-radius: 3px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-blue);
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Improve performance with CSS containment */
+.fruite-item {
+    contain: layout style;
+}
+
+.modal {
+    contain: layout;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

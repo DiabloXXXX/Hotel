@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <title>Status Booking - Hotel Senang Hati</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/premium-clean.css">
+  <style>
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+      color: var(--primary-gold);
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .section-title, .display-4, .display-6 {
+      font-family: 'Playfair Display', serif;
+      color: var(--primary-gold);
+      font-weight: 700;
+    }
+    .lead, p, .section-fade, .hero-subtitle, .footer-desc, .footer-contact, .footer-social, .room-features, .amenity-features, .event-features {
+      font-family: 'Open Sans', sans-serif;
+      color: var(--primary-dark);
+      font-size: 1.08rem;
+      font-weight: 400;
+    }
+    .premium-navbar, .premium-footer, .footer-logo, .footer-desc h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--primary-gold);
+    }
+    .btn-luxury-primary, .btn-luxury-secondary {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 600;
+    }
+    .luxury-badge {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body style="background: var(--luxury-cream);">
+  <!-- Premium Navigation Bar Start -->
+  <header class="premium-header">
+    <nav class="navbar navbar-expand-lg fixed-top premium-navbar">
+      <div class="container-fluid px-4">
+        <a class="navbar-brand premium-brand" href="index.html">
+          <div class="brand-container">
+            <img src="img/logo-brand.png" alt="Hotel Senang Hati Logo" class="brand-logo" style="height:48px;width:auto;object-fit:contain;max-width:130px;display:block;" onerror="this.onerror=null;this.src='img/logo-brand.PNG'" />
+            <div class="brand-details">
+              <span class="brand-title">Hotel Senang Hati</span>
+              <small class="brand-subtitle">Luxury Experience</small>
+            </div>
+          </div>
+        </a>
+        <div class="navbar-nav mx-auto d-none d-lg-flex premium-nav-menu">
+          <a class="nav-link premium-nav-link" href="index.html">Beranda</a>
+          <a class="nav-link premium-nav-link" href="room-detail.html">Detail Kamar</a>
+          <a class="nav-link premium-nav-link" href="reservation-form.html">Booking</a>
+          <a class="nav-link premium-nav-link" href="reservation.html">Riwayat</a>
+        </div>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="mobileNav">
+        <div class="navbar-nav w-100 text-center d-lg-none">
+          <a class="nav-link" href="index.html">Beranda</a>
+          <a class="nav-link" href="room-detail.html">Detail Kamar</a>
+          <a class="nav-link" href="reservation-form.html">Booking</a>
+          <a class="nav-link" href="reservation.html">Riwayat</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Premium Navigation Bar End -->
+
+  <!-- Hero Section Start -->
+  <section class="section-fade" style="background: linear-gradient(rgba(212,175,55,0.08),rgba(0,0,0,0.01)), url('img/hero-img-1.png'); background-size: cover; background-position: center; padding: 64px 0 32px 0; margin-top: 80px;">
+    <div class="container text-center">
+      <h1 class="display-4 mb-2" style="color: var(--primary-gold); font-family: 'Playfair Display', serif; font-weight: 800;">Status Pemesanan</h1>
+      <p class="lead" style="color: var(--primary-dark); max-width: 600px; margin: 0 auto;">Lihat status pemesanan kamar Anda di Hotel Senang Hati. Simpan kode pesanan untuk check-in atau cek riwayat pesanan Anda.</p>
+    </div>
+  </section>
+  <!-- Hero Section End -->
+
+  <div class="container py-5" style="margin-top: 40px;">
+    <div class="row justify-content-center">
+      <div class="col-lg-7 col-md-10">
+        <div class="card shadow-lg border-0" style="border-radius: 18px;">
+          <div class="card-body p-5 text-center">
+            <h2 class="mb-3 section-title">Status Booking</h2>
+            <div id="bookingStatusResult">
+              <!-- Status booking akan diisi oleh JS -->
+            </div>
+            <a href="reservation.html" class="btn btn-luxury-primary mt-4">Lihat Riwayat Pesanan</a>
+            <a href="index.html" class="btn btn-outline-secondary mt-2">Kembali ke Beranda</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Start -->
+  <div class="container-fluid" style="background: var(--luxury-black); color: var(--luxury-cream);">
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-item">
+            <h4 class="text-light mb-3" style="color: var(--luxury-gold) !important; font-family: 'Playfair Display', serif;">Hotel Senang Hati</h4>
+            <p class="mb-4" style="color: var(--luxury-cream);">
+              Hotel mewah yang menawarkan pengalaman menginap tak terlupakan dengan pelayanan terbaik dan fasilitas berkelas dunia.
+            </p>
+            <div class="d-flex">
+              <a class="btn btn-md-square rounded-circle me-3" style="border: 2px solid var(--luxury-gold); color: var(--luxury-gold); width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;" href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a class="btn btn-md-square rounded-circle me-3" style="border: 2px solid var(--luxury-gold); color: var(--luxury-gold); width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;" href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+              <a class="btn btn-md-square rounded-circle me-3" style="border: 2px solid var(--luxury-gold); color: var(--luxury-gold); width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;" href="https://wa.me/6289629749277" title="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+              <a class="btn btn-md-square rounded-circle" style="border: 2px solid var(--luxury-gold); color: var(--luxury-gold); width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;" href="mailto:info@hotelsenanghati.com" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex flex-column text-start footer-item">
+            <h4 class="text-light mb-3" style="color: var(--luxury-gold) !important;">Kontak Info</h4>
+            <a class="btn-link" href="#" style="color: var(--luxury-cream); text-decoration: none;"><i class="fas fa-map-marker-alt me-2" style="color: var(--luxury-gold);"></i>Jl. Luxury Resort No. 123, Jakarta</a>
+            <a class="btn-link" href="mailto:info@hotelsenanghati.com" style="color: var(--luxury-cream); text-decoration: none;"><i class="fas fa-envelope me-2" style="color: var(--luxury-gold);"></i>info@hotelsenanghati.com</a>
+            <a class="btn-link" href="tel:+6281234567890" style="color: var(--luxury-cream); text-decoration: none;"><i class="fas fa-phone me-2" style="color: var(--luxury-gold);"></i>+62 812-3456-7890</a>
+            <a class="btn-link" href="tel:+6281234567890" style="color: var(--luxury-cream); text-decoration: none;"><i class="fas fa-clock me-2" style="color: var(--luxury-gold);"></i>24/7 Customer Service</a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex flex-column text-start footer-item">
+            <h4 class="text-light mb-3" style="color: var(--luxury-gold) !important;">Link Cepat</h4>
+            <a class="btn-link" href="index.html" style="color: var(--luxury-cream); text-decoration: none;"><i class="fas fa-home me-2" style="color: var(--luxury-gold);"></i>Beranda</a>
+            <a class="btn-link" href="search-rooms.html" style="color: var(--luxury-cream); text-decoration: none;"><i class="fas fa-search me-2" style="color: var(--luxury-gold);"></i>Cari Kamar</a>
+            <a class="btn-link" href="room-detail.html" style="color: var(--luxury-cream); text-decoration: none;"><i class="fas fa-bed me-2" style="color: var(--luxury-gold);"></i>Detail Kamar</a>
+            <a class="btn-link" href="staff-login.html" style="color: var(--luxury-cream); text-decoration: none;"><i class="fas fa-users me-2" style="color: var(--luxury-gold);"></i>Staff Login</a>
+          </div>
+        </div>
+      </div>
+      <div class="row border-top mt-3 pt-3" style="border-color: var(--luxury-gold) !important;">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <span style="color: var(--luxury-cream);"><a href="#" style="color: var(--luxury-gold); text-decoration: none;"><i class="fas fa-copyright me-2" style="color: var(--luxury-gold);"></i>Hotel Senang Hati</a>, All right reserved.</span>
+        </div>
+        <div class="col-md-6 my-auto text-center text-md-end">
+          <span style="color: var(--luxury-cream);">© 2025 Hotel Senang Hati. All rights reserved.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer End -->
+
+  <script src="https://kit.fontawesome.com/2b2e7e5e7a.js" crossorigin="anonymous"></script>
+  <script>
+    // Ambil status booking dari query string
+    function getQueryParam(name) {
+      const url = new URL(window.location.href);
+      return url.searchParams.get(name);
+    }
+    const kode = getQueryParam('kode') || '-';
+    const status = getQueryParam('status') || 'success';
+    let html = '';
+    if(status === 'success') {
+      html = `<div class='alert alert-success'><i class='fas fa-check-circle me-2'></i>Booking Berhasil!</div>
+        <p>Kode Pesanan Anda: <strong>${kode}</strong></p>
+        <p>Silakan tunjukkan kode ini saat check-in atau cek riwayat pesanan Anda.</p>`;
+    } else {
+      html = `<div class='alert alert-danger'><i class='fas fa-times-circle me-2'></i>Booking Gagal!</div>
+        <p>Silakan ulangi proses pemesanan atau hubungi petugas front-desk.</p>`;
+    }
+    document.getElementById('bookingStatusResult').innerHTML = html;
+  </script>
+</body>
+</html>

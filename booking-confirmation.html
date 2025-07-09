@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Konfirmasi Booking - Hotel Senang Hati</title>
+  <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
+  <meta content="Hotel Senang Hati, konfirmasi booking, reservasi, receipt" name="keywords" />
+  <meta content="Konfirmasi booking Hotel Senang Hati - Bukti reservasi kamar Anda" name="description" />
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&family=Playfair+Display:wght@400;600;700;900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Icon Font Stylesheet -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+  
+  <!-- Enhanced Responsive Design -->
+  <link href="css/responsive-design.css" rel="stylesheet" />
+  
+  <!-- Cross-Device Compatibility -->
+
+  
+  <!-- Luxury Theme -->
+  <link href="css/luxury-theme.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Spinner Start -->
+  <div id="spinner"
+    class="show w-100 vh-100 position-fixed translate-middle top-50 start-50 d-flex align-items-center justify-content-center"
+    style="background: var(--luxury-cream);">
+    <div class="spinner-luxury" role="status"></div>
+  </div>
+  <!-- Spinner End -->
+
+  <!-- Navbar start -->
+  <div class="container-fluid fixed-top" style="background: var(--luxury-black);">
+    <div class="container topbar d-none d-lg-block" style="background: var(--luxury-black);">
+      <div class="d-flex justify-content-between">
+        <div class="top-info ps-2">
+          <small class="me-3" style="color: var(--luxury-cream);"><i class="fas fa-map-marker-alt me-2" style="color: var(--luxury-gold);"></i>
+            <a href="#" style="color: var(--luxury-cream); text-decoration: none;">Jl. Luxury Resort No. 123, Jakarta</a></small>
+          <small class="me-3" style="color: var(--luxury-cream);"><i class="fas fa-envelope me-2" style="color: var(--luxury-gold);"></i>
+            <a href="mailto:info@hotelsenanghati.com" style="color: var(--luxury-cream); text-decoration: none;">info@hotelsenanghati.com</a></small>
+        </div>
+        <div class="top-link pe-2">
+          <a href="staff-login.html" style="color: var(--luxury-cream); text-decoration: none;">
+            <small class="text-light ms-2"><i class="fas fa-users me-2" style="color: var(--luxury-gold);"></i>Staff Login</small>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container px-0">
+      <nav class="navbar navbar-light navbar-expand-xl" style="background: var(--luxury-black);">
+        <a href="index.html" class="navbar-brand">
+          <h1 style="color: var(--luxury-gold); font-family: 'Playfair Display', serif; margin: 0;">Hotel Senang Hati</h1>
+        </a>
+        <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="fa fa-bars" style="color: var(--luxury-gold);"></span>
+        </button>
+        <div class="collapse navbar-collapse bg-dark" id="navbarCollapse" style="background: var(--luxury-black) !important;">
+          <div class="navbar-nav mx-auto">
+            <a href="index.html" class="nav-item nav-link" style="color: var(--luxury-cream);">Beranda</a>
+            <a href="search-rooms.html" class="nav-item nav-link" style="color: var(--luxury-cream);">Cari Kamar</a>
+            <a href="room-detail.html" class="nav-item nav-link" style="color: var(--luxury-cream);">Detail Kamar</a>
+            <a href="reservation-form.html" class="nav-item nav-link" style="color: var(--luxury-cream);">Booking</a>
+            <a href="booking-confirmation.html" class="nav-item nav-link active" style="color: var(--luxury-gold);">Konfirmasi</a>
+          </div>
+          <div class="d-flex m-3 me-0">
+            <a href="tel:+6281234567890" class="btn-search btn border border-secondary btn-md-square rounded-circle" 
+               style="background: var(--luxury-gold); color: var(--luxury-black); border-color: var(--luxury-gold) !important;" title="Call Us">
+              <i class="fas fa-phone"></i>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <!-- Navbar End -->
+
+  <!-- Single Page Header start -->
+  <div class="container-fluid page-header py-5" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/hero-img-1.png'); background-size: cover; background-position: center;">
+    <h1 class="text-center text-white display-6">Konfirmasi Booking</h1>
+    <ol class="breadcrumb justify-content-center mb-0">
+      <li class="breadcrumb-item"><a href="index.html" style="color: var(--luxury-cream);">Beranda</a></li>
+      <li class="breadcrumb-item"><a href="reservation-form.html" style="color: var(--luxury-cream);">Form Reservasi</a></li>
+      <li class="breadcrumb-item active text-white">Konfirmasi Booking</li>
+    </ol>
+  </div>
+  <!-- Single Page Header End -->
+
+  <!-- Booking Confirmation Start -->
+  <div class="container-fluid py-5" style="background: var(--luxury-cream);">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <!-- Success Message -->
+          <div class="card border-0 shadow-lg mb-4" style="border-radius: 20px;">
+            <div class="card-body p-5 text-center">
+              <div class="success-icon mb-4">
+                <i class="fas fa-check-circle fa-4x" style="color: #28a745;"></i>
+              </div>
+              <h2 class="mb-3" style="color: var(--luxury-black); font-family: 'Playfair Display', serif;">
+                Booking Berhasil!
+              </h2>
+              <p class="lead mb-4" style="color: var(--luxury-black);">
+                Terima kasih! Reservasi Anda telah berhasil dibuat dan sedang diproses.
+              </p>
+              <div class="alert alert-info" style="background: rgba(255, 193, 7, 0.1); border: 1px solid var(--luxury-gold); color: var(--luxury-black);">
+                <i class="fas fa-info-circle me-2" style="color: var(--luxury-gold);"></i>
+                Tim kami akan menghubungi Anda dalam 1x24 jam untuk konfirmasi pembayaran dan detail check-in.
+              </div>
+            </div>
+          </div>
+
+          <!-- Booking Details -->
+          <div class="card border-0 shadow-lg" style="border-radius: 20px;">
+            <div class="card-body p-5">
+              <h4 class="mb-4" style="color: var(--luxury-black); font-family: 'Playfair Display', serif;">
+                <i class="fas fa-receipt me-3" style="color: var(--luxury-gold);"></i>
+                Detail Reservasi
+              </h4>
+              
+              <div id="bookingDetails">
+                <!-- Will be populated by JavaScript -->
+                <div class="text-center p-4">
+                  <i class="fas fa-exclamation-triangle fa-2x mb-3" style="color: var(--luxury-gold); opacity: 0.5;"></i>
+                  <p style="color: var(--luxury-black); opacity: 0.7;">Data reservasi tidak ditemukan</p>
+                  <a href="search-rooms.html" class="btn" 
+                     style="background: var(--luxury-gold); color: var(--luxury-black); border: none; border-radius: 10px;">
+                    Buat Reservasi Baru
+                  </a>
+                </div>
+              </div>
+              
+              <div class="row mt-5" id="actionButtons" style="display: none;">
+                <div class="col-md-6 mb-3">
+                  <button class="btn btn-lg w-100" onclick="printConfirmation()"
+                          style="background: var(--luxury-gold); color: var(--luxury-black); border: none; border-radius: 10px; font-weight: 600;">
+                    <i class="fas fa-print me-2"></i>Cetak Konfirmasi
+                  </button>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <button class="btn btn-outline-secondary btn-lg w-100" onclick="emailConfirmation()"
+                          style="border-radius: 10px; font-weight: 600;">
+                    <i class="fas fa-envelope me-2"></i>Email Konfirmasi
+                  </button>
+                </div>
+                <div class="col-12">
+                  <a href="index.html" class="btn btn-outline-primary btn-lg w-100" 
+                     style="border-radius: 10px; font-weight: 600; border-color: var(--luxury-gold); color: var(--luxury-gold);">
+                    <i class="fas fa-home me-2"></i>Kembali ke Beranda
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Booking Confirmation End -->
+
+  <!-- Footer Start -->
+  <div class="container-fluid" style="background: var(--luxury-black); color: var(--luxury-cream);">
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-item">
+            <h4 class="text-light mb-3" style="color: var(--luxury-gold) !important; font-family: 'Playfair Display', serif;">Hotel Senang Hati</h4>
+            <p class="mb-4" style="color: var(--luxury-cream);">
+              Hotel mewah yang menawarkan pengalaman menginap tak terlupakan dengan pelayanan terbaik dan fasilitas berkelas dunia.
+            </p>
+            <div class="d-flex">
+              <a
+                class="btn btn-md-square rounded-circle me-3"
+                style="border: 2px solid var(--luxury-gold); color: var(--luxury-gold); width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;"
+                href="#"
+                title="Facebook"
+                ><i class="fab fa-facebook-f"></i></a>
+              <a
+                class="btn btn-md-square rounded-circle me-3"
+                style="border: 2px solid var(--luxury-gold); color: var(--luxury-gold); width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;"
+                href="#"
+                title="Instagram"
+                ><i class="fab fa-instagram"></i></a>
+              <a
+                class="btn btn-md-square rounded-circle me-3"
+                style="border: 2px solid var(--luxury-gold); color: var(--luxury-gold); width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;"
+                href="https://wa.me/6289629749277"
+                title="WhatsApp"
+                target="_blank"
+                ><i class="fab fa-whatsapp"></i></a>
+              <a
+                class="btn btn-md-square rounded-circle"
+                style="border: 2px solid var(--luxury-gold); color: var(--luxury-gold); width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;"
+                href="mailto:info@hotelsenanghati.com"
+                title="Email"
+                ><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex flex-column text-start footer-item">
+            <h4 class="text-light mb-3" style="color: var(--luxury-gold) !important;">Kontak Info</h4>
+            <a class="btn-link" href="#" style="color: var(--luxury-cream); text-decoration: none;">
+              <i class="fas fa-map-marker-alt me-2" style="color: var(--luxury-gold);"></i>
+              Jl. Luxury Resort No. 123, Jakarta
+            </a>
+            <a class="btn-link" href="mailto:info@hotelsenanghati.com" style="color: var(--luxury-cream); text-decoration: none;">
+              <i class="fas fa-envelope me-2" style="color: var(--luxury-gold);"></i>
+              info@hotelsenanghati.com
+            </a>
+            <a class="btn-link" href="tel:+6281234567890" style="color: var(--luxury-cream); text-decoration: none;">
+              <i class="fas fa-phone me-2" style="color: var(--luxury-gold);"></i>
+              +62 812-3456-7890
+            </a>
+            <a class="btn-link" href="tel:+6281234567890" style="color: var(--luxury-cream); text-decoration: none;">
+              <i class="fas fa-clock me-2" style="color: var(--luxury-gold);"></i>
+              24/7 Customer Service
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex flex-column text-start footer-item">
+            <h4 class="text-light mb-3" style="color: var(--luxury-gold) !important;">Link Cepat</h4>
+            <a class="btn-link" href="index.html" style="color: var(--luxury-cream); text-decoration: none;">
+              <i class="fas fa-home me-2" style="color: var(--luxury-gold);"></i>
+              Beranda
+            </a>
+            <a class="btn-link" href="search-rooms.html" style="color: var(--luxury-cream); text-decoration: none;">
+              <i class="fas fa-search me-2" style="color: var(--luxury-gold);"></i>
+              Cari Kamar
+            </a>
+            <a class="btn-link" href="room-detail.html" style="color: var(--luxury-cream); text-decoration: none;">
+              <i class="fas fa-bed me-2" style="color: var(--luxury-gold);"></i>
+              Detail Kamar
+            </a>
+            <a class="btn-link" href="staff-login.html" style="color: var(--luxury-cream); text-decoration: none;">
+              <i class="fas fa-users me-2" style="color: var(--luxury-gold);"></i>
+              Staff Login
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Copyright Section within Footer -->
+      <div class="row border-top mt-3 pt-3" style="border-color: var(--luxury-gold) !important;">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <span style="color: var(--luxury-cream);"
+            ><a href="#" style="color: var(--luxury-gold); text-decoration: none;"
+              ><i class="fas fa-copyright me-2" style="color: var(--luxury-gold);"></i>Hotel Senang Hati</a
+            >, All right reserved.</span
+          >
+        </div>
+        <div class="col-md-6 my-auto text-center text-md-end">
+          <span style="color: var(--luxury-cream);">© 2025 Hotel Senang Hati. All rights reserved.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer End -->
+
+  <!-- Back to Top -->
+  <a href="index.html" class="back-to-top" title="Kembali ke Beranda">
+    <i class="fas fa-home"></i>
+  </a>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Hotel System Javascript -->
+  <script src="js/hotel-system.js"></script>
+  <script src="js/main.js"></script>
+  
+  <!-- Cross-Device Compatibility Enhancement -->
+
+  
+  <!-- Booking Confirmation Specific Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize hotel system
+      if (typeof HotelSystem !== 'undefined') {
+        HotelSystem.init();
+      }
+      
+      // Load and display reservation data
+      loadReservationData();
+    });
+    
+    function loadReservationData() {
+      const reservationData = sessionStorage.getItem('reservationData');
+      const bookingDetailsContainer = document.getElementById('bookingDetails');
+      const actionButtons = document.getElementById('actionButtons');
+      
+      if (reservationData) {
+        try {
+          const data = JSON.parse(reservationData);
+          displayBookingDetails(data);
+          actionButtons.style.display = 'block';
+          
+          // Save to localStorage for future reference
+          saveReservationToLocalStorage(data);
+          
+        } catch (error) {
+          console.error('Error loading reservation data:', error);
+          showNoReservationFound();
+        }
+      } else {
+        showNoReservationFound();
+      }
+    }
+    
+    function displayBookingDetails(data) {
+      const { roomData, searchParams } = data.roomData;
+      const nights = calculateNights(searchParams.checkinDate, searchParams.checkoutDate);
+      const totalPrice = roomData.price * nights;
+      
+      const detailsHTML = `
+        <div class="booking-confirmation-details">
+          <!-- Reservation ID -->
+          <div class="row mb-4">
+            <div class="col-12">
+              <div class="alert alert-success" style="background: rgba(40, 167, 69, 0.1); border: 1px solid #28a745;">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <strong>ID Reservasi: ${data.reservationId}</strong>
+                    <p class="mb-0 mt-1">Simpan ID ini untuk referensi Anda</p>
+                  </div>
+                  <i class="fas fa-bookmark fa-2x" style="color: #28a745;"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Guest Information -->
+          <div class="row mb-4">
+            <div class="col-md-6">
+              <h6 style="color: var(--luxury-gold); margin-bottom: 15px;">
+                <i class="fas fa-user me-2"></i>Informasi Tamu
+              </h6>
+              <div class="guest-info">
+                <p><strong>Nama:</strong> ${data.firstName} ${data.lastName}</p>
+                <p><strong>Email:</strong> ${data.email}</p>
+                <p><strong>Telepon:</strong> ${data.phone}</p>
+                <p><strong>Identitas:</strong> ${data.idType.toUpperCase()} - ${data.idNumber}</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h6 style="color: var(--luxury-gold); margin-bottom: 15px;">
+                <i class="fas fa-bed me-2"></i>Informasi Kamar
+              </h6>
+              <div class="room-info">
+                <p><strong>Tipe Kamar:</strong> ${roomData.name}</p>
+                <p><strong>Nomor Kamar:</strong> ${roomData.roomNumber}</p>
+                <p><strong>Kapasitas:</strong> ${roomData.capacity} tamu</p>
+                <p><strong>Fasilitas:</strong> ${roomData.features.slice(0, 3).join(', ')}</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Booking Dates -->
+          <div class="row mb-4">
+            <div class="col-md-6">
+              <h6 style="color: var(--luxury-gold); margin-bottom: 15px;">
+                <i class="fas fa-calendar me-2"></i>Tanggal Menginap
+              </h6>
+              <div class="booking-dates">
+                <p><strong>Check-in:</strong> ${formatDate(searchParams.checkinDate)} (${HOTEL_CONFIG.checkInTime})</p>
+                <p><strong>Check-out:</strong> ${formatDate(searchParams.checkoutDate)} (${HOTEL_CONFIG.checkOutTime})</p>
+                <p><strong>Durasi:</strong> ${nights} malam</p>
+                <p><strong>Tamu:</strong> ${searchParams.guests} orang</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h6 style="color: var(--luxury-gold); margin-bottom: 15px;">
+                <i class="fas fa-money-bill me-2"></i>Rincian Harga
+              </h6>
+              <div class="pricing-details">
+                <p><strong>Harga per malam:</strong> ${formatCurrency(roomData.price)}</p>
+                <p><strong>Subtotal (${nights} malam):</strong> ${formatCurrency(totalPrice)}</p>
+                <p><strong>Pajak & Service:</strong> Termasuk</p>
+                <hr style="border-color: var(--luxury-gold);">
+                <p class="h5" style="color: var(--luxury-gold);"><strong>Total: ${formatCurrency(totalPrice)}</strong></p>
+              </div>
+            </div>
+          </div>
+          
+          ${data.specialRequests ? `
+          <!-- Special Requests -->
+          <div class="row mb-4">
+            <div class="col-12">
+              <h6 style="color: var(--luxury-gold); margin-bottom: 15px;">
+                <i class="fas fa-comment me-2"></i>Permintaan Khusus
+              </h6>
+              <div class="alert alert-info" style="background: rgba(255, 193, 7, 0.1); border: 1px solid var(--luxury-gold);">
+                ${data.specialRequests}
+              </div>
+            </div>
+          </div>
+          ` : ''}
+          
+          <!-- Important Information -->
+          <div class="row">
+            <div class="col-12">
+              <div class="alert alert-warning" style="background: rgba(255, 193, 7, 0.1); border: 1px solid #ffc107;">
+                <h6 style="color: #856404;"><i class="fas fa-info-circle me-2"></i>Informasi Penting:</h6>
+                <ul class="mb-0" style="color: #856404;">
+                  <li>Konfirmasi pembayaran akan dikirim melalui email dalam 1x24 jam</li>
+                  <li>Check-in dilakukan mulai pukul ${HOTEL_CONFIG.checkInTime}</li>
+                  <li>Check-out paling lambat pukul ${HOTEL_CONFIG.checkOutTime}</li>
+                  <li>Pembatalan gratis hingga 24 jam sebelum check-in</li>
+                  <li>Harap membawa identitas yang valid saat check-in</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+      
+      document.getElementById('bookingDetails').innerHTML = detailsHTML;
+    }
+    
+    function showNoReservationFound() {
+      const detailsHTML = `
+        <div class="text-center p-4">
+          <i class="fas fa-exclamation-triangle fa-2x mb-3" style="color: var(--luxury-gold); opacity: 0.5;"></i>
+          <p style="color: var(--luxury-black); opacity: 0.7;">Data reservasi tidak ditemukan</p>
+          <a href="search-rooms.html" class="btn" 
+             style="background: var(--luxury-gold); color: var(--luxury-black); border: none; border-radius: 10px;">
+            Buat Reservasi Baru
+          </a>
+        </div>
+      `;
+      
+      document.getElementById('bookingDetails').innerHTML = detailsHTML;
+    }
+    
+    function saveReservationToLocalStorage(data) {
+      // Get existing reservations
+      let reservations = JSON.parse(localStorage.getItem('hotelReservations')) || [];
+      
+      // Add new reservation
+      reservations.push(data);
+      
+      // Save back to localStorage
+      localStorage.setItem('hotelReservations', JSON.stringify(reservations));
+    }
+    
+    function calculateNights(checkin, checkout) {
+      const checkinDate = new Date(checkin);
+      const checkoutDate = new Date(checkout);
+      const timeDiff = checkoutDate.getTime() - checkinDate.getTime();
+      return Math.ceil(timeDiff / (1000 * 3600 * 24));
+    }
+    
+    function formatDate(dateString) {
+      const options = { 
+        weekday: 'long', 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric' 
+      };
+      return new Date(dateString).toLocaleDateString('id-ID', options);
+    }
+    
+    function formatCurrency(amount) {
+      return new Intl.NumberFormat('id-ID', {
+        style: 'currency',
+        currency: 'IDR',
+        minimumFractionDigits: 0
+      }).format(amount);
+    }
+    
+    function printConfirmation() {
+      window.print();
+    }
+    
+    function emailConfirmation() {
+      const reservationData = sessionStorage.getItem('reservationData');
+      if (reservationData) {
+        const data = JSON.parse(reservationData);
+        const subject = `Konfirmasi Reservasi ${data.reservationId} - Hotel Senang Hati`;
+        const body = `Terima kasih atas reservasi Anda di Hotel Senang Hati.
+        
+ID Reservasi: ${data.reservationId}
+Nama Tamu: ${data.firstName} ${data.lastName}
+Kamar: ${data.roomData.roomData.name}
+
+Tim kami akan segera menghubungi Anda untuk konfirmasi pembayaran.
+
+Salam hangat,
+Hotel Senang Hati`;
+        
+        window.location.href = `mailto:${data.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      }
+    }
+    
+    // Get HOTEL_CONFIG from hotel-system.js
+    const HOTEL_CONFIG = typeof window.HotelSystem !== 'undefined' && window.HotelSystem.HOTEL_CONFIG ? 
+                        window.HotelSystem.HOTEL_CONFIG : 
+                        { checkInTime: "14:00", checkOutTime: "12:00" };
+  </script>
+</body>
+
+</html>
